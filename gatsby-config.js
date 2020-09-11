@@ -5,6 +5,37 @@
  */
 
 module.exports = {
-  /* Your site config here */
-  plugins: [],
+	siteMetadata: {
+		title: 'Carla Vieira Portfolio',
+		author: 'Carla Vieira'
+	},
+	plugins: [
+		'gatsby-plugin-sass',
+		'gatsby-plugin-netlify-cms',
+		{
+			resolve: 'gatsby-source-filesystem',
+			options: {
+			  name: 'src',
+			  path: `${__dirname}/src/`,
+			},
+		},
+		'gatsby-plugin-sharp',
+		{
+			resolve: 'gatsby-transformer-remark',
+			options:{
+				plugins: [
+					'gatsby-remark-relative-images',
+					{
+						resolve: 'gatsby-remark-images',
+						options: {
+							maxWidth: 960,
+							linkImagesToOriginal: false
+						}
+					}
+				]
+			}
+		}
+		
+
+	]
 }
