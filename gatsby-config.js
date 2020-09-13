@@ -6,8 +6,35 @@
 
 module.exports = {
 	siteMetadata: {
-		title: 'Carla Portfolio',
-		author: 'Carla Vieira'
+		title: 'carlavieira.dev',
+		author: 'Carla Vieira',
+		description : '',
+		image: "/images/avatar-carla-2020.jpg", // Path to your image you placed in the 'static' folder
+		twitter: "carlaprvieira",
+		instagram: "@carlaprvieira",
+		linkedin: "carlaprv",
+		github: "carlaprv",
+		youtube: "eaicarla",
+		mail: "contato@carlavieira.dev",
+		menuLinks:[
+			{
+				name:'Home',
+				link: '/'
+			},
+			{
+				name: 'About',
+				link: '/about'
+			},
+			{
+				name:'Blog',
+				link: '/blog'
+			},
+			{
+				name:'Contact',
+				link: '/contact'
+			},
+
+		]
 	},
 	plugins: [
 		'gatsby-plugin-sass',

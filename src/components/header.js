@@ -8,6 +8,10 @@ const Header = () => {
             site{
                 siteMetadata{
                     title
+                    menuLinks {
+                        name
+                        link
+                      }
                 }
             }
         }
@@ -15,25 +19,20 @@ const Header = () => {
 
     return (
         <header className={headerStyles.header}>
-            <h1>
-                <Link className={headerStyles.title} to="/">
+            <nav className={headerStyles.navContainer}>
+                <Link className={headerStyles.navBrand} to="/">
                     {data.site.siteMetadata.title}
                 </Link>
-            </h1>
-            <nav>
                 <ul className={headerStyles.navList}>
-                    <li>
-                        <Link className={headerStyles.navItem} activeClassName={headerStyles.activeNavItem} to="/">Home</Link>
-                    </li>
-                    <li>
-                        <Link className={headerStyles.navItem} activeClassName={headerStyles.activeNavItem} to="/about">About</Link>
-                    </li>
-                    <li>
-                        <Link className={headerStyles.navItem} activeClassName={headerStyles.activeNavItem} to="/blog">Blog</Link>
-                    </li>
-                    <li>
-                        <Link className={headerStyles.navItem} activeClassName={headerStyles.activeNavItem} to="/contact">Contact</Link>
-                    </li>
+                    {data.site.siteMetadata.menuLinks.slice(0).reverse().map((menuItem) => {
+                        return(
+                            <li>
+                                <Link className={headerStyles.navItem} activeClassName={headerStyles.activeNavItem} to={menuItem.link}>
+                                    {menuItem.name}
+                                </Link>
+                             </li>
+                        )
+                    })}
                 </ul>
             </nav>
         </header>

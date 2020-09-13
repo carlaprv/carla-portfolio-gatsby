@@ -1,3 +1,9 @@
 .footer{
       margin-top:3rem;
+      display: block;
+      text-align: center;
+      bottom:0;
+      grid-column-start: 3;
+      grid-column-end: 11;
+      grid-row: row-line-6;
 }
