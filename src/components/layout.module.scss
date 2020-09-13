@@ -65,6 +65,22 @@ $font-family-serif: 'Merriweather', serif;
       background-image: linear-gradient(0deg,rgba(194, 99, 184,.7) 0,rgba(194, 99, 184,.7) 30%,transparent 40%,transparent);
 }
 
+.button {
+      display: inline-block;
+      padding: .4rem .6rem;
+      background: #D6BDDC;
+      border-radius: 5px;
+      color: $main-txt-color;
+      font-size: .75rem;
+      font-weight: 400;
+      margin: .25rem 1rem 0 2rem;
+      opacity: 0.8;
+      text-decoration: none;
+}
+
+.button:hover {
+      opacity: 1;
+}
 
 
 //responsive

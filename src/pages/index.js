@@ -52,17 +52,18 @@ const IndexPage = () => {
 				<p className={indexStyles.intro}>{data.site.siteMetadata.bio}</p>
 			</section>
 			<section className={layoutStyles.whiteSection}>
-				<h1>
-					Section 2
-				</h1>
 				<h2>
-					Lorem ipsum
+					Section 2
 				</h2>
+				<p>
+					Lorem ipsum
+				</p>
 			</section>
 			<section className={layoutStyles.coloredSection}>
-				<h1>
+				<h2>
 					Section 2
-				</h1>
+					<a className={layoutStyles.button} href="/">View All Content</a>
+				</h2>
 				<Card></Card>
 			</section>
 
