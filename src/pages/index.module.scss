@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
+
+/* color variables */
+$main-bg-color: #fbf4ff;
+$main-bg-color: #fbf4ff;
+$main-txt-color: #342843;
+$secondary-txt-color: #7f7687;
+$pink-color: #844a7e;
+
+
+/* font variables */
+$font-family-sans-serif:  'Inter', sans-serif;
+$font-family-serif: 'Merriweather', serif;
+
+
+/** Shared section styles **/
+.coloredSection {
+      background: $main-bg-color;
+      padding:80px 25%;
+      background-image: url('/images/background.png');
+      background-position: top;
+      background-attachment: fixed;
+}
+
+.whiteSection {
+      background: #fff;
+      padding:80px 25%;
+}
+
+
+/** About section **/
+.header-container{
+      display: grid;
+      grid-template-columns: repeat(5,1fr);
+      grid-column-gap: 0;
+      grid-row-gap: 0;
+}
+
+.header-image img{
+      border-radius: 50%;
+      max-width: 200px;
+      display: inline-block;
+      margin-right:1.45rem;
+      grid-column-start: 1;
+      grid-column-end: 2;
+
+}
+
+.header-text{
+      display: inline-block;
+      grid-column-start: 2;
+      grid-column-end: 6;
+
+      .headline{
+            font-weight: 500;
+            font-size: 1.4rem;
+            line-height: 1.55rem;
+            font-family: $font-family-sans-serif;
+            color:$secondary-txt-color;
+      }
+
+      .socialIcons{
+            list-style-type: none;
+            border-bottom: 0;
+            font-size: 1.75em;
+            padding-left: 0;
+            margin-left:0;
+      }
+
+      .socialIcons li{
+            display: inline-block;
+            margin-right: .8em;
+            margin-bottom: 0;
+      }
+
+      .socialIcons li:hover{
+            opacity: 0.5;
+      }
+
+      .socialIcons img {
+            height: .8em;
+      }
+      
+}
+
+
+.intro{
+      font-size: 0.95em;
+      line-height: 1.5em;
+}

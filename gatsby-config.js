@@ -8,14 +8,43 @@ module.exports = {
 	siteMetadata: {
 		title: 'carlavieira.dev',
 		author: 'Carla Vieira',
-		description : '',
+		headline : 'Software Engineer • MSc Student Artificial Intelligence (USP) • Google Developer Expert @ Machine Learning',
+		description : 'Carla Vieira - Portfolio',
+		bio:"Carla holds a Bachelor's degree in Information Systems at USP, master student in Artificial Intelligence, software engineer and Google Developer Expert in Machine Learning. She promotes gender and race diversity in technology as co-organizer of perifaCode Community. She believes Technology is steadily changing the social good landscape and has been researching about the unconscious bias in Artificial Intelligence and its impacts on our society.",
 		image: "/images/avatar-carla-2020.jpg", // Path to your image you placed in the 'static' folder
-		twitter: "carlaprvieira",
-		instagram: "@carlaprvieira",
-		linkedin: "carlaprv",
-		github: "carlaprv",
-		youtube: "eaicarla",
-		mail: "contato@carlavieira.dev",
+		socialLinks:[
+			{
+				name:'Twitter',
+				link:'https://twitter.com/carlaprvieira',
+				icon:"/images/social-icons/twitter.png",
+			},
+			{
+				name:'Instagram',
+				link:'https://instagram.com/carlaprvieira',
+				icon:"/images/social-icons/instagram.png",
+			},
+			{
+				name:'Linkedin',
+				link:'https://linkedin.com/in/carlaprv',
+				icon:"/images/social-icons/linkedin.png",
+			},
+			{
+				name:'Github',
+				link:'https://github.com/carlaprv',
+				icon:"/images/social-icons/github.png",
+			},
+			{
+				name:'Youtube',
+				link:'https://youtube.com/eaicarla',
+				icon:"/images/social-icons/youtube.png",
+			},
+			{
+				name:'Email',
+				link:'contato@carlavieira.dev',
+				icon:"/images/social-icons/mail.png",
+			},
+
+		],
 		menuLinks:[
 			{
 				name:'Home',
