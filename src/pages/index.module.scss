@@ -73,3 +73,30 @@ $font-family-serif: 'Merriweather', serif;
       font-size: 0.98em;
       line-height: 1.6em;
 }
+
+
+@media screen and (max-width: 480px) {
+     
+}
+
+
+@media screen and (max-width: 768px) {
+      .header-image img{
+            max-width: 300px;
+      }
+      .header-image, .header-text{
+            grid-column-start: 1;
+            grid-column-end: 6;
+            justify-self: center;
+      }
+     
+}
+
+
+@media screen and (max-width: 1024px) {
+     
+}
+
+@media screen and (max-width: 1200px) {
+     
+}

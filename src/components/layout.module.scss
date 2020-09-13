@@ -56,3 +56,30 @@ $font-family-serif: 'Merriweather', serif;
 .content p{
       font-family: $font-family-serif;
 }
+
+//responsive
+
+
+@media screen and (max-width: 1760px) {
+      .coloredSection, .whiteSection {
+            padding:80px 16%;
+      }
+     
+}
+
+@media screen and (max-width: 1024px) {
+      .coloredSection, .whiteSection {
+            padding:80px 8%;
+      }
+     
+}
+
+
+@media screen and (max-width: 768px) {
+     
+}
+
+
+@media screen and (max-width: 480px) {
+     
+}
