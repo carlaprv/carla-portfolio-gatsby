@@ -1,7 +1,9 @@
 import React from "react"
-import { Link, graphql, useStaticQuery } from 'gatsby'
+import { graphql, useStaticQuery } from 'gatsby'
 
 import Layout from '../components/layout'
+import layoutStyles from '../components/layout.module.scss'
+
 import indexStyles from './index.module.scss'
 
 const IndexPage = () => {
@@ -24,7 +26,7 @@ const IndexPage = () => {
     `)
 	return(
 		<Layout>
-			<section className={indexStyles.coloredSection}>
+			<section className={layoutStyles.coloredSection}>
 				<div className={indexStyles.headerContainer}>
 					<div className={indexStyles.headerImage}>
 						<img src={data.site.siteMetadata.image}/>
@@ -33,12 +35,12 @@ const IndexPage = () => {
 						<h1>{data.site.siteMetadata.author}</h1>
 						<h2 className={indexStyles.headline}>{data.site.siteMetadata.headline}</h2>
 						<ul className={indexStyles.socialIcons}>
-							{data.site.siteMetadata.socialLinks.slice(0).reverse().map((socialItem) => {
+							{data.site.siteMetadata.socialLinks.map((socialItem) => {
 								return(
 								<li>
-									<Link to={socialItem.link}>
+									<a href={socialItem.link} target="_blank" rel="noreferrer">
 										<img src={socialItem.icon} alt={socialItem.name}/>
-									</Link>
+									</a>
 								</li>
 								)
 							})}
@@ -47,7 +49,7 @@ const IndexPage = () => {
 				</div>
 				<p className={indexStyles.intro}>{data.site.siteMetadata.bio}</p>
 			</section>
-			<section className={indexStyles.whiteSection}>
+			<section className={layoutStyles.whiteSection}>
 				<h1>
 					Section 2
 				</h1>
