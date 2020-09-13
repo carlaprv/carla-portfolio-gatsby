@@ -1,7 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
+
+/* font variables */
+$font-family-sans-serif:  'Inter', sans-serif;
+$font-family-serif: 'Merriweather', serif;
+
 $main-bg-color: #fbf4ff;
 $main-txt-color: #342843;
 $secondary-txt-color: #7f7687;
 $pink-color: #844a7e;
+$pink-color-2:#C551B9;
 
 .header {
       margin: 0 auto;
@@ -13,10 +21,13 @@ $pink-color: #844a7e;
       width: 100%;
       left: 0;
       right: 0;
-      height: 50px;
+      height: 55px;
       top: 0;
-      line-height: 50px;
+      line-height: 55px;
       background: $main-txt-color;
+      border-bottom: 4px solid $pink-color-2;
+      background-clip: padding-box;
+      font-family: $font-family-sans-serif;
       display: grid;
       grid-template-columns: repeat(12, [col-start] 1fr);
 }
@@ -24,7 +35,6 @@ $pink-color: #844a7e;
 .nav-brand {
       margin-right: auto;
       text-transform: uppercase;
-      letter-spacing:1px;
       font-weight: 600;
       color:#fff;
       text-decoration: none;
@@ -52,7 +62,7 @@ $pink-color: #844a7e;
       }
 
       .nav-item {
-            line-height: 50px;
+            line-height: 55px;
             color: #fff;
             font-size: 0.9rem;
             margin-right: 1.3rem;

@@ -30,7 +30,7 @@ const Header = () => {
                                 <Link className={headerStyles.navItem} activeClassName={headerStyles.activeNavItem} to={menuItem.link}>
                                     {menuItem.name}
                                 </Link>
-                             </li>
+                            </li>
                         )
                     })}
                 </ul>
