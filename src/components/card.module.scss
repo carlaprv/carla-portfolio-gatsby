@@ -1,0 +1,95 @@
+$gray-darker:               #444444;
+$gray-dark:                 #696969;
+$gray:                      #999999;
+$gray-light:                #cccccc;
+$gray-lighter:              #ececec;
+$gray-lightest:             lighten($gray-lighter,4%);
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
+
+/* font variables */
+$font-family-sans-serif:  'Inter', sans-serif;
+$font-family-serif: 'Merriweather', serif;
+
+$main-bg-color: #fbf4ff;
+$main-txt-color: #342843;
+$secondary-txt-color: #7f7687;
+$pink-color: #844a7e;
+$pink-color-2:#C551B9;
+
+*,
+*::before,
+*::after { 
+  box-sizing: border-box;
+}
+
+
+.btn {
+  background-color: white;
+  border: 1px solid $gray-light;
+  border-radius: 1rem;
+  color: $main-txt-color;
+  padding: 0.5rem;
+  text-transform: lowercase;
+  display: block;
+  width: 100%;
+}
+ 
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  margin-top: 40px;
+  padding: 0;
+}
+
+.cards__item {
+  display: flex;
+  padding-right: 2.2rem;
+  padding-bottom: 2rem;
+  @media(min-width: 40rem) {
+    width: 50%;
+  }
+  @media(min-width: 56rem) {
+    width: 33.3333%;
+  }
+}
+
+.card {
+  background-color: white;
+  border-radius: 0.8rem;
+  box-shadow: 0px 6px 6px 0px rgba(0,0,0,0.15);
+  display: flex;
+  padding:8px;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.card__content {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+.card__title {
+  color: $main-txt-color;
+  font-size: 1.25rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 9px;
+  font-family: $font-family-sans-serif;
+}
+.card__title a{
+  background-image: linear-gradient(0deg,rgba(194, 99, 184,.4) 0,rgba(194, 99, 184,.4) 30%,transparent 40%,transparent);
+}
+
+.card__text {
+  flex: 1 1 auto;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  margin-bottom: 1.25rem;
+}
+

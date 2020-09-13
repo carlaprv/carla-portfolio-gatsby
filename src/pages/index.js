@@ -1,6 +1,8 @@
 import React from "react"
 import { graphql, useStaticQuery } from 'gatsby'
 
+import Card from '../components/card'
+
 import Layout from '../components/layout'
 import layoutStyles from '../components/layout.module.scss'
 
@@ -57,6 +59,14 @@ const IndexPage = () => {
 					Lorem ipsum
 				</h2>
 			</section>
+			<section className={layoutStyles.coloredSection}>
+				<h1>
+					Section 2
+				</h1>
+				<Card></Card>
+			</section>
+
+			
 			
 		</Layout>
 	)

@@ -57,6 +57,16 @@ $font-family-serif: 'Merriweather', serif;
       font-family: $font-family-serif;
 }
 
+.content p a{
+      font-weight: bold;
+      background-image: linear-gradient(0deg,rgba(194, 99, 184,.4) 0,rgba(194, 99, 184,.4) 30%,transparent 40%,transparent);
+}
+.content p a:hover{
+      background-image: linear-gradient(0deg,rgba(194, 99, 184,.7) 0,rgba(194, 99, 184,.7) 30%,transparent 40%,transparent);
+}
+
+
+
 //responsive
 
 
