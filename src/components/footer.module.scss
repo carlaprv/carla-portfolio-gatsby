@@ -1,9 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
+
+/* color variables */
+$main-bg-color: #fbf4ff;
+$main-txt-color: #342843;
+$secondary-txt-color: #7f7687;
+$pink-color: #844a7e;
+
+/* font variables */
+$font-family-sans-serif:  'Inter', sans-serif;
+$font-family-serif: 'Merriweather', serif;
+
 .footer{
       margin-top:3rem;
+      padding:20px;
       display: block;
       text-align: center;
       bottom:0;
-      grid-column-start: 3;
-      grid-column-end: 11;
+      grid-column-start: 1;
+      grid-column-end: 13;
       grid-row: row-line-6;
+      background-color: $main-txt-color;
+      color:#fff;
+
+      .footerContent{
+            font-family: $font-family-serif;
+            text-align: center;
+            margin: 1em;
+            font-size: .8em;
+      }
 }
+
