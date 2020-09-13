@@ -85,6 +85,9 @@ $pink-color-2:#C551B9;
 .card__title a{
   background-image: linear-gradient(0deg,rgba(194, 99, 184,.4) 0,rgba(194, 99, 184,.4) 30%,transparent 40%,transparent);
 }
+.card__title a:hover{
+  background-image: linear-gradient(0deg,rgba(194, 99, 184,.7) 0,rgba(194, 99, 184,.7) 30%,transparent 40%,transparent);
+}
 
 .card__text {
   flex: 1 1 auto;
