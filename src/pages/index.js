@@ -31,6 +31,36 @@ const IndexPage = () => {
 	return(
 		<Layout>
 			<section className={layoutStyles.fullHeader}>
+				<video poster="/images/carla_banner.jpg'" id="bgvid" loop muted autoPlay>
+					<source src="/images/video-carla-banner.mp4" type="video/mp4"/>
+				</video>
+				<div className={layoutStyles.viewportHeader}>
+					<div className={layoutStyles.hedcontainer}>
+						<h1>
+							{intl.formatMessage({ id: "greeting" })}
+						</h1>
+						<h2>
+							{intl.formatMessage({ id: "headline" })}
+						</h2>
+						<ul className={layoutStyles.socialIcons}>
+							{data.site.siteMetadata.socialLinks.map((socialItem) => {
+								return(
+								<li>
+									<a href={socialItem.link} target="_blank" rel="noreferrer">
+										<img src={socialItem.icon} alt={socialItem.name}/>
+									</a>
+								</li>
+								)
+							})}
+						</ul>
+						<button className={layoutStyles.headerButton} href="/">
+							<a href="/">Visit my youtube channel</a>
+						</button>
+					</div>
+				</div>
+
+			</section>
+			<section className={layoutStyles.fullHeader}>
 				<div className={indexStyles.fullHeaderContainer}>
 					<div className={indexStyles.fullHeaderContent}>
 						<h1>

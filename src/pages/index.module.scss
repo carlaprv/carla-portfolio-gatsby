@@ -11,7 +11,7 @@ $pink-color: #844a7e;
 $font-family-sans-serif:  'Inter', sans-serif;
 $font-family-serif: 'Merriweather', serif;
 
-
+/* Header */
 .header-container{
       display: grid;
       grid-template-columns: repeat(5,1fr);
@@ -69,7 +69,15 @@ $font-family-serif: 'Merriweather', serif;
       
 }
 
-// fullheader
+video {
+      object-fit: cover;
+      width: 100%;
+      height: 100vh;
+      top: 0;
+      left: 0;
+    }
+
+/* fullheader */
 .full-header-container{
       display: grid;
       grid-template-columns: repeat(12,1fr);
@@ -79,6 +87,7 @@ $font-family-serif: 'Merriweather', serif;
 
 .full-header-content {
       padding:200px 0;
+      position: relative;
       display: flex;
       flex-direction: column;
       -moz-box-align: left;
