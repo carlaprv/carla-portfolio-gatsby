@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
+
+/* font variables */
+$font-family-sans-serif:  'Inter', sans-serif;
+
+$main-bg-color: #fbf4ff;
+$main-txt-color: #342843;
+$secondary-txt-color: #7f7687;
+$pink-color: #201a20;
+$pink-color-2:#C551B9;
+
+// color: #C551B9;
+// background: white;
+// padding: 6px;
+// padding: 8px;
+// border-radius: 5px;
+// font-size: 12px;
+// font-weight: bold;
+
+
+.button{
+      font-family: $font-family-sans-serif;
+      margin-right: 10px;
+      text-decoration: none;
+      cursor: pointer;
+      padding: 6px;
+      border-radius: 5px;
+      font-size: 12px;
+}
+
+.inline{
+      display: inline-block;
+      margin-left:30px;
+      margin-top: -3px;
+}

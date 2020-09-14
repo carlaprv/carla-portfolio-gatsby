@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link, graphql, useStaticQuery } from 'gatsby'
 import headerStyles from './header.module.scss'
+import Language from "./language"
 
 const Header = () => {
     const data = useStaticQuery(graphql`
@@ -22,7 +23,9 @@ const Header = () => {
             <nav className={headerStyles.navContainer}>
                 <Link className={headerStyles.navBrand} to="/">
                     {data.site.siteMetadata.title}
+                    
                 </Link>
+                <Language />
                 <ul className={headerStyles.navList}>
                     {data.site.siteMetadata.menuLinks.slice(0).reverse().map((menuItem) => {
                         return(
@@ -36,6 +39,7 @@ const Header = () => {
                 </ul>
             </nav>
         </header>
+        
     )
 }
 

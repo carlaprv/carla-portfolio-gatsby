@@ -5,5 +5,8 @@
       "welcome": "bem vindo",
       "title_page2": "pagina doois",
       "hello_page2": "oi da pagina dois",
-      "go_page2": "Vá para a pagina de contato"
+      "go_page2": "Vá para a pagina de contato",
+      "about":{
+            "title": "sobre"
+      }
 }
