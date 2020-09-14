@@ -35,7 +35,7 @@ const IndexPage = () => {
 					<source src="/images/video-carla-banner.mp4" type="video/mp4"/>
 				</video>
 				<div className={indexStyles.viewportHeader}>
-					<div className={indexStyles.hedcontainer}>
+					<div className={indexStyles.fullHeaderContainer}>
 						<h1>
 							{intl.formatMessage({ id: "greeting" })}
 						</h1>
@@ -54,7 +54,7 @@ const IndexPage = () => {
 							})}
 						</ul>
 						<button className={indexStyles.headerButton} href="/">
-							<a href="/">Visit my youtube channel</a>
+							<a href="/">{intl.formatMessage({ id: "cta" })}</a>
 						</button>
 					</div>
 				</div>
