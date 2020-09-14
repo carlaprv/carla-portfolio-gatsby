@@ -103,19 +103,24 @@ $pink-color-2:#C551B9;
       }
       .nav-list{
             grid-column-start: 5;
-            grid-column-end: 11;
+            grid-column-end: 12;
       }
      
 }
 
 
 @media screen and (max-width: 768px) {
-     
+      .nav-brand{
+            grid-column-start: 2;
+            grid-column-end: 5;
+      }
+      .nav-list{
+            grid-column-start: 6;
+            grid-column-end: 12;
+      }
      
 }
 
-@media screen and (max-width: 480px) {
+// @media screen and (max-width: 480px) {
      
-}
-
-
+// }

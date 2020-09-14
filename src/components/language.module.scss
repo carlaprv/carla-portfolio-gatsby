@@ -3,7 +3,6 @@
 
 /* font variables */
 $font-family-sans-serif:  'Inter', sans-serif;
-
 $main-bg-color: #fbf4ff;
 $main-txt-color: #342843;
 $secondary-txt-color: #7f7687;
@@ -24,4 +23,17 @@ $pink-color-2:#C551B9;
       display: inline-block;
       margin-left:30px;
       margin-top: -3px;
+}
+
+@media screen and (max-width: 1024px) {
+      .inline{
+            margin-left: 50px;
+      }
+}
+
+
+@media screen and (max-width: 768px) {
+      .inline{
+            margin-left: 100px;
+      }
 }
