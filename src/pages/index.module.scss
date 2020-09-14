@@ -100,7 +100,6 @@ video {
             grid-column-start: 3;
             grid-column-end: 10;
             padding:200px 0;
-
       }
       
       h1 {
@@ -209,3 +208,11 @@ video {
 @media screen and (max-width: 480px) {
      
 }
+
+
+@media (max-height: 600px) {
+      .viewport-header, video  {
+            height: 600px;
+      }
+}
+
