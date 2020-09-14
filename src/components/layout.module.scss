@@ -12,6 +12,12 @@ $font-family-sans-serif:  'Inter', sans-serif;
 $font-family-serif: 'Merriweather', serif;
 
 
+/* 
+"""
+SHARED CONTAINER AND SECTIONS
+      - style sections 
+"""
+*/
 .container{
       display: grid;
       grid-template-columns: repeat(12, [col-start] 1fr);
@@ -83,6 +89,12 @@ $font-family-serif: 'Merriweather', serif;
 }
 
 
+/* 
+"""
+RESPONSIVE
+      - style components responsive
+"""
+*/
 @media screen and (max-width: 1760px) {
       .coloredSection, .whiteSection {
             padding:80px 16%;

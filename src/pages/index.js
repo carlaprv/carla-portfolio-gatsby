@@ -61,11 +61,11 @@ const IndexPage = () => {
 
 			</section>
 			<section className={layoutStyles.coloredSection}>
-				<div className={indexStyles.headerContainer}>
-					<div className={indexStyles.headerImage}>
+				<div className={indexStyles.aboutContainer}>
+					<div className={indexStyles.aboutImage}>
 						<img src={data.site.siteMetadata.image}/>
 					</div>
-					<div className={indexStyles.headerText}>
+					<div className={indexStyles.aboutText}>
 						<h1>{data.site.siteMetadata.author}</h1>
 						<h2 className={indexStyles.headline}>
 							{intl.formatMessage({ id: "headline" })}

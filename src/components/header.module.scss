@@ -81,8 +81,12 @@ $pink-color-2:#C551B9;
 }
 
 
-//responsive
-
+/* 
+"""
+RESPONSIVE
+      - style components responsive
+"""
+*/
 @media screen and (max-width: 1760px) {
       .nav-brand{
             grid-column-start: 3;
