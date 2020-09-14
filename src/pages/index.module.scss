@@ -96,9 +96,8 @@ video {
       grid-row-gap: 0;
 
       .full-header-container{
-            //grid
             display: inline-block;
-            grid-column-start: 4;
+            grid-column-start: 3;
             grid-column-end: 10;
             padding:200px 0;
 
@@ -185,13 +184,14 @@ video {
 
 
 @media screen and (max-width: 1024px) {
-      .full-header-container{
-            grid-column-start: 2;
-            grid-column-end: 11;
+      .viewport-header {  
+            .full-header-container{
+                  grid-column-start: 2;
+                  grid-column-end: 11;
+            }
       }
      
 }
-
 
 
 @media screen and (max-width: 768px) {

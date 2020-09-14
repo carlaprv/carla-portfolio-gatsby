@@ -31,7 +31,7 @@ const IndexPage = () => {
 	return(
 		<Layout>
 			<section>
-				<video poster="/images/carla_banner.jpg" id="bgvid" loop muted autoPlay>
+				<video poster="" id="bgvid" loop muted autoPlay>
 					<source src="/images/video-carla-banner.mp4" type="video/mp4"/>
 				</video>
 				<div className={indexStyles.viewportHeader}>
