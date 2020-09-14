@@ -69,10 +69,113 @@ $font-family-serif: 'Merriweather', serif;
       
 }
 
+// fullheader
+.full-header-container{
+      display: grid;
+      grid-template-columns: repeat(12,1fr);
+      grid-column-gap: 0;
+      grid-row-gap: 0;
+}
+
+.full-header-content {
+      padding:200px 0;
+      display: flex;
+      flex-direction: column;
+      -moz-box-align: left;
+      align-items: left;
+      -moz-box-pack: left;
+      justify-content: center;
+      //grid
+      display: inline-block;
+      grid-column-start: 4;
+      grid-column-end: 10;
+      h1 {
+            color:#fff;
+            font-size: 4.5rem;
+      }
+      h2 {
+            color:#e0d4e8;
+            font-size: 2rem;
+            line-height: 2.55rem;
+            font-weight: 500;
+            
+      }
+      .socialIcons{
+            margin-top:0.5em;
+            list-style-type: none;
+            border-bottom: 0;
+            font-size: 1.75em;
+            padding-left: 0;
+            margin-left:0;
+      }
+
+      .socialIcons li{
+            display: inline-block;
+            margin-right: .8em;
+            margin-bottom: 0;
+      }
+
+      .socialIcons li:hover{
+            opacity: 0.5;
+      }
+
+      .socialIcons img {
+            height: 1.4em;
+      }
+      button.header-button {
+            display: inline-block;
+            padding: .6rem .6rem;
+            background: $main-bg-color;
+            border-radius: 5px;
+            font-size: 1.2rem;
+            margin: .7rem 1rem 0 0;
+            opacity: 0.8;
+            text-decoration: none;
+            width: 300px;
+            border: none;
+      }
+      
+      button.header-button:hover {
+            opacity: 1;
+      }
+      a{
+            text-decoration: none;
+            color: $pink-color;
+            font-weight: 500;
+
+
+      }
+      
+
+}
+
+///
+
 
 .intro{
       font-size: 0.98em;
       line-height: 1.6em;
+}
+
+@media screen and (max-width: 1760px) {
+      .full-header-content{
+            grid-column-start: 3;
+            grid-column-end: 11;
+      }
+      
+}
+
+@media screen and (max-width: 1200px) {
+     
+}
+
+
+@media screen and (max-width: 1024px) {
+      .full-header-content{
+            grid-column-start: 2;
+            grid-column-end: 11;
+      }
+     
 }
 
 
@@ -90,14 +193,5 @@ $font-family-serif: 'Merriweather', serif;
             grid-column-end: 6;
             justify-self: center;
       }
-     
-}
-
-
-@media screen and (max-width: 1024px) {
-     
-}
-
-@media screen and (max-width: 1200px) {
      
 }

@@ -31,27 +31,30 @@ const IndexPage = () => {
 	return(
 		<Layout>
 			<section className={layoutStyles.fullHeader}>
-				<div className={layoutStyles.fullHeaderContent}>
-					<h1>
-						{intl.formatMessage({ id: "greeting" })}
-					</h1>
-					<h2>
-						{intl.formatMessage({ id: "headline" })}
-					</h2>
-					<ul className={layoutStyles.socialIcons}>
-						{data.site.siteMetadata.socialLinks.map((socialItem) => {
-							return(
-							<li>
-								<a href={socialItem.link} target="_blank" rel="noreferrer">
-									<img src={socialItem.icon} alt={socialItem.name}/>
-								</a>
-							</li>
-							)
-						})}
-					</ul>
-					<button className={layoutStyles.headerButton} href="/"><a href="/">Visit my youtube channel</a></button>
+				<div className={indexStyles.fullHeaderContainer}>
+					<div className={indexStyles.fullHeaderContent}>
+						<h1>
+							{intl.formatMessage({ id: "greeting" })}
+						</h1>
+						<h2>
+							{intl.formatMessage({ id: "headline" })}
+						</h2>
+						<ul className={indexStyles.socialIcons}>
+							{data.site.siteMetadata.socialLinks.map((socialItem) => {
+								return(
+								<li>
+									<a href={socialItem.link} target="_blank" rel="noreferrer">
+										<img src={socialItem.icon} alt={socialItem.name}/>
+									</a>
+								</li>
+								)
+							})}
+						</ul>
+						<button className={indexStyles.headerButton} href="/">
+							<a href="/">Visit my youtube channel</a>
+						</button>
+					</div>
 				</div>
-				
 			</section>
 			<section className={layoutStyles.coloredSection}>
 				<div className={indexStyles.headerContainer}>
