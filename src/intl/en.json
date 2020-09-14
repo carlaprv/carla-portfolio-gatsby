@@ -1,12 +1,4 @@
 {
-      "title": "Carla Vieira EN",
-      "headline" : "Software Engineer • MSc Student Artificial Intelligence (USP) • Google Developer Expert @ Machine Learning",
-      "hello": "Hi",
-      "welcome": "Welcome",
-      "title_page2": "Page two",
-      "hello_page2": "Hi from the second page",
-      "go_page2": "Go to page Contact",
-      "about":{
-            "title": "about"
-      }
+      "headline": "Software Engineer • MSc Student Artificial Intelligence (USP) • Google Developer Expert @ Machine Learning",
+      "bio": "Carla holds a Bachelor's degree in Information Systems at USP, master student in Artificial Intelligence, software engineer and Google Developer Expert in Machine Learning. She promotes gender and race diversity in technology as co-organizer of perifaCode Community. She believes Technology is steadily changing the social good landscape and has been researching about the unconscious bias in Artificial Intelligence and its impacts on our society."
 }

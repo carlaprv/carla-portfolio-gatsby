@@ -2,13 +2,15 @@ import React from "react"
 import { graphql, useStaticQuery } from 'gatsby'
 
 import Card from '../components/card'
-
 import Layout from '../components/layout'
-import layoutStyles from '../components/layout.module.scss'
 
+import layoutStyles from '../components/layout.module.scss'
 import indexStyles from './index.module.scss'
 
+import { useIntl } from "gatsby-plugin-intl"
+
 const IndexPage = () => {
+	const intl = useIntl()
 	const data = useStaticQuery(graphql`
         query {
             site{
@@ -35,7 +37,9 @@ const IndexPage = () => {
 					</div>
 					<div className={indexStyles.headerText}>
 						<h1>{data.site.siteMetadata.author}</h1>
-						<h2 className={indexStyles.headline}>{data.site.siteMetadata.headline}</h2>
+						<h2 className={indexStyles.headline}>
+							{intl.formatMessage({ id: "headline" })}
+						</h2>
 						<ul className={indexStyles.socialIcons}>
 							{data.site.siteMetadata.socialLinks.map((socialItem) => {
 								return(
@@ -49,7 +53,9 @@ const IndexPage = () => {
 						</ul>
 					</div>
 				</div>
-				<p className={indexStyles.intro}>{data.site.siteMetadata.bio}</p>
+				<p className={indexStyles.intro}>
+					{intl.formatMessage({ id: "bio" })}
+				</p>
 			</section>
 			<section className={layoutStyles.whiteSection}>
 				<h2>

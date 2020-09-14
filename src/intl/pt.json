@@ -1,12 +1,4 @@
 {
-      "title": "Carla Vieira pt",
-      "headline" : "Engenheira de software",
-      "hello": "oi",
-      "welcome": "bem vindo",
-      "title_page2": "pagina doois",
-      "hello_page2": "oi da pagina dois",
-      "go_page2": "Vá para a pagina de contato",
-      "about":{
-            "title": "sobre"
-      }
+      "headline": "Engenheira de Software, mestranda em Inteligêcia Artificial (USP) e Google Developer Expert em Machine Learning",
+      "bio": "Bacharel em Sistemas de Informação pela USP, mestranda em Inteligência Artificial pela USP, engenheira de software e Google Developer Expert em Machine Learning. Co-organizadora da perifaCode, buscando levar a tecnologia para dentro das periferias. Acredita na tecnologia como ferramenta de transformação social e tem estudado sobre como o viés inconsciente tem afetado a Inteligência Artificial e como tornar algoritmos caixa-preta mais transparentes."
 }
