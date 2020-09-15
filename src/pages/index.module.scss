@@ -11,14 +11,120 @@ $pink-color: #844a7e;
 $font-family-sans-serif:  'Inter', sans-serif;
 $font-family-serif: 'Merriweather', serif;
 
-.header-container{
+
+/* 
+"""
+FULL VIDEO BANNER
+      - style video as background
+      - style full banner components: title, greeting, icons, button
+"""
+*/
+video {
+      object-fit: cover;
+      width: 100%;
+      height: 100vh;
+      position: absolute;
+      top: 50px;
+      left: 0;
+}
+.viewport-header {
+      position: relative;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      -moz-box-align: left;
+      align-items: left;
+      -moz-box-pack: left;
+      justify-content: center;
+      background-color: rgba(132, 74, 126,.8);
+
+      display: grid;
+      grid-template-columns: repeat(12,1fr);
+      grid-column-gap: 0;
+      grid-row-gap: 0;
+
+      .full-header-container{
+            display: inline-block;
+            grid-column-start: 3;
+            grid-column-end: 10;
+            padding:200px 0;
+            text-align:left;
+      }
+      
+      h1 {
+            color:#fff;
+            font-size: 4.5rem;
+      }
+      h2 {
+            color:#e0d4e8;
+            font-size: 2rem;
+            line-height: 2.55rem;
+            font-weight: 500;
+            
+      }
+      .socialIcons{
+            margin-top:0.5em;
+            list-style-type: none;
+            border-bottom: 0;
+            font-size: 1.75em;
+            padding-left: 0;
+            margin-left:0;
+      }
+
+      .socialIcons li{
+            display: inline-block;
+            margin-right: .8em;
+            margin-bottom: 0;
+      }
+
+      .socialIcons li:hover{
+            opacity: 0.5;
+      }
+
+      .socialIcons img {
+            height: 1.4em;
+      }
+
+      button.header-button {
+            display: inline-block;
+            padding: .6rem .8rem;
+            background: $main-bg-color;
+            border-radius: 5px;
+            font-size: 1.2rem;
+            margin: .7rem 1rem 0 0;
+            opacity: 0.8;
+            text-decoration: none;
+            width: auto;
+            max-width: 460px;
+            border: none;
+      }
+      
+      button.header-button:hover {
+            opacity: 1;
+      }
+
+      a{
+            text-decoration: none;
+            color: $pink-color;
+            font-weight: 500;
+      }
+}
+
+
+/* 
+"""
+ABOUT CONTAINER
+      - style about section
+"""
+*/
+.about-container{
       display: grid;
       grid-template-columns: repeat(5,1fr);
       grid-column-gap: 0;
       grid-row-gap: 0;
 }
 
-.header-image {
+.about-image {
       display: inline-block;
       margin-right:1.45rem;
       grid-column-start: 1;
@@ -26,12 +132,12 @@ $font-family-serif: 'Merriweather', serif;
 
 }
 
-.header-image img{
+.about-image img{
       border-radius: 50%;
       max-width: 200px;
 }
 
-.header-text{
+.about-text{
       display: inline-block;
       grid-column-start: 2;
       grid-column-end: 6;
@@ -68,14 +174,38 @@ $font-family-serif: 'Merriweather', serif;
       
 }
 
-
 .intro{
       font-size: 0.98em;
       line-height: 1.6em;
 }
 
 
-@media screen and (max-width: 480px) {
+/* 
+"""
+RESPONSIVE
+      - style components responsive
+"""
+*/
+@media screen and (max-width: 1760px) {
+      .full-header-container{
+            grid-column-start: 3;
+            grid-column-end: 11;
+      }
+      
+}
+
+@media screen and (max-width: 1200px) {
+     
+}
+
+
+@media screen and (max-width: 1024px) {
+      .viewport-header {  
+            .full-header-container{
+                  grid-column-start: 2;
+                  grid-column-end: 11;
+            }
+      }
      
 }
 
@@ -92,11 +222,13 @@ $font-family-serif: 'Merriweather', serif;
      
 }
 
-
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 480px) {
      
 }
 
-@media screen and (max-width: 1200px) {
-     
+@media (max-height: 600px) {
+      .viewport-header, video  {
+            height: 600px;
+      }
 }
+
