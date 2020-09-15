@@ -27,6 +27,7 @@ const Menu = () => {
                   <Link className={menuStyles.navBrand} to="/">{data.site.siteMetadata.title}</Link>
                   <Language />
 
+                  {/* Button for mobile */}
                   <button onClick={() => setMenuActive(!menuActive)} className={classNames({[menuStyles.activeOne]: menuActive})}>
                         <span className={classNames({[menuStyles.hamburger]: true, [menuStyles.hamburgerOne]: true})}></span>
                   </button>
@@ -41,9 +42,7 @@ const Menu = () => {
                               )
                         })}
                   </ul>
-                  {/* </div> */}
             </nav>
-
       )
 }
 
