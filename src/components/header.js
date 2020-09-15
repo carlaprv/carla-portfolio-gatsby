@@ -4,7 +4,6 @@ import headerStyles from './header.module.scss'
 import Language from "./language"
 import Menu from '../components/menu'
 
-
 const Header = () => {
     const data = useStaticQuery(graphql`
         query {
