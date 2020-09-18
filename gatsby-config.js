@@ -17,31 +17,37 @@ module.exports = {
 				name:'Twitter',
 				link:'https://twitter.com/carlaprvieira',
 				icon:"/images/social-icons/twitter.png",
+				svg:"/images/social-icons/twitter.svg",
 			},
 			{
 				name:'Instagram',
 				link:'https://instagram.com/carlaprvieira',
 				icon:"/images/social-icons/instagram.png",
+				svg:"/images/social-icons/instagram.svg",
 			},
 			{
 				name:'Linkedin',
 				link:'https://linkedin.com/in/carlaprv',
 				icon:"/images/social-icons/linkedin.png",
+				svg:"/images/social-icons/linkedin.svg",
 			},
 			{
 				name:'Github',
 				link:'https://github.com/carlaprv',
 				icon:"/images/social-icons/github.png",
+				svg:"/images/social-icons/github.svg",
 			},
 			{
 				name:'Youtube',
 				link:'https://youtube.com/eaicarla',
 				icon:"/images/social-icons/youtube.png",
+				svg:"/images/social-icons/youtube.svg",
 			},
 			{
 				name:'Email',
 				link:'contato@carlavieira.dev',
 				icon:"/images/social-icons/mail.png",
+				svg:"/images/social-icons/mail.svg",
 			},
 
 		],

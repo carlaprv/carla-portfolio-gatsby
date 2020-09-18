@@ -8,6 +8,12 @@ const Footer = () => {
             site{
                 siteMetadata{
                     author
+                    socialLinks {
+                        name
+                        link
+                        icon
+                        svg
+                    }
                 }
             }
         }
@@ -16,9 +22,21 @@ const Footer = () => {
     return (
         <footer className={footerStyles.footer}>
             <div className={footerStyles.footerContent}>
+                
+                <ul className={footerStyles.socialIcons}>
+                    {data.site.siteMetadata.socialLinks.map((socialItem) => {
+                        return(
+                        <li>
+                            <a href={socialItem.link} target="_blank" rel="noreferrer">
+                                <img src={socialItem.svg} alt={socialItem.name}/>
+                            </a>
+                        </li>
+                        )
+                    })}
+                </ul>
+                {/* twitter instagram linkedin github youtube email  */}
                 <p>
-                    Made with coffee & various tech in São Paulo - Brazil<br/>
-                    Created by {data.site.siteMetadata.author} © 2020
+                    © {data.site.siteMetadata.author} 2020. Made with love & various tech.
                 </p>
             </div>
         </footer>

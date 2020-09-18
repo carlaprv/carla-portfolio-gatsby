@@ -12,7 +12,7 @@ $font-family-sans-serif:  'Inter', sans-serif;
 $font-family-serif: 'Merriweather', serif;
 
 .footer{
-      padding:20px 0px;
+      padding:50px 0px;
       display: block;
       text-align: center;
       bottom:0;
@@ -23,10 +23,34 @@ $font-family-serif: 'Merriweather', serif;
       color:#fff;
 
       .footerContent{
-            font-family: $font-family-serif;
+            font-family: $font-family-sans-serif;
             text-align: center;
-            margin: 1em;
-            font-size: .8em;
+            margin: 1em 0;
+            font-size: 1em;
       }
+
 }
 
+.socialIcons{
+      list-style-type: none;
+      border-bottom: 0;
+      font-size: 1.75em;
+      padding-left: 0;
+      margin-left:0;
+      margin-bottom: 15px;      
+}
+
+.socialIcons li{
+      display: inline-block;
+      margin-right:1em;
+      opacity: 0.44;
+}
+
+.socialIcons li:hover{
+      opacity: 1;
+      transition: 0.8s;
+}
+
+.socialIcons img {
+      width: 35px;
+}
