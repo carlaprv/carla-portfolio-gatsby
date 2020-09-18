@@ -4,6 +4,7 @@
 /* color variables */
 $main-bg-color: #fbf4ff;
 $main-txt-color: #33204B;
+$txt-color: #231436;
 $secondary-txt-color: #7f7687;
 $pink-color: #844a7e;
 
@@ -18,6 +19,10 @@ SHARED CONTAINER AND SECTIONS
       - style sections 
 """
 */
+*{
+      color: $txt-color;
+}
+
 .container{
       display: grid;
       grid-template-columns: repeat(12, [col-start] 1fr);
@@ -43,15 +48,16 @@ SHARED CONTAINER AND SECTIONS
       background-position: top;
       background-attachment: fixed;
       text-align: left;
+      color: $txt-color;
 }
 
 .whiteSection {
       background: #fff;
       padding:80px 25%;
-      // background-image: url('/images/background.png');
       background-position: top;
       background-attachment: fixed;
       text-align: left;
+      color: $txt-color;
 }
 
 .content h1{
@@ -66,7 +72,6 @@ SHARED CONTAINER AND SECTIONS
 
 .content p a{
       text-decoration: none;
-      color: $main-txt-color;
       font-weight: bold;
       background-image: linear-gradient(0deg,rgba(194, 99, 184,.4) 0,rgba(194, 99, 184,.4) 30%,transparent 40%,transparent);
 }

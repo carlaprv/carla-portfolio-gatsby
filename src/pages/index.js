@@ -9,33 +9,9 @@ import indexStyles from './index.module.scss'
 
 import { useIntl } from "gatsby-plugin-intl"
 
-const IndexPage = () => {
+const IndexPage = (props) => {
 	const intl = useIntl()
-	const data = useStaticQuery(graphql`
-		query {
-			site{
-				siteMetadata{
-					author	
-					headline
-					bio
-					image
-					socialLinks {
-						name
-						link
-						icon
-					}
-				}
-			}
-			markdownRemark(fileAbsolutePath: { regex: "/index_data.md/" }) {
-				html  
-				frontmatter {
-				title
-					lang
-				}
-			}
-		}
-	`)  
-
+	const locale = intl.locale === "pt" ? `/${intl.locale}` : ""
 
 	return(
 		<Layout>
@@ -52,7 +28,7 @@ const IndexPage = () => {
 							{intl.formatMessage({ id: "headline" })}
 						</h2>
 						<ul className={indexStyles.socialIcons}>
-							{data.site.siteMetadata.socialLinks.map((socialItem) => {
+							{props.data.site.siteMetadata.socialLinks.map((socialItem) => {
 								return(
 								<li>
 									<a href={socialItem.link} target="_blank" rel="noreferrer">
@@ -71,7 +47,16 @@ const IndexPage = () => {
 			</section>
 			<section className={layoutStyles.coloredSection}>
 				<h2>{intl.formatMessage({ id: "about" })}</h2>
-				<p className={indexStyles.intro} dangerouslySetInnerHTML={{ __html: data.markdownRemark.html}}></p>
+				{intl.locale === "pt" ? (
+					<p className={indexStyles.intro}>
+						Carla é Bacharel em Sistemas de Informação pela USP, mestranda em Inteligência Artificial pela USP, engenheira de software e Google Developer Expert em Machine Learning. Co-organizadora da <a href="https://perifaCode.com">perifaCode</a>, buscando levar a tecnologia para dentro das periferias. Acredita na tecnologia como ferramenta de transformação social e tem estudado sobre como o viés inconsciente tem afetado a Inteligência Artificial e como tornar algoritmos caixa-preta mais transparentes.
+					</p>
+				) : (
+					<p className={indexStyles.intro}>
+						Carla holds a Bachelor's degree in Information Systems at USP, master student in Artificial Intelligence, software engineer and Google Developer Expert in Machine Learning. She promotes gender and race diversity in technology as co-organizer of <a href="https://perifaCode.com">perifaCode</a> Community. She believes Technology is steadily changing the social good landscape and has been researching about the unconscious bias in Artificial Intelligence and its impacts on our society.
+					</p>
+				)}
+				
 			</section>
 			<section className={layoutStyles.whiteSection}>
 				<h2>Section 2</h2>
@@ -89,3 +74,24 @@ const IndexPage = () => {
 }
 
 export default IndexPage
+
+export const query = graphql`
+	query {
+		site{
+			siteMetadata{
+				author	
+				headline
+				bio
+				image
+				socialLinks {
+					name
+					link
+					icon
+				}
+			}
+		}
+	}
+
+`
+
+
