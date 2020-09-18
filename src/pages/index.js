@@ -27,7 +27,7 @@ const IndexPage = (props) => {
 								return(
 								<li>
 									<a href={socialItem.link} target="_blank" rel="noreferrer">
-										<img src={socialItem.icon} alt={socialItem.name} alt=""/>
+										<img src={socialItem.svg} alt={socialItem.name} alt=""/>
 									</a>
 								</li>
 								)
@@ -83,6 +83,7 @@ export const query = graphql`
 					name
 					link
 					icon
+					svg
 				}
 			}
 		}

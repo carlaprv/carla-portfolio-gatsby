@@ -22,7 +22,6 @@ const Menu = () => {
 
       return (
             <nav className={menuStyles.navContainer}>
-                  
                   {/* Brand and toggle get grouped for better mobile display  */}
                   <Link className={menuStyles.navBrand} to="/">{data.site.siteMetadata.title}</Link>
                   <Language />
