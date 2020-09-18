@@ -19,7 +19,7 @@ const Language = () => {
               onClick={() => changeLocale(language)}
               className={languageStyles.button}
               style={{
-                color: currentLocale === language ? `#C551B9` : `#342843`,
+                color: currentLocale === language ? `#C551B9` : `#33204B`,
                 background: currentLocale === language ? `white` : `#D6BDDC`,
                 fontWeight: currentLocale === language ? `bold` : `normal`
               }}
