@@ -12,22 +12,31 @@ import { useIntl } from "gatsby-plugin-intl"
 const IndexPage = () => {
 	const intl = useIntl()
 	const data = useStaticQuery(graphql`
-        query {
-            site{
-                siteMetadata{
-				author	
-				headline
-				bio
-				image
-				socialLinks {
-					name
-					link
-					icon
+		query {
+			site{
+				siteMetadata{
+					author	
+					headline
+					bio
+					image
+					socialLinks {
+						name
+						link
+						icon
+					}
 				}
-                }
-            }
-        }
-    `)
+			}
+			markdownRemark(fileAbsolutePath: { regex: "/index_data.md/" }) {
+				html  
+				frontmatter {
+				title
+					lang
+				}
+			}
+		}
+	`)  
+
+
 	return(
 		<Layout>
 			<section>
@@ -62,7 +71,7 @@ const IndexPage = () => {
 			</section>
 			<section className={layoutStyles.coloredSection}>
 				<h2>{intl.formatMessage({ id: "about" })}</h2>
-				<p className={indexStyles.intro}>{intl.formatMessage({ id: "bio" })}</p>
+				<p className={indexStyles.intro} dangerouslySetInnerHTML={{ __html: data.markdownRemark.html}}></p>
 			</section>
 			<section className={layoutStyles.whiteSection}>
 				<h2>Section 2</h2>
