@@ -2,6 +2,7 @@ import React from 'react'
 import { graphql, useStaticQuery } from 'gatsby'
 import footerStyles from './footer.module.scss'
 
+
 const Footer = () => {
     const data = useStaticQuery(graphql`
         query {
@@ -22,7 +23,6 @@ const Footer = () => {
     return (
         <footer className={footerStyles.footer}>
             <div className={footerStyles.footerContent}>
-                
                 <ul className={footerStyles.socialIcons}>
                     {data.site.siteMetadata.socialLinks.map((socialItem) => {
                         return(
@@ -34,9 +34,8 @@ const Footer = () => {
                         )
                     })}
                 </ul>
-                {/* twitter instagram linkedin github youtube email  */}
                 <p>
-                    © {data.site.siteMetadata.author} 2020. Made with love & various tech.
+                    © {data.site.siteMetadata.author} 2020. Made with love & <a>various tech</a>.
                 </p>
             </div>
         </footer>
