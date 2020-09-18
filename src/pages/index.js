@@ -21,12 +21,8 @@ const IndexPage = (props) => {
 				</video>
 				<div className={indexStyles.viewportHeader}>
 					<div className={indexStyles.fullHeaderContainer}>
-						<h1>
-							{intl.formatMessage({ id: "greeting" })}
-						</h1>
-						<h2>
-							{intl.formatMessage({ id: "headline" })}
-						</h2>
+						<h1>{intl.formatMessage({ id: "greeting" })}</h1>
+						<h2>{intl.formatMessage({ id: "headline" })}</h2>
 						<ul className={indexStyles.socialIcons}>
 							{props.data.site.siteMetadata.socialLinks.map((socialItem) => {
 								return(
