@@ -20,7 +20,7 @@ const Language = () => {
               className={languageStyles.button}
               style={{
                 color: currentLocale === language ? `#C551B9` : `#33204B`,
-                background: currentLocale === language ? `white` : `#D6BDDC`,
+                background: currentLocale === language ? `white` : `#D8BBE8`,
                 fontWeight: currentLocale === language ? `bold` : `normal`
               }}
             >

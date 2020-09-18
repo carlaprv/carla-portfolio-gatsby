@@ -1,5 +1,5 @@
 import React from "react"
-import { graphql, useStaticQuery } from 'gatsby'
+import { graphql } from 'gatsby'
 
 import Card from '../components/card'
 import Layout from '../components/layout'
@@ -11,7 +11,6 @@ import { useIntl } from "gatsby-plugin-intl"
 
 const IndexPage = (props) => {
 	const intl = useIntl()
-	const locale = intl.locale === "pt" ? `/${intl.locale}` : ""
 
 	return(
 		<Layout>
@@ -28,13 +27,13 @@ const IndexPage = (props) => {
 								return(
 								<li>
 									<a href={socialItem.link} target="_blank" rel="noreferrer">
-										<img src={socialItem.icon} alt={socialItem.name}/>
+										<img src={socialItem.icon} alt={socialItem.name} alt=""/>
 									</a>
 								</li>
 								)
 							})}
 						</ul>
-						<button className={indexStyles.headerButton} href="/">
+						<button className={indexStyles.headerButton}>
 							<a href="/">{intl.formatMessage({ id: "cta" })}</a>
 						</button>
 					</div>
@@ -43,6 +42,7 @@ const IndexPage = (props) => {
 			</section>
 			<section className={layoutStyles.coloredSection}>
 				<h2>{intl.formatMessage({ id: "about" })}</h2>
+				
 				{intl.locale === "pt" ? (
 					<p className={indexStyles.intro}>
 						Carla é Bacharel em Sistemas de Informação pela USP, mestranda em Inteligência Artificial pela USP, engenheira de software e Google Developer Expert em Machine Learning. Co-organizadora da <a href="https://perifaCode.com">perifaCode</a>, buscando levar a tecnologia para dentro das periferias. Acredita na tecnologia como ferramenta de transformação social e tem estudado sobre como o viés inconsciente tem afetado a Inteligência Artificial e como tornar algoritmos caixa-preta mais transparentes.

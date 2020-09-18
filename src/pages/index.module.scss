@@ -3,9 +3,10 @@
 
 /* color variables */
 $main-bg-color: #fbf4ff;
+$secondary-bg-color: #D8BBE8;
 $main-txt-color: #33204B;
 $secondary-txt-color: #7f7687;
-$pink-color: #844a7e;
+$pink-color: #6f4a84;
 
 /* font variables */
 $font-family-sans-serif:  'Inter', sans-serif;
@@ -92,7 +93,7 @@ video {
             border-radius: 5px;
             font-size: 1.2rem;
             margin: .7rem 1rem 0 0;
-            opacity: 0.8;
+            // opacity: 0.8;
             text-decoration: none;
             width: auto;
             max-width: 460px;

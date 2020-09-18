@@ -1,9 +1,11 @@
 import React from 'react'
 import { graphql, useStaticQuery } from 'gatsby'
 import footerStyles from './footer.module.scss'
+import { useIntl } from "gatsby-plugin-intl"
 
 
 const Footer = () => {
+    const intl = useIntl()
     const data = useStaticQuery(graphql`
         query {
             site{
@@ -34,9 +36,15 @@ const Footer = () => {
                         )
                     })}
                 </ul>
-                <p>
-                    © {data.site.siteMetadata.author} 2020. Made with love & <a>various tech</a>.
-                </p>
+                {intl.locale === "pt" ? (
+                    <p>
+                        © {data.site.siteMetadata.author} 2020. Feito com amor & <a href="/">código</a>.
+                    </p>
+                ):(
+                    <p>
+                        © {data.site.siteMetadata.author} 2020. Made with love & <a href="/">various tech</a>.
+                    </p>
+                )}
             </div>
         </footer>
     )

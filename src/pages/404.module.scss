@@ -1,6 +1,16 @@
-.text{
+.content{
       display: inline-block;
       grid-column-start: 1;
       grid-column-end: 6;
       text-align: center;
+}
+
+.content h1{
+      display: block;
+      font-size:2rem;
+}
+
+.content img{
+      max-width: 400px;
+      border-radius: 50%;
 }
