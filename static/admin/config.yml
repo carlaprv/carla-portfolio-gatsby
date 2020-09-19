@@ -20,7 +20,9 @@ collections:
       - { label: 'Title', name: 'title', widget: 'string' }
       - { label: 'Publish Date', name: 'date', widget: 'datetime' }
       - { label: 'Description', name: 'description', widget: 'string' }
-      - { label: 'Language', name: 'language', widget: 'string' }
+      - { label: 'Language', name: 'language', widget: 'select', options: ["en", "pt"]}
       - { label: 'Slug', name: 'slug', widget: 'string' }
       - { label: "Featured Image", name: "thumbnail", widget: "image" }
       - { label: 'Body', name: 'body', widget: 'markdown' }
+      - { label: 'Tags', name: tags, widget: list, default: [''] }
+      - { label: 'Categories', name: categories, widget: list, default: [''] }
