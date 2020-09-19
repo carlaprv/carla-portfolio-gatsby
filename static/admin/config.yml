@@ -1,29 +1,26 @@
 backend:
-  name: git-gateway
+  name: github
+  repo: carlaprv/carla-portfolio-gatsby
   branch: main
 
-media_folder: src/img
-public_folder: /img
+media_folder: static/assets
+public_folder: /assets
 
 collections:
   - name: 'blog'
     label: 'Blog'
-    folder: 'src/posts'
+    folder: 'content/posts' # The path to the folder where the documents are stored
     create: true
-    slug: 'index'
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
     media_folder: ''
     public_folder: ''
-    path: '{{title}}/index'
     editor:
       preview: false
     fields:
       - { label: 'Title', name: 'title', widget: 'string' }
-      - { label: 'Publish Date', name: 'date', widget: 'git ' }
+      - { label: 'Publish Date', name: 'date', widget: 'datetime' }
       - { label: 'Description', name: 'description', widget: 'string' }
-      - {
-          label: "Post Image",
-          name: "featuredImage",
-          widget: "image",
-          allow_multiple: false,
-      }
+      - { label: 'Language', name: 'language', widget: 'string' }
+      - { label: 'Slug', name: 'slug', widget: 'string' }
+      - { label: "Featured Image", name: "thumbnail", widget: "image" }
       - { label: 'Body', name: 'body', widget: 'markdown' }
