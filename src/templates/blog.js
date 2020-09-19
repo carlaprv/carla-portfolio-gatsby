@@ -4,11 +4,20 @@ import { graphql } from 'gatsby'
 import Layout from '../components/layout'
 
 const Blog = (props) => {
+      const post = props.data.markdownRemark
+      // const next = props.pageContext.next
+      // const previous = props.pageContext.previous
+      
       return(
             <Layout>
-                  <h1>{props.data.markdownRemark.frontmatter.title}</h1>
-                  <p>{props.data.markdownRemark.frontmatter.date}</p>
-                  <div dangerouslySetInnerHTML={{ __html: props.data.markdownRemark.html}}></div>
+                  {/* Post Header with picture */}
+                  <h1>{post.frontmatter.title}</h1>
+                  <p>{post.frontmatter.date}</p>
+                  <div dangerouslySetInnerHTML={{ __html: post.html}}></div>
+                  {/* Post Footer with author info */}
+                  {/* Post tags */}
+                  {/* <PostNav previous={previous} next={next} /> */}
+                  {/* webmention */}
             </Layout>
       )
 }
@@ -22,9 +31,16 @@ export const query = graphql`
                         slug
                   }
                   frontmatter {
+                        date(locale: "pt-br", formatString: "DD [de] MMMM [de] YYYY")
+                        description
                         title
-                        date
+                        tags
+                        thumbnail {
+                              id
+                              publicURL
+                        }
                   }
+                  timeToRead
             }
       }
 
