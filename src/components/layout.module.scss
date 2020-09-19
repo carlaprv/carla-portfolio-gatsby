@@ -23,10 +23,15 @@ SHARED CONTAINER AND SECTIONS
       color: $txt-color;
 }
 
+body{
+      background-color: $main-bg-color;
+}
+
 .container{
       display: grid;
       grid-template-columns: repeat(12, [col-start] 1fr);
-      grid-template-rows: [row-line-1] 50px [row-line-2] auto [row-line-3] auto [row-line-4] auto [row-line-5] auto [row-line-6];
+      grid-template-rows: 1fr auto;
+      // grid-template-rows: [row-line-1] 50px [row-line-2] auto [row-line-3] auto [row-line-4] auto [row-line-5] auto [row-line-6];
       align-items: start;
       padding: 0;
       column-gap: 0px;
@@ -43,7 +48,7 @@ SHARED CONTAINER AND SECTIONS
 
 .coloredSection {
       background: $main-bg-color;
-      padding:80px 25%;
+      // padding:80px 25%;
       background-image: url('/images/background.png');
       background-position: top;
       background-attachment: fixed;

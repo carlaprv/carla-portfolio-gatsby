@@ -18,10 +18,11 @@ $font-family-serif: 'Merriweather', serif;
       bottom:0;
       grid-column-start: 1;
       grid-column-end: 13;
-      grid-row: row-line-6;
+      // grid-row: row-line-6;
+      grid-row-start: 5;
+      grid-row-end: 6;
       background-color: $main-txt-color;
       color:#fff;
-
       .footerContent{
             font-family: $font-family-serif;
             text-align: center;
