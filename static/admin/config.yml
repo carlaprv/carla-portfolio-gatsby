@@ -24,5 +24,6 @@ collections:
       - { label: 'Slug', name: 'slug', widget: 'string' }
       - { label: "Featured Image", name: "thumbnail", widget: "image" }
       - { label: 'Body', name: 'body', widget: 'markdown' }
-      - { label: 'Tags', name: tags, widget: list, default: [''] }
-      - { label: 'Categories', name: categories, widget: list, default: [''] }
+      - { label: 'Tags', name: 'tags', widget: list, default: [''] }
+      - { label: 'Categories', name: 'categories', widget: list, default: [''] }
+      - { label: 'Draft', name: 'draft', widget: "boolean", default: false }
