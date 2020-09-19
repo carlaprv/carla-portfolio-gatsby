@@ -47,8 +47,10 @@ body{
 }
 
 .coloredSection {
+      display: grid;
+      grid-template-columns: repeat(12, [col-start] 1fr);
       background: $main-bg-color;
-      padding:80px 25%;
+      padding:80px 0;
       background-image: url('/images/background.png');
       background-position: top;
       background-attachment: fixed;
@@ -57,12 +59,19 @@ body{
 }
 
 .whiteSection {
+      display: grid;
+      grid-template-columns: repeat(12, [col-start] 1fr);
       background: #fff;
-      padding:80px 25%;
+      padding:80px 0;
       background-position: top;
       background-attachment: fixed;
       text-align: left;
       color: $txt-color;
+}
+
+.section-content {
+      grid-column-start: 3;
+      grid-column-end: 11;
 }
 
 .content h1{
@@ -109,16 +118,15 @@ RESPONSIVE
 """
 */
 @media screen and (max-width: 1760px) {
-      .coloredSection, .whiteSection {
-            padding:80px 16%;
-      }
-     
+      
 }
 
 @media screen and (max-width: 1024px) {
-      .coloredSection, .whiteSection {
-            padding:80px 8%;
+      .section-content {
+            grid-column-start: 2;
+            grid-column-end: 12;
       }
+     
      
 }
 
