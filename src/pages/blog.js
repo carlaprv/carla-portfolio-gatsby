@@ -5,13 +5,14 @@ import Layout from '../components/layout'
 import blogStyles from './blog.module.scss'
 
 const BlogPage = (props) => {
+	const list = props.data.allMarkdownRemark.edges
 	
 	return (
 		<Layout>
 			<h1>Blog</h1>
 			<p>Posts here</p>
 			<ol className={blogStyles.posts}>
-				{props.data.allMarkdownRemark.edges.map((edge) => {
+				{list.map((edge) => {
 					return(
 						<li className={blogStyles.post}>
 							<Link to={`/blog/${edge.node.fields.slug}`}>
