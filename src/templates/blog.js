@@ -21,7 +21,7 @@ const BlogPost = (props) => {
                   </div>
 
                   <section className={layoutStyles.coloredSection}>
-                        <div className={layoutStyles.sectionContent}>
+                        <div className={layoutStyles.sectionContent410}>
                               <div className={blogPostStyles.postData}>
                                     {/* button back to blog list */}<Link to="/" rel="prev" className={blogPostStyles.backLink}>← Voltar na listagem</Link>
                                     <p className={blogPostStyles.date}>
@@ -52,19 +52,31 @@ const BlogPost = (props) => {
 
                               <div className={blogPostStyles.blogPagination}>
                                     {previous && (
-                                          <div className={blogPostStyles.blogNav}>
-                                                Anterior - {previous.frontmatter.title}        
+                                          <div className={blogPostStyles.blogNav}> 
+                                                <h2>Anterior</h2>
+                                                 
+                                                <Link to={`/${previous.fields.slug}`}>
+                                                      <div className={blogPostStyles.blogNavItem}> 
+                                                            <time>{previous.frontmatter.date}</time>
+                                                            <h3>{previous.frontmatter.title}</h3>
+                                                      </div>
+                                                </Link>
                                           </div>
                                           
                                     )}
                                     {next && (
-                                          <div className={blogPostStyles.blogNav}>
-                                                Próximo - {next.frontmatter.title}
+                                          <div className={blogPostStyles.blogNav}> 
+                                                <h2>Próximo</h2>
+                                                <Link to={`/${next.fields.slug}`}>
+                                                      <div className={blogPostStyles.blogNavItem}> 
+                                                            <time>{next.frontmatter.date}</time>
+                                                            <h3>{next.frontmatter.title}</h3>
+                                                      </div>
+                                                </Link>
                                           </div>
                                     )}
                               </div>
 
-                              {/* <PostNav previous={previous} next={next} /> */}
                               {/* webmention */}
                               
                         </div>

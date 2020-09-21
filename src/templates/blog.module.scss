@@ -6,12 +6,18 @@ $main-bg-color: #fbf4ff;
 $secondary-bg-color: #D8BBE8;
 $main-txt-color: #33204B;
 $secondary-txt-color: #8B8194;
+$third-txt-color: #7b7481;
 $pink-color: #6f4a84;
+$secondary-pink-color: #A173B1;
 
 /* font variables */
 $font-family-sans-serif:  'Inter', sans-serif;
 $font-family-serif: 'Merriweather', serif;
 
+
+a{
+      text-decoration: none;
+}
 
 .post-header{
       img{
@@ -51,7 +57,7 @@ $font-family-serif: 'Merriweather', serif;
             margin-top:30px;
             margin-bottom:10px;
             color:$secondary-txt-color;
-            font-size:14px;
+            font-size:15px;
             font-family: $font-family-sans-serif;
       }
 
@@ -60,8 +66,10 @@ $font-family-serif: 'Merriweather', serif;
       }
 
       .post-description{
-            color:$secondary-txt-color;
+            color:$third-txt-color;
             font-family: $font-family-serif;
+            font-size:1.2rem;
+            line-height: 2.1rem;
       }
 }
 
@@ -115,22 +123,60 @@ $font-family-serif: 'Merriweather', serif;
       color:$main-txt-color;
 
       h1{
-            font-size:1.5rem;
+            font-size:1.6rem;
       }
 
       p{
-            font-size:0.9rem;
+            font-size:1.02rem;
             line-height: 2rem;
       }
 }
 
+// PAGINATION
+
 .blog-pagination{
       display: flex;
-      flex-flow: row wrap;
-      justify-content: flex-start;
-      align-items: flex-start;
-
+      -moz-box-pack: justify;
+      justify-content: space-between;
+      border-top:1px solid $secondary-pink-color;
+      padding-top: 30px;
 }
+
+
+.blog-nav{
+      max-width: calc(50% - 0.8rem);
+      width: 50%;
+      display: block;
+
+      h2{
+            display: block;
+            color:$secondary-pink-color;
+      }
+
+      .blog-nav-item{
+            background-color: white;
+            padding:20px;
+            box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+
+            &:hover{
+                  opacity: 0.7;
+            }
+
+            time{
+                  color:$secondary-txt-color;
+                  font-size:14px;
+                  font-family: $font-family-sans-serif;
+            }
+            h3{
+                  margin-top:9px;
+            }
+     
+      }
+   
+}
+
 
 
 // .viewport-header {
