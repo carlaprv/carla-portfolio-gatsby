@@ -3,8 +3,6 @@ import { Link, graphql } from 'gatsby'
 
 import Layout from '../components/layout'
 import layoutStyles from '../components/layout.module.scss'
-import indexStyles from '../pages/index.module.scss'
-
 import blogPostStyles from './blog.module.scss'
 
 
@@ -20,7 +18,7 @@ const BlogPost = (props) => {
                         <img src={post.frontmatter.thumbnail.publicURL}/>
                   </div>
 
-                  <section className={layoutStyles.coloredSection}>
+                  <section className={layoutStyles.whiteSectionDecorated}>
                         <div className={layoutStyles.sectionContent410}>
                               <div className={blogPostStyles.postData}>
                                     {/* button back to blog list */}<Link to="/" rel="prev" className={blogPostStyles.backLink}>← Voltar na listagem</Link>
