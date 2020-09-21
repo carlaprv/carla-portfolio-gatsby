@@ -3,10 +3,10 @@ import { graphql } from 'gatsby'
 
 import Layout from '../components/layout'
 
-const Blog = (props) => {
+const BlogPost = (props) => {
       const post = props.data.markdownRemark
-      // const next = props.pageContext.next
-      // const previous = props.pageContext.previous
+      const next = props.pageContext.next
+      const previous = props.pageContext.previous
       
       return(
             <Layout>
@@ -21,6 +21,8 @@ const Blog = (props) => {
             </Layout>
       )
 }
+
+export default BlogPost
 
 export const query = graphql`
       query PostBySlug($slug: String!) {
@@ -45,5 +47,3 @@ export const query = graphql`
       }
 
 `
-
-export default Blog
