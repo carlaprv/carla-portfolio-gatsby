@@ -10,6 +10,7 @@ collections:
   - name: 'blog'
     label: 'Blog'
     folder: 'content/posts' # The path to the folder where the documents are stored
+    path: '{{year}}/{{slug}}/index'
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
     media_folder: ''
