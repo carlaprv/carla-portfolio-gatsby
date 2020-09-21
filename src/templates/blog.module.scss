@@ -152,6 +152,20 @@ a{
             font-size:1.02rem;
             line-height: 2rem;
       }
+
+
+      blockquote{
+            margin: 4rem 4rem;
+      }
+
+      blockquote p{
+            font-size: 1.3rem;
+            line-height: 2.4rem;
+            font-style:italic;
+            background: linear-gradient(180deg, rgba(185, 125, 235, 0.3) calc(70% - 10px), rgba(185, 125, 235, 0.3) calc(95%), rgba(185, 125, 235, 0.3) calc(70% + 10px) );
+            display: inline;
+
+      }
 }
 
 // PAGINATION
@@ -189,6 +203,7 @@ a{
 
             &:hover{
                   opacity: 1;
+                  transition: 0.6s;
                   box-shadow: 0px 6px 6px 0px rgba(0, 0, 0, 0.2);
             }
 

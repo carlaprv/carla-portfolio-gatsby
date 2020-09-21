@@ -18,7 +18,8 @@ A compreensão do tempo está perdida. Está escuro, mas você não precisa ir p
 
 De forma similar, o tempo apaga a fé. Não há elogios, nem últimas palavras, e os cadáveres não são mais transferidos para os cemitérios. Eles são colocados em caminhões refrigerados, os enterros são pequenos e rápidos e muitos não conseguem se despedir.
 
-Enquanto isso, continuamos a ver crianças perdendo suas vidas e pessoas, que na tentativa de ajudar àqueles que não tem o que comer, são atravessadas por balas e gritos. A população está entre a bala e o vírus.
+> Enquanto isso, continuamos a ver crianças perdendo suas vidas e pessoas, que na tentativa de ajudar àqueles que não tem o que comer, são atravessadas por balas e gritos. A população está entre a bala e o vírus. 
+> Carla Vieira
 
 Perde-se a crença no governo, no país, na própria possibilidade de que a vida continue. Por quanto tempo a democracia conseguirá sobreviver em meio a tudo isso? Teremos comida suficiente daqui a um mês?
 

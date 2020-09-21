@@ -18,11 +18,11 @@ $font-family-serif: 'Merriweather', serif;
       bottom:0;
       grid-column-start: 1;
       grid-column-end: 13;
-      // grid-row: row-line-6;
       grid-row-start: 5;
       grid-row-end: 6;
       background-color: $main-txt-color;
       color:#fff;
+      
       .footerContent{
             font-family: $font-family-serif;
             text-align: center;
@@ -41,13 +41,12 @@ $font-family-serif: 'Merriweather', serif;
             text-decoration: none;
             color:#fff;
             background-image: linear-gradient(0deg,rgba(151, 99, 194, 0.5) 0,rgba(151, 99, 194,.5) 30%,transparent 40%,transparent);
-      }
-      p a:hover{
-            color:#fff;
-            background-image: linear-gradient(0deg,rgba(151, 99, 194,.7) 0,rgba(151, 99, 194,.7) 30%,transparent 40%,transparent);
+            &:hover{
+                  color:#fff;
+                  background-image: linear-gradient(0deg,rgba(151, 99, 194,.7) 0,rgba(151, 99, 194,.7) 30%,transparent 40%,transparent);
+            }
       }
 }
-
 
 
 .socialIcons{
@@ -56,24 +55,22 @@ $font-family-serif: 'Merriweather', serif;
       font-size: 1.75em;
       padding-left: 0;
       margin-left:0;
-      margin-bottom: 15px;      
-}
-
-.socialIcons li{
-      display: inline-block;
-      margin-right:1em;
-      opacity: 0.44;
-
+      margin-bottom: 15px;  
+      &:hover{
+            opacity: 1;
+            transition: 0.8s;
+      }  
+      
+      li{
+            display: inline-block;
+            margin-right:1em;
+            opacity: 0.44;
+      }
       &:last-child{
             margin-right: 0;
       }
-}
 
-.socialIcons li:hover{
-      opacity: 1;
-      transition: 0.8s;
-}
-
-.socialIcons img {
-      width: 35px;
+      img {
+            width: 35px;
+      }
 }
