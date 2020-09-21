@@ -109,9 +109,6 @@ $font-family-serif: 'Merriweather', serif;
 }
 
 
-
-
-
 .post-content{
       margin-top: 40px;
       font-size:1rem;
@@ -125,6 +122,14 @@ $font-family-serif: 'Merriweather', serif;
             font-size:0.9rem;
             line-height: 2rem;
       }
+}
+
+.blog-pagination{
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: flex-start;
+      align-items: flex-start;
+
 }
 
 

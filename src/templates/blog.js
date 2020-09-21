@@ -25,7 +25,7 @@ const BlogPost = (props) => {
                               <div className={blogPostStyles.postData}>
                                     {/* button back to blog list */}<Link to="/" rel="prev" className={blogPostStyles.backLink}>← Voltar na listagem</Link>
                                     <p className={blogPostStyles.date}>
-                                          {post.frontmatter.date} · Leitura de {post.timeToRead} minuto
+                                          {post.frontmatter.date} · Leitura de {post.timeToRead} min
                                     </p>
                                     <h1 className={blogPostStyles.postTitle}>{post.frontmatter.title}</h1>
                                     <p  className={blogPostStyles.postDescription}>{post.frontmatter.description}</p>
@@ -50,10 +50,22 @@ const BlogPost = (props) => {
                                     <div dangerouslySetInnerHTML={{ __html: post.html}}></div>
                               </div>
 
-                               {/* Post Footer with author info */}
+                              <div className={blogPostStyles.blogPagination}>
+                                    {previous && (
+                                          <div className={blogPostStyles.blogNav}>
+                                                Anterior - {previous.frontmatter.title}        
+                                          </div>
+                                          
+                                    )}
+                                    {next && (
+                                          <div className={blogPostStyles.blogNav}>
+                                                Próximo - {next.frontmatter.title}
+                                          </div>
+                                    )}
+                              </div>
+
                               {/* <PostNav previous={previous} next={next} /> */}
                               {/* webmention */}
-                              
                               
                         </div>
                   </section>
