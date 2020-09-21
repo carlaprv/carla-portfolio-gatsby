@@ -73,7 +73,7 @@ Só porque (A) acontece juntamente com (B) não significa que (A) causa (B). Det
 4. Pode ser uma combinação das três situações anteriores. Por exemplo, (A) causa (B) e ao mesmo tempo (B) causa também (A);
 5. A correlação pode ser apenas uma coincidência, ou seja, os dois eventos não têm qualquer relação . (Se estivermos falando de um estudo científico, utilizar uma amostra grande ajuda a reduzir a probabilidade de coincidência).
 
-Dica: o site [Spurious Correlations \[9]](http://www.tylervigen.com/spurious-correlations). O Spurious Correlations ilustra os perigos da nossa época, rica em dados. Um deles é que com um processador bom o suficiente para analisar um grande conjunto de dados, você pode descobrir um grande número de correlações. Muitas vão ser estatisticamente significativas, o que significa que é improvável que tenham ocorrido por acaso. Mas as relações causais, nas quais uma mudança em uma variável causa uma mudança na outra, são muito mais difíceis de encontrar.
+Dica: o site [Spurious Correlations](http://www.tylervigen.com/spurious-correlations). O Spurious Correlations ilustra os perigos da nossa época, rica em dados. Um deles é que com um processador bom o suficiente para analisar um grande conjunto de dados, você pode descobrir um grande número de correlações. Muitas vão ser estatisticamente significativas, o que significa que é improvável que tenham ocorrido por acaso. Mas as relações causais, nas quais uma mudança em uma variável causa uma mudança na outra, são muito mais difíceis de encontrar.
 
 
 ## Como evitar o viés?

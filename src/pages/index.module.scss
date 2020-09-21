@@ -31,12 +31,12 @@ video {
 .viewport-header {
       position: relative;
       height: 100vh;
-      display: flex;
-      flex-direction: column;
-      -moz-box-align: left;
-      align-items: left;
-      -moz-box-pack: left;
-      justify-content: center;
+      // display: flex;
+      // flex-direction: column;
+      // -moz-box-align: left;
+      // align-items: left;
+      // -moz-box-pack: left;
+      // justify-content: center;
       background-color: rgba(132, 84, 155, 0.8);
 
       display: grid;
@@ -47,9 +47,14 @@ video {
       .full-header-container{
             display: inline-block;
             grid-column-start: 3;
-            grid-column-end: 10;
-            padding:200px 0;
-            text-align:left;
+            grid-column-end: 11;
+            display: flex;
+            flex-direction: column;
+            flex-flow: column wrap;
+            align-items: center;
+            justify-content: center;
+            align-content: center;
+            text-align: center;
       }
       
       h1 {
@@ -74,7 +79,7 @@ video {
       .socialIcons li{
             margin-top:0.6em;
             display: inline-block;
-            margin-right: .8em;
+            margin-right: 1.2em;
             margin-bottom: 0;
             opacity: 0.8;
       }
@@ -84,7 +89,7 @@ video {
       }
 
       .socialIcons img {
-            height: 1.3em;
+            height: 1.5em;
       }
 
       button.header-button {
@@ -226,9 +231,7 @@ RESPONSIVE
 @media (max-width: 700px) {
       .viewport-header, video  {
             height: 800px; //fix height on mobile
-      }
-      .viewport-header .full-header-container{
-            padding: 120px 0;
+            
       }
       .about-image {
             grid-column-start: 1;
@@ -258,9 +261,15 @@ RESPONSIVE
       .viewport-header, video  {
             height: 1000px; //fix height on mobile
       }
-      .viewport-header.full-header-container{
-            padding: 100px 0;
+
+      .viewport-header{
+            .full-header-container{
+                  align-items: flex-start; 
+                  text-align: left;
+            }
+
       }
+      
      
 }
 

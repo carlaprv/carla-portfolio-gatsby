@@ -127,11 +127,25 @@ a{
 
 .post-content{
       margin-top: 40px;
-      font-size:1rem;
       color:$main-txt-color;
-
+            font-family: $font-family-serif;
+            line-height: 2rem;
+      
       h1{
+            font-size:2rem;
+      }
+      h2{
             font-size:1.6rem;
+      }
+      h3{
+            font-size:1.3rem;
+      }
+
+      h1, h2, h3{
+            color:$main-txt-color;
+            font-family: $font-family-serif;
+            margin-bottom: 1.3rem;
+            margin-top: 3rem;
       }
 
       p{
