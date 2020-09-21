@@ -4,7 +4,6 @@ date: 2020-09-19T00:33:09.417Z
 description: Neque porro quisquam est qui dolorem ipsum quia dolor sit amet,
   consectetur, adipisci velit...
 language: en
-slug: lorem-ipsum
 thumbnail: índice.jpg
 tags:
   - blog

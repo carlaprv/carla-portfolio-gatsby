@@ -4,7 +4,6 @@ date: 2020-06-05T23:05:02.713Z
 description: Com certeza, uma pandemia é capaz de mudar nossa visão de mundo e,
   principalmente, nossa percepção de tempo.
 language: pt
-slug: como-uma-pandemia-transforma-o-familiar-em-desconhecido
 thumbnail: 0-h3q5uqksp_256_ri.jpeg
 tags:
   - política
