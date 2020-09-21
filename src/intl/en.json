@@ -2,7 +2,10 @@
       "greeting": "Hi, I'm Carla",
       "headline": "software engineer, content creator & community organizer",
       "cta": "Visit my Youtube Channel",
-      "bio": "Carla holds a Bachelor's degree in Information Systems at USP, master student in Artificial Intelligence, software engineer and Google Developer Expert in Machine Learning. She promotes gender and race diversity in technology as co-organizer of perifaCode Community. She believes Technology is steadily changing the social good landscape and has been researching about the unconscious bias in Artificial Intelligence and its impacts on our society.",
       "home": "Home",
-      "about": "About me"
+      "about": "About me",
+      "contact":"Contact",
+      "speaking":"Speaking",
+      "previous":"Previous",
+      "next":"Next"
 }
