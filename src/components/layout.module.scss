@@ -88,6 +88,15 @@ body{
 .section-content {
       grid-column-start: 3;
       grid-column-end: 11;
+
+      h2{
+            font-size: 2.1rem;
+      }
+      p{
+            font-size: 1.1rem;
+            line-height: 2.1rem;
+      }
+
 }
 
 .section-content-4-10 {

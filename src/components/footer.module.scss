@@ -63,6 +63,10 @@ $font-family-serif: 'Merriweather', serif;
       display: inline-block;
       margin-right:1em;
       opacity: 0.44;
+
+      &:last-child{
+            margin-right: 0;
+      }
 }
 
 .socialIcons li:hover{
