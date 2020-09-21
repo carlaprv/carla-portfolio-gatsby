@@ -1,7 +1,12 @@
 import React from 'react'
-import { graphql } from 'gatsby'
+import { Link, graphql } from 'gatsby'
 
 import Layout from '../components/layout'
+import layoutStyles from '../components/layout.module.scss'
+import indexStyles from '../pages/index.module.scss'
+
+import blogPostStyles from './blog.module.scss'
+
 
 const BlogPost = (props) => {
       const post = props.data.markdownRemark
@@ -10,14 +15,48 @@ const BlogPost = (props) => {
       
       return(
             <Layout>
-                  {/* Post Header with picture */}
-                  <h1>{post.frontmatter.title}</h1>
-                  <p>{post.frontmatter.date}</p>
-                  <div dangerouslySetInnerHTML={{ __html: post.html}}></div>
-                  {/* Post Footer with author info */}
-                  {/* Post tags */}
-                  {/* <PostNav previous={previous} next={next} /> */}
-                  {/* webmention */}
+                  <div className={blogPostStyles.postHeader}>
+                        {/* Post Header with picture */}
+                        <img src={post.frontmatter.thumbnail.publicURL}/>
+                  </div>
+
+                  <section className={layoutStyles.coloredSection}>
+                        <div className={layoutStyles.sectionContent}>
+                              <div className={blogPostStyles.postData}>
+                                    {/* button back to blog list */}<Link to="/" rel="prev" className={blogPostStyles.backLink}>← Voltar na listagem</Link>
+                                    <p className={blogPostStyles.date}>
+                                          {post.frontmatter.date} · Leitura de {post.timeToRead} minuto
+                                    </p>
+                                    <h1 className={blogPostStyles.postTitle}>{post.frontmatter.title}</h1>
+                                    <p  className={blogPostStyles.postDescription}>{post.frontmatter.description}</p>
+
+                                    <div className={blogPostStyles.postSocial}>
+                                          <div className={blogPostStyles.tags}>
+                                                {post.frontmatter.tags.map((tag) => {
+                                                      return(
+                                                            <div className={blogPostStyles.tagButton}>
+                                                                  <a href="/">{tag}</a>
+                                                            </div>
+                                                      )
+                                                })}  
+                                          </div>
+                                          <div className={blogPostStyles.share}>
+
+                                          </div>
+                                    </div>
+                              </div>
+
+                              <div className={blogPostStyles.postContent}>
+                                    <div dangerouslySetInnerHTML={{ __html: post.html}}></div>
+                              </div>
+
+                               {/* Post Footer with author info */}
+                              {/* <PostNav previous={previous} next={next} /> */}
+                              {/* webmention */}
+                              
+                              
+                        </div>
+                  </section>
             </Layout>
       )
 }

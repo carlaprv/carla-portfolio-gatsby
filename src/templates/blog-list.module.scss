@@ -1,0 +1,30 @@
+.posts {
+      list-style-type: none;
+      margin:0;
+}
+
+.post {
+      margin: 1rem 0;
+      background:#f2f2f2;
+      padding:1rem;
+
+      a{
+            color:blueviolet;
+            display: block;
+            
+      }
+      
+      a:hover{
+            
+      }
+      p{
+            padding-top:10px;
+            font-style: italic;
+            color:#878787;
+            font-size: 0.9rem;
+      }
+}
+
+.post:hover{
+      background:#ccc;
+}

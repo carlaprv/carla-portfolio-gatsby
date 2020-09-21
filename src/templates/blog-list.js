@@ -5,7 +5,7 @@ import Layout from '../components/layout'
 import BlogItem from '../components/blog-item'
 import Pagination from '../components/pagination'
 
-import blogStyles from './blog.module.scss'
+import blogStyles from './blog-list.module.scss'
 
 const BlogListPage = (props) => {
 	const list = props.data.allMarkdownRemark.edges
