@@ -139,7 +139,7 @@ a{
       -moz-box-pack: justify;
       justify-content: space-between;
       border-top:1px solid $secondary-pink-color;
-      padding-top: 30px;
+      padding-top: 40px;
 }
 
 
@@ -154,6 +154,7 @@ a{
       }
 
       .blog-nav-item{
+            margin-top: 30px;
             background-color: white;
             padding:20px;
             box-sizing: border-box;
