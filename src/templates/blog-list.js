@@ -5,7 +5,7 @@ import Layout from '../components/layout'
 import BlogItem from '../components/blog-item'
 import Pagination from '../components/pagination'
 
-import blogStyles from './blog-list.module.scss'
+import blogPostStyles from './blog-list.module.scss'
 
 const BlogListPage = (props) => {
 	const list = props.data.allMarkdownRemark.edges
@@ -18,10 +18,10 @@ const BlogListPage = (props) => {
 	return (
 		<Layout>
 			<h1>Blog</h1>
-			<ol className={blogStyles.posts}>
+			<ol className={blogPostStyles.posts}>
 				{list.map((edge) => {
 					return (
-						<li className={blogStyles.post}>
+						<li className={blogPostStyles.post}>
 							<Link to={`/${edge.node.fields.slug}`}>
 								<h2>{edge.node.frontmatter.title}</h2>
 							</Link>
@@ -32,17 +32,19 @@ const BlogListPage = (props) => {
 				})}
 			</ol>
 
-			{/* /* your code to display a list of posts */}
-			{!isFirst && (
-				<Link to={prevPage} rel="prev">
-					← Previous Page
-				</Link>
-			)}
-			{!isLast && (
-				<Link to={nextPage} rel="next">
-					Next Page →
-				</Link>
-			)}
+			<div className={blogPostStyles.pagination}>
+				{!isFirst && (
+					<Link to={prevPage} rel="prev" className={blogPostStyles.pageLink}>
+						← Previous Page
+					</Link>
+				)}
+				<span>{currentPage} de {numPages}</span>
+				{!isLast && (
+					<Link to={nextPage} rel="next" className={blogPostStyles.pageLink}>
+						Next Page →
+					</Link>
+				)}
+			</div>
 		</Layout>
 	)
 }

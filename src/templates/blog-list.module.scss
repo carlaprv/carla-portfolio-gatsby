@@ -1,3 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
+
+/* color variables */
+$main-bg-color: #fbf4ff;
+$secondary-bg-color: #D8BBE8;
+$third-bg-color: #ede2f3;
+$main-txt-color: #33204B;
+$secondary-txt-color: #8B8194;
+$third-txt-color: #7b7481;
+$pink-color: #6f4a84;
+$secondary-pink-color: #A173B1;
+
+/* font variables */
+$font-family-sans-serif:  'Inter', sans-serif;
+$font-family-serif: 'Merriweather', serif;
+
+
 .posts {
       list-style-type: none;
       margin:0;
@@ -27,4 +45,15 @@
 
 .post:hover{
       background:#ccc;
+}
+
+.pagination{
+      display: flex;
+      font-size: 1.4rem;
+      -moz-box-pack: justify;
+      justify-content: space-between;
+
+      .page-link{
+            text-decoration: none;
+      }
 }

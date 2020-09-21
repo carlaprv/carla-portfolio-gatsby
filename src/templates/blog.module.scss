@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600&display=swap');
+
 
 /* color variables */
 $main-bg-color: #fbf4ff;
@@ -14,6 +16,7 @@ $secondary-pink-color: #A173B1;
 /* font variables */
 $font-family-sans-serif:  'Inter', sans-serif;
 $font-family-serif: 'Merriweather', serif;
+$font-family-source-sans-serif: 'Source Sans Pro', sans-serif;
 
 
 a{
@@ -21,13 +24,17 @@ a{
 }
 
 .post-header{
+      margin: 0;
       img{
             display: block;
-            height: 25vh;
-            left: calc(-50vw + 50%);
+            height: 30vh;
+            left: calc(-60vw + 50%);
             object-fit: cover;
             position: relative;
             width: 100vw;  
+            margin: 0;
+            left: 0;
+            right: 0;
       }
       &:after {
             background-color: rgba(132, 84, 155, 0.4);
@@ -38,7 +45,7 @@ a{
             right: 0;
             top: 0;
             z-index: auto;
-            height: 25vh;
+            height: 30vh;
       }
 
 }

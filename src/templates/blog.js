@@ -14,14 +14,13 @@ const BlogPost = (props) => {
       return(
             <Layout>
                   <div className={blogPostStyles.postHeader}>
-                        {/* Post Header with picture */}
                         <img src={post.frontmatter.thumbnail.publicURL}/>
                   </div>
 
                   <section className={layoutStyles.whiteSectionDecorated}>
                         <div className={layoutStyles.sectionContent410}>
                               <div className={blogPostStyles.postData}>
-                                    {/* button back to blog list */}<Link to="/" rel="prev" className={blogPostStyles.backLink}>← Voltar na listagem</Link>
+                                    {/* button back to blog list */}<Link to="/blog" rel="prev" className={blogPostStyles.backLink}>← Voltar na listagem</Link>
                                     <p className={blogPostStyles.date}>
                                           {post.frontmatter.date} · Leitura de {post.timeToRead} min
                                     </p>

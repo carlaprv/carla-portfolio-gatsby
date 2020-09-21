@@ -4,8 +4,10 @@
       "cta": "Visit my Youtube Channel",
       "home": "Home",
       "about": "About me",
-      "contact":"Contact",
-      "speaking":"Speaking",
-      "previous":"Previous",
-      "next":"Next"
+      "contact": "Contact",
+      "speaking": "Speaking",
+      "page": "Page",
+      "of": "of",
+      "previous": "Previous",
+      "next": "Next"
 }

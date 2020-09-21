@@ -76,7 +76,7 @@ body{
 .white-section-decorated {
       display: grid;
       grid-template-columns: repeat(12, [col-start] 1fr);
-      background: white;
+      background: #fff;
       padding:80px 0;
       background-image: url('/images/background.png');
       background-position: top;
