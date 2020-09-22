@@ -64,12 +64,13 @@ $font-family-serif: 'Merriweather', serif;
             &:hover{
                   opacity: 1;
                   transition: 0.8s;
-            }  
+            } 
+            &:last-child{
+                  margin-right: 0;
+            }
       }
      
-      &:last-child{
-            margin-right: 0;
-      }
+     
 
       img {
             width: 35px;
