@@ -39,6 +39,7 @@ video {
       grid-row-gap: 0;
 
       .full-header-container{
+            margin-top: 50px;
             display: inline-block;
             grid-column-start: 3;
             grid-column-end: 11;
@@ -223,7 +224,7 @@ RESPONSIVE
 
 @media (max-width: 700px) {
       .viewport-header, video  {
-            height: 800px; //fix height on mobile
+            min-height: 700px; //fix height on mobile
             
       }
       .about-image {
@@ -246,13 +247,13 @@ RESPONSIVE
 
 @media (max-height: 600px) {
       .viewport-header, video  {
-            height: 600px;
+            min-height: 700px;
       }
 }
 
 @media screen and (max-width: 600px) {
       .viewport-header, video  {
-            height: 1000px; //fix height on mobile
+            min-height: 700px; //fix height on mobile
       }
 
       .viewport-header{
