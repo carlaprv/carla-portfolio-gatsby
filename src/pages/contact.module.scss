@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
+
+/* color variables */
+$main-bg-color: #fbf4ff;
+$secondary-bg-color: #D8BBE8;
+$main-txt-color: #33204B;
+$secondary-txt-color: #7f7687;
+$pink-color: #6f4a84;
+
+/* font variables */
+$font-family-sans-serif:  'Inter', sans-serif;
+$font-family-serif: 'Merriweather', serif;
+
+.text{
+      margin-top:70px;
+}
+
+/* Style inputs with type="text", select elements and textareas */
+input[type=text], input[type=email], select, textarea {
+      width: 100%; /* Full width */
+      padding: 5px; /* Some padding */ 
+      border: 1px solid #D6BDDC; /* Gray border */
+      border-radius: 4px; /* Rounded borders */
+      box-sizing: border-box; /* Make sure that padding and width stays in place */
+      margin-top: 16px; /* Add a top margin */
+      margin-bottom: 16px; /* Bottom margin */
+      resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+    }
+
+.contact{
+
+}
+.socialIcons{
+      list-style-type: none;
+      border-bottom: 0;
+      font-size: 1.35em;
+      padding-left: 0;
+      margin-left:0;
+
+      li{
+            margin-top:0.6em;
+            display: inline-block;
+            margin-right: 1.2em;
+            margin-bottom: 0;
+            opacity: 0.8;
+
+            &:hover{
+                  opacity: 0.5;
+            }
+            &:last-child{
+                  margin-right: 0;
+            }
+      }
+
+      img {
+            height: 1.5em;
+      }
+}
