@@ -56,16 +56,17 @@ $font-family-serif: 'Merriweather', serif;
       padding-left: 0;
       margin-left:0;
       margin-bottom: 15px;  
-      &:hover{
-            opacity: 1;
-            transition: 0.8s;
-      }  
       
       li{
             display: inline-block;
             margin-right:1em;
             opacity: 0.44;
+            &:hover{
+                  opacity: 1;
+                  transition: 0.8s;
+            }  
       }
+     
       &:last-child{
             margin-right: 0;
       }
