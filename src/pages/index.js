@@ -1,10 +1,11 @@
 import React from "react"
-import { graphql } from 'gatsby'
+import { Link, graphql } from 'gatsby'
 
 import SEO from '../components/seo'
 import Card from '../components/card'
 import Layout from '../components/layout'
 
+import cardStyles from '../components/card.module.scss'
 import layoutStyles from '../components/layout.module.scss'
 import indexStyles from './index.module.scss'
 
@@ -12,6 +13,7 @@ import { useIntl } from "gatsby-plugin-intl"
 
 const IndexPage = (props) => {
 	const intl = useIntl()
+	const list = props.data.allMarkdownRemark.edges
 
 	return(
 		<Layout>
@@ -64,11 +66,24 @@ const IndexPage = (props) => {
 			</section>
 			<section className={layoutStyles.coloredSection}>
 				<div className={layoutStyles.sectionContent}>
-					<h2>
-						Section 2
-						<a className={layoutStyles.button} href="/">View All Content</a>
-					</h2>
-					<Card></Card>
+					<div className={layoutStyles.titleContent}>
+						<h2>Section 2</h2>
+						<Link className={layoutStyles.button} href="/blog">View All Posts</Link>
+					</div>
+					<ul className={cardStyles.cards}>
+						{list.map((edge) => {
+						return (
+								<Card
+									slug={edge.node.fields.slug}
+									date={edge.node.frontmatter.date}
+									title={edge.node.frontmatter.title}
+									description={edge.node.frontmatter.description}
+									image={edge.node.frontmatter.thumbnail.publicURL}
+								/>
+							)
+						})}
+					</ul>
+					
 				</div>
 			</section>
 		</Layout>
@@ -80,19 +95,39 @@ export default IndexPage
 export const query = graphql`
 	query {
 		site{
-			siteMetadata{
-				author	
-				image
-				socialLinks {
-					name
-					link
-					icon
-					svg
-				}
+		   siteMetadata{
+		        author	
+		        image
+		        socialLinks {
+				name
+				link
+				icon
+				svg
+			  }
+		   }
+		}
+		allMarkdownRemark(
+			sort: { fields: frontmatter___date, order: DESC }
+			limit: 3
+		    ) {
+			edges {
+			  node {
+			    fields {
+				slug
+			    }
+			    frontmatter {
+				date(locale: "pt-br", formatString: "DD MMM[,] YYYY")
+				description
+				title
+				thumbnail {
+                           id
+                           publicURL
+                        }
+			    }
+			  }
 			}
 		}
 	}
-
 `
 
 

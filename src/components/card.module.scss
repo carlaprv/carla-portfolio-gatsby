@@ -74,20 +74,25 @@ $pink-color-2:#C551B9;
   overflow: hidden;
 }
 
+.card__title {
+  font-size: 1.3rem;
+  line-height: 2rem;
+  font-weight: 600;
+  margin-bottom: 9px;
+  font-family: $font-family-sans-serif;
+}
+
 .card__content {
   display: flex;
   flex: 1 1 auto;
   flex-direction: column;
-  padding: 2rem;
+  padding: 1rem 2rem 2rem 2rem;
+  p{
+    font-size: 1rem;
+  }
+  
 }
 
-.card__title {
-  font-size: 1.25rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  margin-bottom: 9px;
-  font-family: $font-family-sans-serif;
-}
 .card__title a{
   text-decoration: none;
   color: $main-txt-color;
@@ -104,8 +109,10 @@ $pink-color-2:#C551B9;
   margin-bottom: 1.25rem;
 }
 
-.card__image {
-  
+.card__image img{
+  width: 100%; /* width of container */
+  height: 200px; /* height of container */
+  object-fit: cover;
 }
 
 

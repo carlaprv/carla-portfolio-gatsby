@@ -1,34 +1,37 @@
 import React from 'react'
-// import { Link, graphql, useStaticQuery } from 'gatsby'
+import { Link } from 'gatsby'
 import cardStyles from './card.module.scss'
 
 const Card = ({
       slug,
       date,
       title,
-      description
+      description,
+      image
     }) => {
 
       return(
-            <div>
-                  <ul className={cardStyles.cards}>
-                        <li className={cardStyles.cards__item}>
-                              <div className={cardStyles.card}>
+            <>
+            {/* <ul className={cardStyles.cards}> */}
+                  <li className={cardStyles.cards__item}>
+                        <div className={cardStyles.card}>
+                              {image && (
                                     <div className={cardStyles.card__image}>
-                                          <img src="https://unsplash.it/800/600?image=59"/>
+                                          <img src={image}/>
                                     </div>
-                                    <div className={cardStyles.card__content}>
-                                          <div className={cardStyles.card__title}><a href="/">Flex</a></div>
-                                          <p className={cardStyles.card__text}>This is the shorthand for flex-grow, flex-shrink and flex-basis combined. The second and third parameters (flex-shrink and flex-basis) are optional. Default is 0 1 auto. </p>
-                                          <button className={cardStyles.btn}>Button</button>
+                              )}
+                              <div className={cardStyles.card__content}>
+                                    <div className={cardStyles.card__title}>
+                                          <Link to={`/${slug}`}>{title}</Link>
                                     </div>
+                                    <p className={cardStyles.card__text}>{description}</p>
+                                    {/* <button className={cardStyles.btn}>Button</button> */}
                               </div>
-                        </li>
-                  </ul>
-            </div>
-
+                        </div>
+                  </li>
+            {/* </ul> */}
+            </>
       )
-
 }
 
 export default Card;
