@@ -2,8 +2,7 @@ import React from "react"
 import { Link, graphql } from 'gatsby'
 
 import Layout from '../components/layout'
-import BlogItem from '../components/blog-item'
-import Pagination from '../components/pagination'
+import SEO from '../components/Seo'
 
 import blogPostStyles from './blog-list.module.scss'
 
@@ -17,6 +16,7 @@ const BlogListPage = (props) => {
 
 	return (
 		<Layout>
+			<SEO title='Blog' />
 			<h1>Blog</h1>
 			<ol className={blogPostStyles.posts}>
 				{list.map((edge) => {

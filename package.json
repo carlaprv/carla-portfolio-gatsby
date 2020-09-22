@@ -17,6 +17,7 @@
     "gatsby": "^2.24.54",
     "gatsby-plugin-intl": "^0.3.3",
     "gatsby-plugin-netlify-cms": "^4.3.13",
+    "gatsby-plugin-react-helmet": "^3.3.11",
     "gatsby-plugin-sass": "^2.3.12",
     "gatsby-plugin-sharp": "^2.6.35",
     "gatsby-remark-images": "^3.3.29",
@@ -27,6 +28,7 @@
     "node-sass": "^4.14.1",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
+    "react-helmet": "^6.1.0",
     "react-intl": "^5.8.1"
   },
   "devDependencies": {

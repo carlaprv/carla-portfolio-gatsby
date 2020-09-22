@@ -1,6 +1,7 @@
 import React from "react"
 import { graphql } from 'gatsby'
 
+import SEO from '../components/Seo'
 import Card from '../components/card'
 import Layout from '../components/layout'
 
@@ -14,6 +15,7 @@ const IndexPage = (props) => {
 
 	return(
 		<Layout>
+			<SEO title={intl.formatMessage({ id: "home" })} lang={intl.locale}/>
 			<section>
 				<video poster="" id="bgvid" loop muted autoPlay>
 					<source src="/images/video-carla-banner.mp4" type="video/mp4"/>
@@ -80,8 +82,6 @@ export const query = graphql`
 		site{
 			siteMetadata{
 				author	
-				headline
-				bio
 				image
 				socialLinks {
 					name

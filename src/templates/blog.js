@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link, graphql } from 'gatsby'
 
+import SEO from '../components/Seo'
 import Layout from '../components/layout'
 import layoutStyles from '../components/layout.module.scss'
 import blogPostStyles from './blog.module.scss'
@@ -13,6 +14,11 @@ const BlogPost = (props) => {
       
       return(
             <Layout>
+                  <SEO
+                        title={post.frontmatter.title}
+                        description={post.frontmatter.description}
+                        image={post.frontmatter.thumbnail}
+                  />
                   <div className={blogPostStyles.postHeader}>
                         <img src={post.frontmatter.thumbnail.publicURL}/>
                   </div>

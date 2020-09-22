@@ -8,9 +8,8 @@ module.exports = {
 	siteMetadata: {
 		title: 'carlavieira.dev',
 		author: 'Carla Vieira',
-		headline : 'Software Engineer • MSc Student Artificial Intelligence (USP) • Google Developer Expert @ Machine Learning',
 		description : 'Carla Vieira - Portfolio',
-		bio:"Carla holds a Bachelor's degree in Information Systems at USP, master student in Artificial Intelligence, software engineer and Google Developer Expert in Machine Learning. She promotes gender and race diversity in technology as co-organizer of perifaCode Community. She believes Technology is steadily changing the social good landscape and has been researching about the unconscious bias in Artificial Intelligence and its impacts on our society.",
+		url: "https://www.carlavieira.dev", // No trailing slash allowed!
 		image: "/images/avatar-carla-2020.jpg", // Path to your image you placed in the 'static' folder
 		socialLinks:[
 			{
@@ -74,6 +73,7 @@ module.exports = {
 	plugins: [
 		'gatsby-plugin-sass',
 		'gatsby-plugin-netlify-cms',
+		'gatsby-plugin-react-helmet',
 		{
 			resolve: 'gatsby-source-filesystem',
 			options: {
