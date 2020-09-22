@@ -21,6 +21,9 @@ const Card = ({
                                     </div>
                               )}
                               <div className={cardStyles.card__content}>
+                                    <div className={cardStyles.card__date}>
+                                          {date}
+                                    </div>
                                     <div className={cardStyles.card__title}>
                                           <Link to={`/${slug}`}>{title}</Link>
                                     </div>

@@ -90,6 +90,13 @@ $pink-color-2:#C551B9;
   font-family: $font-family-sans-serif;
 }
 
+.card__date{
+  margin-bottom:10px;
+  color:$secondary-txt-color;
+  font-size:15px;
+  font-family: $font-family-sans-serif;
+}
+
 .card__content {
   display: flex;
   flex: 1 1 auto;
