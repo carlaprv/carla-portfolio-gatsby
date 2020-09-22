@@ -111,6 +111,10 @@ body{
       align-items: center;
       align-content: center;
 
+      h2{
+            margin-right: 30px;
+      }
+
 }
 
 
@@ -139,11 +143,10 @@ body{
       display: inline-block;
       padding: .2rem .8rem;
       background: #D8BBE8;
-      border-radius: 0.8rem;
+      border-radius: 12px;
       color: $main-txt-color;
       font-size: .8rem;
       font-weight: 400;
-      margin: 0 1rem 0 2rem;
       opacity: 0.8;
       text-decoration: none;
       position:relative;

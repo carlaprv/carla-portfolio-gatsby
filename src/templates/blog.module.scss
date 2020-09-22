@@ -105,7 +105,7 @@ a{
       .tag-button {
             padding: .3rem .6rem;
             background: #D8BBE8;
-            border-radius: 0.8rem;
+            border-radius: 12px;
             color: $main-txt-color;
             font-size: 14px;
             font-weight: 400;
@@ -211,7 +211,7 @@ a{
             -moz-box-sizing: border-box;
             -webkit-box-sizing: border-box;
             min-height: 9rem;
-            border-radius: 0.8rem;
+            border-radius: 12px;
             box-shadow: 0px 6px 6px 0px rgba(0, 0, 0, 0.15);
 
             &:hover{
