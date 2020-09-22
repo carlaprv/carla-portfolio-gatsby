@@ -29,7 +29,7 @@ const BlogPost = (props) => {
 
                                     <div className={blogPostStyles.postSocial}>
                                           <div className={blogPostStyles.tags}>
-                                                {post.frontmatter.tags.map((tag) => {
+                                                {post.frontmatter.categories.map((tag) => {
                                                       return(
                                                             <div className={blogPostStyles.tagButton}>
                                                                   <a href="/">{tag}</a>
@@ -97,6 +97,7 @@ export const query = graphql`
                         description
                         title
                         tags
+                        categories
                         thumbnail {
                               id
                               publicURL
