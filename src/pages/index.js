@@ -67,8 +67,17 @@ const IndexPage = (props) => {
 			<section className={layoutStyles.coloredSection}>
 				<div className={layoutStyles.sectionContent}>
 					<div className={layoutStyles.titleContent}>
-						<h2>Section 2</h2>
-						<Link className={layoutStyles.button} href="/blog">View All Posts</Link>
+						{intl.locale === "pt" ? (
+							<>
+							<h2>Últimas do blog</h2>
+							<Link className={layoutStyles.button} href="/blog">Veja todos os posts</Link>
+							</>
+						):(
+							<><h2>Latest posts</h2>
+							<Link className={layoutStyles.button} href="/blog">View All Posts</Link>
+							</>
+						)}
+						
 					</div>
 					<ul className={cardStyles.cards}>
 						{list.map((edge) => {
