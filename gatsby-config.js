@@ -59,18 +59,22 @@ module.exports = {
 		menuLinks:[
 			{
 				name:'Home',
+				namept:'Início',
 				link: '/'
 			},
 			{
 				name: 'About',
+				namept:'Sobre',
 				link: '/about'
 			},
 			{
 				name:'Blog',
+				namept:'Blog',
 				link: '/blog'
 			},
 			{
 				name:'Contact',
+				namept:'Contato',
 				link: '/contact'
 			},
 
