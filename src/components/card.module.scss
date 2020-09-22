@@ -28,7 +28,7 @@ $pink-color-2:#C551B9;
 .btn {
   background-color: white;
   border: 1px solid $gray-light;
-  border-radius: 1rem;
+  border-radius: 0.8rem;
   color: $main-txt-color;
   padding: 0.5rem;
   text-transform: lowercase;
@@ -49,12 +49,19 @@ $pink-color-2:#C551B9;
   display: flex;
   padding-right: 2.2rem;
   padding-bottom: 2rem;
+
   @media(min-width: 40rem) {
     width: 50%;
   }
-  @media(min-width: 56rem) {
+  @media(min-width: 66rem) {
     width: 33.3333%;
   }
+  // @media(min-width: 40rem) {
+  //   width: 50%;
+  // }
+  // @media(min-width: 56rem) {
+  //   width: 33.3333%;
+  // }
 }
 
 .card {
@@ -62,7 +69,7 @@ $pink-color-2:#C551B9;
   border-radius: 0.8rem;
   box-shadow: 0px 6px 6px 0px rgba(0,0,0,0.15);
   display: flex;
-  padding:8px;
+  // padding:8px;
   flex-direction: column;
   overflow: hidden;
 }
@@ -71,7 +78,7 @@ $pink-color-2:#C551B9;
   display: flex;
   flex: 1 1 auto;
   flex-direction: column;
-  padding: 1rem;
+  padding: 2rem;
 }
 
 .card__title {
@@ -96,4 +103,9 @@ $pink-color-2:#C551B9;
   line-height: 1.5;
   margin-bottom: 1.25rem;
 }
+
+.card__image {
+  
+}
+
 
