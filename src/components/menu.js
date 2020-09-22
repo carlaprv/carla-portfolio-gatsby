@@ -4,7 +4,12 @@ import Language from "./language"
 import menuStyles from './menu.module.scss'
 import classNames from 'classnames';
 
+import { useIntl } from "gatsby-plugin-intl"
+
+
 const Menu = () => {
+      const intl = useIntl()
+      const locale = intl.locale
       const [menuActive, setMenuActive] = useState(false);
       const data = useStaticQuery(graphql`
         query {
@@ -13,8 +18,9 @@ const Menu = () => {
                     title
                     menuLinks {
                         name
+                        namept
                         link
-                      }
+                    }
                 }
             }
         }
@@ -27,18 +33,27 @@ const Menu = () => {
                   <Language />
 
                   {/* Button for mobile */}
-                  <button onClick={() => setMenuActive(!menuActive)} className={classNames({[menuStyles.activeOne]: menuActive})}>
-                        <span className={classNames({[menuStyles.hamburger]: true, [menuStyles.hamburgerOne]: true})}></span>
+                  <button onClick={() => setMenuActive(!menuActive)} className={classNames({ [menuStyles.activeOne]: menuActive })}>
+                        <span className={classNames({ [menuStyles.hamburger]: true, [menuStyles.hamburgerOne]: true })}></span>
                   </button>
 
                   {/* Collect the nav links and content for toggling */}
-                  <ul className={classNames({[menuStyles.navList]: true, [menuStyles.toogle]: menuActive})}>
+                  <ul className={classNames({ [menuStyles.navList]: true, [menuStyles.toogle]: menuActive })}>
                         {data.site.siteMetadata.menuLinks.slice(0).reverse().map((menuItem) => {
-                              return(
+                              return locale === "pt" ?
                                     <li>
-                                          <Link className={menuStyles.navItem} activeClassName={menuStyles.activeNavItem} to={menuItem.link}>{menuItem.name}</Link>
+                                          <Link className={menuStyles.navItem} activeClassName={menuStyles.activeNavItem} to={menuItem.link}>
+                                                {menuItem.namept}
+                                          </Link>
                                     </li>
-                              )
+
+                                    :
+                                    <li>
+                                          <Link className={menuStyles.navItem} activeClassName={menuStyles.activeNavItem} to={menuItem.link}>
+                                                {menuItem.name}
+                                          </Link>
+                                    </li>
+
                         })}
                   </ul>
             </nav>
