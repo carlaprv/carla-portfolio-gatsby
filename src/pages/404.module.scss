@@ -1,8 +1,11 @@
 .content{
-      display: inline-block;
-      grid-column-start: 1;
-      grid-column-end: 6;
+      margin: 0 auto;
       text-align: center;
+      display: flex;
+      flex-flow: column wrap; 
+      align-items: center;
+      align-content: center;
+      padding-top: 50px;
 }
 
 .content h1{
@@ -10,7 +13,19 @@
       font-size:2rem;
 }
 
+.content h2{
+      display: block;
+      font-size:1.5rem;
+}
+
 .content img{
       max-width: 400px;
       border-radius: 50%;
+}
+
+@media screen and (max-width: 500px) {
+      .content img{
+            max-width: 100%;
+      }
+
 }
