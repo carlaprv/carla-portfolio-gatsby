@@ -16,8 +16,13 @@ const ContactPage = (props) => {
 			<section className={layoutStyles.coloredSection}>
         			<div className={layoutStyles.sectionContent}>
 					<div className={contactStyles.text}>
-						<h1>Contact</h1>
-						<p>Looking to get in touch? I'd love to hear from you. The best way to get in touch with me is to send me an e-mail to <a href="mailto:contato@carlavieira.dev">contato@carlavieira.dev</a> or fill out the form below.</p>
+						<h1>{intl.formatMessage({ id: "contact" })}</h1>
+						{intl.locale === "pt" ? (
+							<p>Se você tem interesse em uma palestra minha na sua conferência/evento ou quer apenas entrar em contato, pode só enviar um e-mail para <a href="mailto:contato@carlavieira.dev">contato@carlavieira.dev</a> ou preencher o formulário abaixo.</p>
+						) : (
+							<p>Looking to get in touch? I'd love to hear from you. The best way to get in touch with me is to send me an e-mail to <a href="mailto:contato@carlavieira.dev">contato@carlavieira.dev</a> or fill out the form below.</p>
+						)}
+						
 					</div>
 
 					<div className={contactStyles.contact}>
@@ -27,7 +32,7 @@ const ContactPage = (props) => {
 									return (
 										<li>
 											<a href={socialItem.link} target="_blank" rel="noreferrer">
-												<img src={socialItem.svg} alt={socialItem.name} alt="" />
+												<img src={socialItem.svgpurple} alt={socialItem.name} alt="" />
 											</a>
 										</li>
 									)
@@ -49,7 +54,7 @@ const ContactPage = (props) => {
 									<label>{intl.formatMessage({ id: "message" })}: <textarea name="message"></textarea></label>
 								</p>
 								<p>
-									<button type="submit">Send</button>
+									<button type="submit">{intl.formatMessage({ id: "submit" })}</button>
 								</p>
 							</form>
 						</div>
@@ -73,6 +78,7 @@ export const query = graphql`
 					link
 					icon
 					svg
+					svgpurple
 				}
 			}
 		}
