@@ -17,7 +17,7 @@ const Card = ({
                         <div className={cardStyles.card}>
                               {image && (
                                     <div className={cardStyles.card__image}>
-                                          <img src={image}/>
+                                          <img src={image} alt=""/>
                                     </div>
                               )}
                               <div className={cardStyles.card__content}>

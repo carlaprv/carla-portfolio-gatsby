@@ -20,15 +20,15 @@ const BlogPost = (props) => {
                         image={post.frontmatter.thumbnail}
                   />
                   <div className={blogPostStyles.postHeader}>
-                        <img src={post.frontmatter.thumbnail.publicURL}/>
+                        <img src={post.frontmatter.thumbnail.publicURL} alt=""/>
                   </div>
 
                   <section className={layoutStyles.whiteSectionDecorated}>
                         <div className={layoutStyles.sectionContent410}>
                               <div className={blogPostStyles.postData}>
-                                    {/* button back to blog list */}<Link to="/blog" rel="prev" className={blogPostStyles.backLink}>← Voltar na listagem</Link>
+                                    {/* button back to blog list */}<Link to="/blog" rel="blog" className={blogPostStyles.backLink}>← Voltar na listagem</Link>
                                     <p className={blogPostStyles.date}>
-                                          {post.frontmatter.date} · Leitura de {post.timeToRead} min
+                                          {post.frontmatter.date} · Leitura de {post.timeToRead} min · Escrito por <Link to="/about" rel="about">{props.data.site.siteMetadata.author}</Link>
                                     </p>
                                     <h1 className={blogPostStyles.postTitle}>{post.frontmatter.title}</h1>
                                     <p  className={blogPostStyles.postDescription}>{post.frontmatter.description}</p>
@@ -92,6 +92,12 @@ export default BlogPost
 
 export const query = graphql`
       query PostBySlug($slug: String!) {
+            site{
+                  siteMetadata{
+                       author	
+                       image
+                  }
+            }
             markdownRemark(fields: { slug: { eq: $slug } }) {
                   id
                   html

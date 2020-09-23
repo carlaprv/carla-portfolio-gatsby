@@ -21,7 +21,7 @@ input[type=text], input[type=email], select, textarea {
       width: 100%; /* Full width */
       padding: 5px; /* Some padding */ 
       border: 1px solid #D6BDDC; /* Gray border */
-      border-radius: 12px; /* Rounded borders */
+      border-radius: 6px; /* Rounded borders */
       box-sizing: border-box; /* Make sure that padding and width stays in place */
       margin-top: 16px; /* Add a top margin */
       margin-bottom: 16px; /* Bottom margin */
@@ -34,7 +34,7 @@ button[type=submit] {
       color: white;
       padding: 8px 30px;
       border: none;
-      border-radius: 12px;
+      border-radius: 6px;
       cursor: pointer;
       border:none;
 

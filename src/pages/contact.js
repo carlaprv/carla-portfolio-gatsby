@@ -32,7 +32,7 @@ const ContactPage = (props) => {
 									return (
 										<li>
 											<a href={socialItem.link} target="_blank" rel="noreferrer">
-												<img src={socialItem.svgpurple} alt={socialItem.name} alt="" />
+												<img src={socialItem.svgpurple} alt={socialItem.name}/>
 											</a>
 										</li>
 									)

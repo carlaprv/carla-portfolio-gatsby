@@ -28,7 +28,7 @@ $pink-color-2:#C551B9;
 .btn {
   background-color: white;
   border: 1px solid $gray-light;
-  border-radius: 12px;
+  border-radius: 6px;
   color: $main-txt-color;
   padding: 0.5rem;
   text-transform: lowercase;
@@ -66,7 +66,7 @@ $pink-color-2:#C551B9;
 
 .card {
   background-color: white;
-  border-radius: 12px;
+  border-radius: 6px;
   box-shadow: 0 1px 3px rgba(0,0,0,0.08);
   -webkit-transition: -webkit-box-shadow .35s ease;
   transition: -webkit-box-shadow .35s ease;
