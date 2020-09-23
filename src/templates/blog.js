@@ -23,7 +23,7 @@ const BlogPost = (props) => {
                         <img src={post.frontmatter.thumbnail.publicURL} alt=""/>
                   </div>
 
-                  <section className={layoutStyles.whiteSectionDecorated}>
+                  <section className={layoutStyles.coloredSection}>
                         <div className={layoutStyles.sectionContent410}>
                               <div className={blogPostStyles.postData}>
                                     {/* button back to blog list */}<Link to="/blog" rel="blog" className={blogPostStyles.backLink}>← Voltar na listagem</Link>
