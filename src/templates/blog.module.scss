@@ -75,6 +75,7 @@ a{
 
       .post-title{
             color:#33204B;
+            line-height: 3rem;
       }
 
       .post-description{
@@ -162,15 +163,11 @@ a{
 
 
       blockquote{
-            margin: 4rem 4rem;
-      }
-
-      blockquote p{
-            font-size: 1.3rem;
-            line-height: 2.4rem;
-            font-style:italic;
-            background: linear-gradient(180deg, rgba(185, 125, 235, 0.3) calc(70% - 10px), rgba(185, 125, 235, 0.3) calc(95%), rgba(185, 125, 235, 0.3) calc(70% + 10px) );
-            display: inline;
+            background: #e1d6e8;
+            border-left: 8px solid #6f4a84;
+            border-radius: 5px;
+            color: #6f4a84;
+            padding: 20px;
       }
 
       img{
