@@ -15,6 +15,49 @@ $secondary-pink-color: #A173B1;
 $font-family-sans-serif:  'Inter', sans-serif;
 $font-family-serif: 'Merriweather', serif;
 
+.blog-header{
+      display: block;
+      height: auto;
+      left: calc(-60vw + 50%);
+      object-fit: cover;
+      position: relative;
+      width: 100vw;  
+      margin: 0;
+      left: 0;
+      right: 0;
+      background-color: #6f4a84;
+      position: relative;
+      display: grid;
+      grid-template-columns: repeat(12, [col-start] 1fr);
+      top: 0;
+
+}
+
+// .blog-header{
+//       background-color: #6f4a84;
+//       grid-column-start: 1;
+//       grid-column-end: 13;
+// }
+
+.blog-header-content{
+      grid-column-start: 3;
+      grid-column-end: 11;
+      padding: 50px 0;
+
+      h1{
+            color:#fff;
+      }
+
+      p{
+            margin-top:10px;
+            font-size:1.2rem;
+            line-height: 2rem;
+            color: #e0d4e8;
+            font-family: $font-family-sans-serif;
+            font-weight: 500;
+      }
+}
+
 
 .posts {
       list-style-type: none;

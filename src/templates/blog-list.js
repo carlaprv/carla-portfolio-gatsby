@@ -4,9 +4,8 @@ import { Link, graphql } from 'gatsby'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
 import layoutStyles from '../components/layout.module.scss'
-import blogPostStyles from './blog-list.module.scss'
+import blogListStyles from './blog-list.module.scss'
 
-import Card from '../components/card'
 import BlogItem from '../components/blog-item'
 
 import cardStyles from '../components/card.module.scss'
@@ -23,9 +22,14 @@ const BlogListPage = (props) => {
 	return (
 		<Layout>
 			<SEO title='Blog' />
+			<div className={blogListStyles.blogHeader}>
+				<div className={blogListStyles.blogHeaderContent}>
+					<h1>Blog</h1>
+					<p>Por aqui você vai encontrar conteúdos sobre: tecnologia, Inteligência Artificial, livros, séries, política, discussões de raça e gênero — e a relação entre todos esses tópicos.</p>
+				</div>
+			</div>
 			<section className={layoutStyles.coloredSection}>
                         <div className={layoutStyles.sectionContent}>
-					<h1>Blog</h1>
 					<ul className={cardStyles.cards}>
 						{list.map((edge) => {
 							return (
@@ -41,15 +45,15 @@ const BlogListPage = (props) => {
 						})}
 					</ul>
 
-					<div className={blogPostStyles.pagination}>
+					<div className={blogListStyles.pagination}>
 						{!isFirst && (
-							<Link to={prevPage} rel="prev" className={blogPostStyles.pageLink}>
+							<Link to={prevPage} rel="prev" className={blogListStyles.pageLink}>
 								← Previous Page
 							</Link>
 						)}
 						<span>{currentPage} de {numPages}</span>
 						{!isLast && (
-							<Link to={nextPage} rel="next" className={blogPostStyles.pageLink}>
+							<Link to={nextPage} rel="next" className={blogListStyles.pageLink}>
 								Next Page →
 							</Link>
 						)}
