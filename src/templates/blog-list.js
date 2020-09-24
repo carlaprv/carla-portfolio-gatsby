@@ -27,6 +27,7 @@ const BlogListPage = (props) => {
 			<SEO title='Blog' />
 			<div className={blogListStyles.blogHeader}>
 				<div className={blogListStyles.blogHeaderContent}>
+					<div class={blogListStyles.bg}></div>
 					<h1>Blog</h1>
 					<p>Por aqui você vai encontrar conteúdos sobre: tecnologia, Inteligência Artificial, livros, séries, política, discussões de raça e gênero — e a relação entre todos esses tópicos.</p>
 				</div>
