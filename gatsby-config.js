@@ -116,6 +116,12 @@ module.exports = {
 			resolve: 'gatsby-transformer-remark',
 			options:{
 				plugins: [
+					{
+						resolve: '@weknow/gatsby-remark-twitter',
+						options: {
+							align: center
+						}
+					},
 					'gatsby-remark-relative-images',
 					{
 						resolve: 'gatsby-remark-images',
