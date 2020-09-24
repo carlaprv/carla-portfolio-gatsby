@@ -100,3 +100,14 @@ $font-family-serif: 'Merriweather', serif;
             text-decoration: none;
       }
 }
+
+
+
+@media screen and (max-width: 1024px) {
+      .blog-header-content{
+            grid-column-start: 2;
+            grid-column-end: 12;
+      }
+     
+     
+}

@@ -50,9 +50,8 @@ $pink-color-2:#C551B9;
   padding-right: 2.2rem;
   padding-bottom: 2rem;
   width: 50%;
-
-  @media(min-width: 1300px) {
-    width: 40%;
+  &:last-child{
+    padding-right:0;
   }
 }
 
@@ -151,4 +150,25 @@ $pink-color-2:#C551B9;
       &:hover {
             opacity: 1;
       }
+}
+
+@media(min-width: 1300px) {
+  .cards__item {
+    width: 40%;
+  }
+  
+}
+
+@media screen and (max-width: 768px) {
+  .cards__item {
+    width: 50%;
+  }
+
+}
+
+@media screen and (max-width: 600px) {
+  .cards__item {
+    width: 100%;
+  }
+
 }
