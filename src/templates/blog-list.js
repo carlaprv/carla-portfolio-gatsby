@@ -1,17 +1,20 @@
 import React from "react"
 import { Link, graphql } from 'gatsby'
+import classNames from 'classnames';
 
 import Layout from '../components/layout'
 import SEO from '../components/seo'
-import layoutStyles from '../components/layout.module.scss'
-import blogListStyles from './blog-list.module.scss'
-
 import BlogItem from '../components/blog-item'
 
 import cardStyles from '../components/card.module.scss'
+import layoutStyles from '../components/layout.module.scss'
+import blogListStyles from './blog-list.module.scss'
+
+import { useIntl } from "gatsby-plugin-intl"
 
 
 const BlogListPage = (props) => {
+	const intl = useIntl()
 	const list = props.data.allMarkdownRemark.edges
 	const { currentPage, numPages } = props.pageContext
 	const isFirst = currentPage === 1
@@ -28,7 +31,7 @@ const BlogListPage = (props) => {
 					<p>Por aqui você vai encontrar conteúdos sobre: tecnologia, Inteligência Artificial, livros, séries, política, discussões de raça e gênero — e a relação entre todos esses tópicos.</p>
 				</div>
 			</div>
-			<section className={layoutStyles.coloredSection}>
+			<section className={classNames ({ [layoutStyles.coloredSection]: true, [blogListStyles.smallPadding]: true})}>
                         <div className={layoutStyles.sectionContent}>
 					<ul className={cardStyles.cards}>
 						{list.map((edge) => {
@@ -48,13 +51,13 @@ const BlogListPage = (props) => {
 					<div className={blogListStyles.pagination}>
 						{!isFirst && (
 							<Link to={prevPage} rel="prev" className={blogListStyles.pageLink}>
-								← Previous Page
+								← {intl.formatMessage({ id: "previous" })}
 							</Link>
 						)}
-						<span>{currentPage} de {numPages}</span>
+						<span>{intl.formatMessage({ id: "page" })} {currentPage} de {numPages}</span>
 						{!isLast && (
 							<Link to={nextPage} rel="next" className={blogListStyles.pageLink}>
-								Next Page →
+								{intl.formatMessage({ id: "next" })} →
 							</Link>
 						)}
 					</div>

@@ -159,14 +159,14 @@ $pink-color-2:#C551B9;
   
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 900px) {
   .cards__item {
     width: 50%;
   }
 
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 768px) {
   .cards__item {
     width: 100%;
   }

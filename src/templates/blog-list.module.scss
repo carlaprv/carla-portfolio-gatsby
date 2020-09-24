@@ -18,10 +18,9 @@ $font-family-serif: 'Merriweather', serif;
 .blog-header{
       display: block;
       height: auto;
-      left: calc(-60vw + 50%);
       object-fit: cover;
       position: relative;
-      width: 100vw;  
+      width: 100%;  
       margin: 0;
       left: 0;
       right: 0;
@@ -30,19 +29,16 @@ $font-family-serif: 'Merriweather', serif;
       display: grid;
       grid-template-columns: repeat(12, [col-start] 1fr);
       top: 0;
-
 }
 
-// .blog-header{
-//       background-color: #6f4a84;
-//       grid-column-start: 1;
-//       grid-column-end: 13;
-// }
+.small-padding{
+      padding:40px;
+}
 
 .blog-header-content{
       grid-column-start: 3;
       grid-column-end: 11;
-      padding: 50px 0;
+      padding: 60px 0;
 
       h1{
             color:#fff;
@@ -55,47 +51,27 @@ $font-family-serif: 'Merriweather', serif;
             color: #e0d4e8;
             font-family: $font-family-sans-serif;
             font-weight: 500;
+            margin-bottom: 0;
       }
 }
 
-
-.posts {
-      list-style-type: none;
-      margin:0;
-}
-
-.post {
-      margin: 1rem 0;
-      background:#f2f2f2;
-      padding:1rem;
-
-      a{
-            color:blueviolet;
-            display: block;
-            
-      }
-      
-      a:hover{
-            
-      }
-      p{
-            padding-top:10px;
-            font-style: italic;
-            color:#878787;
-            font-size: 0.9rem;
-      }
-}
-
-.post:hover{
-      background:#ccc;
-}
 
 .pagination{
       display: flex;
-      font-size: 1.4rem;
+      font-size: 1.2rem;
       -moz-box-pack: justify;
       justify-content: space-between;
-
+      margin-top: 30px;
+      margin-bottom: 50px;
+      font-family: $font-family-sans-serif;
+      font-weight: 600;
+      span{
+            color:$secondary-txt-color;
+            font-size:16px;
+      }
+      a{
+            color: #A173B1;
+      }
       .page-link{
             text-decoration: none;
       }
@@ -108,6 +84,16 @@ $font-family-serif: 'Merriweather', serif;
             grid-column-start: 2;
             grid-column-end: 12;
       }
-     
-     
+}
+
+
+@media screen and (max-width: 768px){
+      .blog-header-content{
+            padding: 40px 0;
+            p{
+                  margin-top:10px;
+                  font-size:1rem;
+                  line-height: 1.8rem;
+            }
+      }
 }
