@@ -27,14 +27,12 @@ const BlogListPage = (props) => {
 	return (
 		<Layout>
 			<SEO title='Blog' />
-			<div className={blogListStyles.blogHeader}>
-				<PageHeader
-					slug="blog"
-					title="Blog"
-					description="Por aqui você vai encontrar conteúdos sobre: tecnologia, Inteligência Artificial, livros, séries, política, discussões de raça e gênero — e a relação entre todos esses tópicos."
-					background="/images/blog-bg-stabilo.jpg"
-				/>
-			</div>
+			<PageHeader
+				slug="blog"
+				title="Blog"
+				description="Por aqui você vai encontrar conteúdos sobre: tecnologia, Inteligência Artificial, livros, séries, política, discussões de raça e gênero — e a relação entre todos esses tópicos."
+				background="/images/blog-bg-stabilo.jpg"
+			/>
 			<section className={classNames ({ [layoutStyles.coloredSection]: true, [blogListStyles.smallPadding]: true})}>
                         <div className={layoutStyles.sectionContent}>
 					<ul className={cardStyles.cards}>

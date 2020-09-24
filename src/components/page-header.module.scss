@@ -6,13 +6,10 @@ $font-family-serif: 'Merriweather', serif;
 .blog-header{
       display: block;
       height: auto;
-      // object-fit: cover;
-      // position: relative;
       width: 100%;  
       margin: 0;
       left: 0;
       right: 0;
-      // background-color: #6f4a84;
       z-index: 5;
       position: relative;
       display: grid;
@@ -69,5 +66,17 @@ $font-family-serif: 'Merriweather', serif;
       .blog-header-content{
             grid-column-start: 2;
             grid-column-end: 12;
+      }
+     
+}
+
+@media screen and (max-width: 768px){
+      .blog-header-content{
+            padding: 40px 0;
+            p{
+                  margin-top:10px;
+                  font-size:1rem;
+                  line-height: 1.8rem;
+            }
       }
 }

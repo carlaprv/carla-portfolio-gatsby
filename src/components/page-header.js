@@ -14,13 +14,13 @@ const PageHeader = ({
       }
 
       return(
-            <>
+            <div className={pageHeaderStyles.blogHeader}>
                   <div className={pageHeaderStyles.blogHeaderContent}>
                         <div class={pageHeaderStyles.bg} style={style}></div>
                         <Link to={`/${slug}`}><h1>{title}</h1></Link>
                         <p>{description}</p>
                   </div>
-            </>
+            </div>
       )
 }
 
