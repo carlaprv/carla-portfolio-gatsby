@@ -65,7 +65,11 @@ export const BlogListQuery = graphql`
             date(locale: "pt-br", formatString: "DD MMM[,] YYYY")
             description
             title
-            tags
+		tags
+		thumbnail {
+			id
+			publicURL
+		   }
           }
           timeToRead
         }
