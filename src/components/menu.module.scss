@@ -40,7 +40,7 @@ $pink-color-2:#C551B9;
       color:#fff;
       text-decoration: none;
       grid-column-start: 3;
-      grid-column-end: 4;
+      grid-column-end: 5;
       font-size: 1.2rem;
       letter-spacing: 0.02rem;
 }
@@ -90,10 +90,10 @@ RESPONSIVE
 @media screen and (max-width: 1760px) {
       .nav-brand{
             grid-column-start: 3;
-            grid-column-end: 4;
+            grid-column-end: 5;
       }
       .nav-list{
-            grid-column-start: 5;
+            grid-column-start: 6;
             grid-column-end: 11;
       }
      
@@ -103,10 +103,10 @@ RESPONSIVE
 @media screen and (max-width: 1024px) {
       .nav-brand{
             grid-column-start: 2;
-            grid-column-end: 4;
+            grid-column-end: 5;
       }
       .nav-list{
-            grid-column-start: 5;
+            grid-column-start: 6;
             grid-column-end: 12;
       }
      
