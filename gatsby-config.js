@@ -119,7 +119,7 @@ module.exports = {
 					{
 						resolve: '@weknow/gatsby-remark-twitter',
 						options: {
-							align: center
+							align: `center`
 						}
 					},
 					'gatsby-remark-relative-images',
