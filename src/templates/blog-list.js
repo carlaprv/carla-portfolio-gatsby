@@ -1,22 +1,12 @@
 import React from "react"
 import { Link, graphql } from 'gatsby'
-import classNames from 'classnames';
 
 import Layout from '../components/layout'
 import SEO from '../components/seo'
-import BlogItem from '../components/blog-item'
-import PageHeader from '../components/page-header'
 
-
-import cardStyles from '../components/card.module.scss'
-import layoutStyles from '../components/layout.module.scss'
-import blogListStyles from './blog-list.module.scss'
-
-import { useIntl } from "gatsby-plugin-intl"
-
+import blogPostStyles from './blog-list.module.scss'
 
 const BlogListPage = (props) => {
-	const intl = useIntl()
 	const list = props.data.allMarkdownRemark.edges
 	const { currentPage, numPages } = props.pageContext
 	const isFirst = currentPage === 1
@@ -27,44 +17,34 @@ const BlogListPage = (props) => {
 	return (
 		<Layout>
 			<SEO title='Blog' />
-			<PageHeader
-				slug="blog"
-				title="Blog"
-				description="Por aqui você vai encontrar conteúdos sobre: tecnologia, Inteligência Artificial, livros, séries, política, discussões de raça e gênero — e a relação entre todos esses tópicos."
-				background="/images/blog-bg-stabilo.jpg"
-			/>
-			<section className={classNames ({ [layoutStyles.coloredSection]: true, [blogListStyles.smallPadding]: true})}>
-                        <div className={layoutStyles.sectionContent}>
-					<ul className={cardStyles.cards}>
-						{list.map((edge) => {
-							return (
-								<BlogItem
-									slug={edge.node.fields.slug}
-									date={edge.node.frontmatter.date}
-									title={edge.node.frontmatter.title}
-									description={edge.node.frontmatter.description}
-									categories={edge.node.frontmatter.categories}
-									image={edge.node.frontmatter.thumbnail.publicURL}
-								/>
-							)
-						})}
-					</ul>
+			<h1>Blog</h1>
+			<ol className={blogPostStyles.posts}>
+				{list.map((edge) => {
+					return (
+						<li className={blogPostStyles.post}>
+							<Link to={`/${edge.node.fields.slug}`}>
+								<h2>{edge.node.frontmatter.title}</h2>
+							</Link>
+							<p>{edge.node.frontmatter.date}</p>
+							<p>{edge.node.frontmatter.description}</p>
+						</li>
+					)
+				})}
+			</ol>
 
-					<div className={blogListStyles.pagination}>
-						{!isFirst && (
-							<Link to={prevPage} rel="prev" className={blogListStyles.pageLink}>
-								← {intl.formatMessage({ id: "previous" })}
-							</Link>
-						)}
-						<span>{intl.formatMessage({ id: "page" })} {currentPage} de {numPages}</span>
-						{!isLast && (
-							<Link to={nextPage} rel="next" className={blogListStyles.pageLink}>
-								{intl.formatMessage({ id: "next" })} →
-							</Link>
-						)}
-					</div>
-				</div>
-			</section>
+			<div className={blogPostStyles.pagination}>
+				{!isFirst && (
+					<Link to={prevPage} rel="prev" className={blogPostStyles.pageLink}>
+						← Previous Page
+					</Link>
+				)}
+				<span>{currentPage} de {numPages}</span>
+				{!isLast && (
+					<Link to={nextPage} rel="next" className={blogPostStyles.pageLink}>
+						Next Page →
+					</Link>
+				)}
+			</div>
 		</Layout>
 	)
 }
@@ -82,15 +62,14 @@ export const BlogListQuery = graphql`
             slug
           }
           frontmatter {
-		date(locale: "pt-br", formatString: "DD MMM[,] YYYY")
-		description
-		title
+            date(locale: "pt-br", formatString: "DD MMM[,] YYYY")
+            description
+            title
 		tags
-		categories
 		thumbnail {
-		   id
-		   publicURL
-		}
+			id
+			publicURL
+		   }
           }
           timeToRead
         }
