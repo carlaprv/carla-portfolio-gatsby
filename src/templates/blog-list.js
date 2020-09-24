@@ -5,6 +5,8 @@ import classNames from 'classnames';
 import Layout from '../components/layout'
 import SEO from '../components/seo'
 import BlogItem from '../components/blog-item'
+import PageHeader from '../components/page-header'
+
 
 import cardStyles from '../components/card.module.scss'
 import layoutStyles from '../components/layout.module.scss'
@@ -26,11 +28,12 @@ const BlogListPage = (props) => {
 		<Layout>
 			<SEO title='Blog' />
 			<div className={blogListStyles.blogHeader}>
-				<div className={blogListStyles.blogHeaderContent}>
-					<div class={blogListStyles.bg}></div>
-					<h1>Blog</h1>
-					<p>Por aqui você vai encontrar conteúdos sobre: tecnologia, Inteligência Artificial, livros, séries, política, discussões de raça e gênero — e a relação entre todos esses tópicos.</p>
-				</div>
+				<PageHeader
+					slug="blog"
+					title="Blog"
+					description="Por aqui você vai encontrar conteúdos sobre: tecnologia, Inteligência Artificial, livros, séries, política, discussões de raça e gênero — e a relação entre todos esses tópicos."
+					background="/images/blog-bg-stabilo.jpg"
+				/>
 			</div>
 			<section className={classNames ({ [layoutStyles.coloredSection]: true, [blogListStyles.smallPadding]: true})}>
                         <div className={layoutStyles.sectionContent}>
