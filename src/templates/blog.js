@@ -26,7 +26,7 @@ const BlogPost = (props) => {
                   <section className={layoutStyles.coloredSection}>
                         <div className={layoutStyles.sectionContent410}>
                               <div className={blogPostStyles.postData}>
-                                    {/* button back to blog list */}<Link to="/blog" rel="blog" className={blogPostStyles.backLink}>← Voltar na listagem</Link>
+                                    <Link to="/blog" rel="blog" className={blogPostStyles.backLink}>← Voltar na listagem</Link>
                                     <p className={blogPostStyles.date}>
                                           {post.frontmatter.date} · Leitura de {post.timeToRead} min · Escrito por <Link to="/about" rel="about">{props.data.site.siteMetadata.author}</Link>
                                     </p>
