@@ -27,3 +27,21 @@ collections:
       - { label: 'Tags', name: 'tags', widget: list, default: [''] }
       - { label: 'Categories', name: 'categories', widget: list, default: [''] }
       - { label: 'Draft', name: 'draft', widget: "boolean", default: false }
+  - name: 'youtube'
+    label: 'Youtube'
+    label_singular: 'video'
+    folder: 'content/youtube'
+    path: '{{year}}/{{title}}/index'
+    create: true
+    slug: "{{year}}--{{title}}"
+    media_folder: ''
+    public_folder: ''
+    editor:
+      preview: false
+    fields:
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Date', name: 'date', widget: 'datetime' }
+      - { label: 'Description', name: 'description', widget: 'string'}
+      - { label: 'Video ID', name: 'videoid', widget: 'string' }
+      - { label: 'Thumbnail', name: 'thumbnail', widget: 'image'}
+      - { label: 'Youtube link', name: 'slides', widget: 'string'}
