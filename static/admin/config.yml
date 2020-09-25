@@ -42,6 +42,7 @@ collections:
       - { label: 'Title', name: 'title', widget: 'string' }
       - { label: 'Date', name: 'date', widget: 'datetime' }
       - { label: 'Description', name: 'description', widget: 'string'}
+      - { label: 'Channel', name: 'channel', widget: 'string'}
       - { label: 'Video ID', name: 'videoid', widget: 'string' }
       - { label: 'Thumbnail', name: 'thumbnail', widget: 'image'}
       - { label: 'Youtube link', name: 'link', widget: 'string'}
