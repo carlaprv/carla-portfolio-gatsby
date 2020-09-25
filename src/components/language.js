@@ -1,7 +1,33 @@
 import React from "react"
 import { IntlContextConsumer, changeLocale } from "gatsby-plugin-intl"
-import languageStyles from './language.module.scss'
+import styled from "styled-components"
 
+const LanguageContainer = styled.div`
+  display: inline-block;
+  margin-left:30px;
+  margin-top: -3px;
+
+  @media screen and (max-width: 1024px) {
+    margin-left: 50px;
+  }
+
+  @media screen and (max-width: 768px) {
+    margin-left: 50px;
+  }
+
+  @media screen and (max-width: 600px) {
+    margin-left: 170px;
+  }
+`
+const LanguageButton = styled.a`
+  font-family: $font-family-sans-serif;
+  margin-right: 10px;
+  text-decoration: none;
+  cursor: pointer;
+  padding: 6px;
+  border-radius: 6px;
+  font-size: 12px;
+`
 
 const languageName = {
   en: "EN",
@@ -10,14 +36,13 @@ const languageName = {
 
 const Language = () => {
   return (
-    <div className={languageStyles.inline}>
+    <LanguageContainer>
       <IntlContextConsumer>
         {({ languages, language: currentLocale }) =>
           languages.map(language => (
-            <a
+            <LanguageButton
               key={language}
               onClick={() => changeLocale(language)}
-              className={languageStyles.button}
               style={{
                 color: currentLocale === language ? `#C551B9` : `#33204B`,
                 background: currentLocale === language ? `white` : `#D8BBE8`,
@@ -25,11 +50,11 @@ const Language = () => {
               }}
             >
               {languageName[language]}
-            </a>
+            </LanguageButton>
           ))
         }
       </IntlContextConsumer>
-    </div>
+    </LanguageContainer>
   )
 }
 
