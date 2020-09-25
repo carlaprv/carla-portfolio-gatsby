@@ -10,19 +10,12 @@ const VideosList = styled.ul`
 	margin: 0;
 	margin-top: 40px;
 	padding: 0;
+	justify-content: space-between;
 `
 
 const VideoItem = styled.li`
-	display: flex;
-	padding-right: 2.2rem;
-	width: 50%;
-
-	&:last-child{
-	  padding-right:0;
-	}
-  
 	@media(min-width: 1300px) {
-	  width: 40%;  
+	  width: 30%;  
 	}
   
 	@media screen and (max-width: 900px) {
@@ -49,8 +42,14 @@ const VideoThumbnail = styled.img`
 	height: auto; 
 	object-fit: cover;
 
+	height:220px;
+
 	&:hover{
 	box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+	}
+
+	@media screen and (max-width: 768px) {
+		height:220px;
 	}
 `
 
