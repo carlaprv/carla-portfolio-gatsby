@@ -85,6 +85,18 @@ module.exports = {
 		'gatsby-plugin-netlify-cms',
 		'gatsby-plugin-react-helmet',
 		{
+			resolve: `gatsby-plugin-manifest`,
+			options: {
+				name: `carlavieira.dev`,
+				short_name: `carlavieira.dev`,
+				start_url: `/`,
+				background_color: `#fbf4ff`,
+				theme_color: `#995692`,
+				display: `standalone`,
+				icon: `static/images/avatar_carla_final.jpg`, // This path is relative to the root of the site.			
+			},
+		},
+		{
 			resolve: 'gatsby-source-filesystem',
 			options: {
 				name: 'src',

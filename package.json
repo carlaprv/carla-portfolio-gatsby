@@ -17,6 +17,7 @@
     "@weknow/gatsby-remark-twitter": "^0.2.3",
     "gatsby": "^2.24.54",
     "gatsby-plugin-intl": "^0.3.3",
+    "gatsby-plugin-manifest": "^2.4.31",
     "gatsby-plugin-netlify-cms": "^4.3.13",
     "gatsby-plugin-react-helmet": "^3.3.11",
     "gatsby-plugin-sass": "^2.3.12",
