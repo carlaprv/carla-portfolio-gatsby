@@ -72,7 +72,8 @@ const BlogListPage = (props) => {
 export const BlogListQuery = graphql`
   query BlogListQuery($skip: Int!, $limit: Int!) {
     allMarkdownRemark(
-      sort: { fields: frontmatter___date, order: DESC }
+	sort: { fields: frontmatter___date, order: DESC }
+	filter: { fileAbsolutePath: { regex: "/(/content/posts)/" } }
       limit: $limit
       skip: $skip
     ) {
@@ -85,7 +86,6 @@ export const BlogListQuery = graphql`
 		date(locale: "pt-br", formatString: "DD MMM[,] YYYY")
 		description
 		title
-		tags
 		categories
 		thumbnail {
 		   id
