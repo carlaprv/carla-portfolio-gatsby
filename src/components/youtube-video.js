@@ -18,8 +18,8 @@ const VideoItem = styled.li`
 	  width: 30%;  
 	}
   
-	@media screen and (max-width: 900px) {
-	  width: 50%;
+	@media screen and (max-width: 1301px) {
+	  width: 48%;
 	}
   
 	@media screen and (max-width: 768px) {
@@ -42,8 +42,6 @@ const VideoThumbnail = styled.img`
 	width: 100%; 
 	height: auto; 
 	object-fit: cover;
-
-	height:220px;
 
 	&:hover{
 	box-shadow: 0 6px 15px rgba(0,0,0,0.2);
