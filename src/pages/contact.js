@@ -1,11 +1,14 @@
 import React from "react"
 import { graphql } from 'gatsby'
+import { useIntl } from "gatsby-plugin-intl"
 
 import Layout from '../components/layout'
 import SEO from '../components/seo'
-import { useIntl } from "gatsby-plugin-intl"
+import Social from '../components/social-icons'
+
 import contactStyles from './contact.module.scss'
 import layoutStyles from '../components/layout.module.scss'
+
 
 const ContactPage = (props) => {
 	const intl = useIntl()
@@ -27,17 +30,7 @@ const ContactPage = (props) => {
 
 					<div className={contactStyles.contact}>
 						<div className={contactStyles.socialInfo}>
-							<ul className={contactStyles.socialIcons}>
-								{props.data.site.siteMetadata.socialLinks.map((socialItem) => {
-									return (
-										<li>
-											<a href={socialItem.link} target="_blank" rel="noreferrer">
-												<img src={socialItem.svgpurple} alt={socialItem.name}/>
-											</a>
-										</li>
-									)
-								})}
-							</ul>
+							<Social purple={true}/>
 						</div>
 						<div className={contactStyles.contactForm}>
 							<form name="contact" method="POST" data-netlify="true">
