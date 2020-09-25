@@ -7,5 +7,5 @@ description: Neste vídeo, Carla fala um pouco sobre sua experiência durante o
   semestre.
 videoid: eliFc3akWts
 thumbnail: thmbnail-video_5_cientista.png
-slides: https://youtu.be/eliFc3akWts
+link: https://youtu.be/eliFc3akWts
 ---
