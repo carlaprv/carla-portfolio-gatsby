@@ -28,6 +28,10 @@ $font-family-serif: 'Merriweather', serif;
             text-align: center;
             margin: 1em 0;
             font-size: 0.9em;
+
+            ul{
+                  justify-content: center;
+            }
       }
 
 }
@@ -45,32 +49,5 @@ $font-family-serif: 'Merriweather', serif;
                   color:#fff;
                   background-image: linear-gradient(0deg,rgba(151, 99, 194,.7) 0,rgba(151, 99, 194,.7) 30%,transparent 40%,transparent);
             }
-      }
-}
-
-
-.socialIcons{
-      list-style-type: none;
-      border-bottom: 0;
-      font-size: 1.75em;
-      padding-left: 0;
-      margin-left:0;
-      margin-bottom: 15px;  
-      
-      li{
-            display: inline-block;
-            margin-right:1em;
-            opacity: 0.44;
-            &:hover{
-                  opacity: 1;
-                  transition: 0.8s;
-            } 
-            &:last-child{
-                  margin-right: 0;
-            }
-      }
-
-      img {
-            width: 35px;
       }
 }

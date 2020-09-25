@@ -89,7 +89,7 @@ const IndexPage = (props) => {
 						{intl.locale === "pt" ? (
 							<>
 							<h2>Últimas do blog</h2>
-							<Link className={layoutStyles.button} href="youtube.com/eaicarla">Veja todos os posts</Link>
+							<Link className={layoutStyles.button} href="/blog">Veja todos os posts</Link>
 							</>
 						):(
 							<><h2>Latest posts</h2>
