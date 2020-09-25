@@ -9,7 +9,7 @@
 </h1>
 
 Personal website/blog.
-  
+
 [![Netlify Status](https://api.netlify.com/api/v1/badges/2fc5f055-3c52-41f0-a736-8ca4236e86d7/deploy-status)](https://app.netlify.com/sites/carla-gatsby-portfolio/deploys)
 
 ## 💫 This site was built with
