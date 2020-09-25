@@ -1,12 +1,37 @@
 import React from "react"
-import Layout from "../components/layout"
+import styled from "styled-components"
 import { Link } from 'gatsby'
-
-
-import layoutStyles from '../components/layout.module.scss'
-import errorStyles from './404.module.scss'
 import { useIntl } from "gatsby-plugin-intl"
 
+import Layout from "../components/layout"
+import layoutStyles from '../components/layout.module.scss'
+
+const ErrorContainer = styled.div`
+      margin: 0 auto;
+      text-align: center;
+      display: flex;
+      flex-flow: column wrap; 
+      align-items: center;
+      align-content: center;
+      padding-top: 50px;
+
+`
+const ErrorTitle = styled.h1`
+      display: block;
+      font-size:2rem;
+`
+
+const ErrorSubTitle = styled.h2`
+      display: block;
+      font-size:1.5rem;
+`
+const ErrorImage= styled.img`
+      max-width: 400px;
+      border-radius: 50%;
+      @media screen and (max-width: 500px) {
+            max-width: 100%;      
+      }
+`
 
 const NotFoundPage = () => {
       const intl = useIntl()
@@ -15,24 +40,24 @@ const NotFoundPage = () => {
             <Layout>
                   <section className={layoutStyles.coloredSection}>
                         <div className={layoutStyles.sectionContent}>
-                              <div className={errorStyles.content}>
+                              <ErrorContainer>
                                     {intl.locale === "pt" ? (
                                           <>
-                                          <h1>Não tem nada aqui...</h1>
-                                          <img src="/images/avatar_carla_sad_transparent.png" alt="Ilustração da carla com uma carinha triste."/>
-                                          <h2>Mas não se preocupe!</h2>
+                                          <ErrorTitle>Não tem nada aqui...</ErrorTitle>
+                                          <ErrorImage src="/images/avatar_carla_sad_transparent.png" alt="Ilustração da carla com uma carinha triste."/>
+                                          <ErrorSubTitle>Mas não se preocupe!</ErrorSubTitle>
                                           <p>Que tal dar uma lida no meu <Link to="/blog">blog</Link>?</p>
                                           </>
                                     ):(
                                           <>
-                                          <h1>404: Page Not Found</h1>
-                                          <img src="/images/avatar_carla_sad_transparent.png" alt="Illustration of Carla with a sad face."/>
-                                          <h2>Don't worry!</h2>
+                                          <ErrorTitle>404: Page Not Found</ErrorTitle>
+                                          <ErrorImage src="/images/avatar_carla_sad_transparent.png" alt="Illustration of Carla with a sad face."/>
+                                          <ErrorSubTitle>Don't worry!</ErrorSubTitle>
                                           <p>What about reading my <Link to="/blog">blog</Link>?</p>
                                           </>
                                     )}
                                     
-                              </div>
+                              </ErrorContainer>
                         </div>
                   </section>
             </Layout>
