@@ -44,4 +44,4 @@ collections:
       - { label: 'Description', name: 'description', widget: 'string'}
       - { label: 'Video ID', name: 'videoid', widget: 'string' }
       - { label: 'Thumbnail', name: 'thumbnail', widget: 'image'}
-      - { label: 'Youtube link', name: 'slides', widget: 'string'}
+      - { label: 'Youtube link', name: 'link', widget: 'string'}
