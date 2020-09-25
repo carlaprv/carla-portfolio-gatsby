@@ -111,6 +111,13 @@ module.exports = {
 			},
 		},
 		{
+			resolve: 'gatsby-source-filesystem',
+			options: {
+				name: `youtube`,
+				path: `${__dirname}/content/youtube/`,
+			},
+		},
+		{
 			resolve: 'gatsby-plugin-intl',
 			options: {
 				// language JSON resource path

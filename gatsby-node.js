@@ -10,6 +10,7 @@ module.exports.createPages = async ({ graphql, actions }) => {
 		`{
 		  allMarkdownRemark(
 		    sort: { fields: [frontmatter___date], order: DESC }
+		    filter: { fileAbsolutePath: { regex: "/(/content/posts)/" } }
 		    limit: 1000
 		  ) {
 		    edges {
