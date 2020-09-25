@@ -14,9 +14,9 @@ Personal website/blog.
 
 ## 💫 This site was built with </>
 
-[Gatsby](https://www.gatsbyjs.org/)
-[Netlify]((https://app.netlify.com/start/deploy?repository=https://github.com/gatsbyjs/gatsby-starter-hello-world)
-Markdown
-GitHub
+- [Gatsby](https://www.gatsbyjs.org/)
+- [Netlify](https://app.netlify.com/start/deploy?repository=https://github.com/gatsbyjs/gatsby-starter-hello-world)
+- Markdown
+- GitHub
 
 <!-- AUTO-GENERATED-CONTENT:END -->
