@@ -4,6 +4,8 @@ import { Link, graphql } from 'gatsby'
 import SEO from '../components/seo'
 import Card from '../components/card'
 import Layout from '../components/layout'
+import YoutubeVideo from '../components/youtube-video'
+
 
 import cardStyles from '../components/card.module.scss'
 import layoutStyles from '../components/layout.module.scss'
@@ -13,7 +15,8 @@ import { useIntl } from "gatsby-plugin-intl"
 
 const IndexPage = (props) => {
 	const intl = useIntl()
-	const list = props.data.allMarkdownRemark.edges
+	const list = props.data.posts.edges
+	const youtube = props.data.youtube.edges
 
 	return(
 		<Layout>
@@ -60,8 +63,21 @@ const IndexPage = (props) => {
 			</section>
 			<section className={layoutStyles.whiteSection}>
 				<div className={layoutStyles.sectionContent}>
-					<h2>Section 2</h2>
-					<p>Lorem ipsum</p>
+					<div className={layoutStyles.titleContent}>
+						{intl.locale === "pt" ? (
+							<>
+							<h2>Últimos vídeos do canal</h2>
+							<a className={layoutStyles.button} href="https://youtube.com/eaicarla" target="_blank">Veja todos os vídeos</a>
+							</>
+						):(
+							<><h2>Latest Youtube videos</h2>
+							<a className={layoutStyles.button} href="https://youtube.com/eaicarla" target="_blank">See all videos</a>
+							</>
+						)}
+					</div>
+					<YoutubeVideo
+							youtube={youtube}
+						/>
 				</div>
 			</section>
 			<section className={layoutStyles.coloredSection}>
@@ -70,7 +86,7 @@ const IndexPage = (props) => {
 						{intl.locale === "pt" ? (
 							<>
 							<h2>Últimas do blog</h2>
-							<Link className={layoutStyles.button} href="/blog">Veja todos os posts</Link>
+							<Link className={layoutStyles.button} href="youtube.com/eaicarla">Veja todos os posts</Link>
 							</>
 						):(
 							<><h2>Latest posts</h2>
@@ -115,8 +131,9 @@ export const query = graphql`
 			  }
 		   }
 		}
-		allMarkdownRemark(
+		posts: allMarkdownRemark(
 			sort: { fields: frontmatter___date, order: DESC }
+			filter: { fileAbsolutePath: { regex: "/(/content/posts)/" } }
 			limit: 3
 		    ) {
 			edges {
@@ -132,6 +149,22 @@ export const query = graphql`
                            id
                            publicURL
                         }
+			    }
+			  }
+			}
+		}
+		youtube: allMarkdownRemark(filter: { fileAbsolutePath: { regex: "/(/content/youtube)/" } }) {
+			edges {
+			  node {
+			    frontmatter {
+				title
+				date(locale: "pt-br", formatString: "DD MMM[,] YYYY")
+				description
+				videoid
+				link
+				thumbnail {
+				  publicURL
+				}
 			    }
 			  }
 			}
