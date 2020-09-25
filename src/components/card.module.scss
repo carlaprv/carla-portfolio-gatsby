@@ -121,4 +121,22 @@ $pink-color-2:#C551B9;
   object-fit: cover;
 }
 
+@media(min-width: 1300px) {
+  .cards__item {
+    width: 40%;
+  }
+  
+}
 
+@media screen and (max-width: 900px) {
+  .cards__item {
+    width: 50%;
+  }
+
+}
+
+@media screen and (max-width: 768px) {
+  .cards__item {
+    width: 100%;
+  }
+}
