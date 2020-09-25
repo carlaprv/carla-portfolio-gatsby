@@ -166,6 +166,7 @@ export const query = graphql`
 				description
 				videoid
 				link
+				channel
 				thumbnail {
 				  publicURL
 				}

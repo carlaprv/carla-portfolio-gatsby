@@ -60,8 +60,9 @@ const Label = styled.span`
 	padding: 0px 10px;
 	margin: 1.5rem 0 1rem 1.5rem;
 	display: inline-block;
-	line-height: 20px;
-	font-size: .75rem;
+	font-size: .8rem;
+	font-weight: 600;
+	font-family: inherit;
 	text-transform: uppercase;
 	letter-spacing: 1px;
 	color: rgba(255, 255, 255, 0.9);
@@ -88,7 +89,7 @@ const YoutubeVideo = ({
 					return (
 						<VideoItem>
 							<a href={edge.node.frontmatter.link}>
-								<Label> youtube </Label>
+								<Label>{edge.node.frontmatter.channel}</Label>
 								<VideoThumbnail src={edge.node.frontmatter.thumbnail.publicURL} alt="" />
 							</a>
 						</VideoItem>
