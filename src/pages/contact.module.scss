@@ -42,34 +42,4 @@ button[type=submit] {
     
 label{
       font-weight: 600;
-
-}
-.socialIcons{
-      list-style-type: none;
-      border-bottom: 0;
-      font-size: 1.35em;
-      padding-left: 0;
-      margin-left:0;
-      margin-bottom: 40px;
-
-      li{
-            margin-top:0.6em;
-            display: inline-block;
-            margin-right: 1.3em;
-            margin-bottom: 0;
-            opacity: 0.44;
-            transition: 0.8s;
-
-            &:hover{
-                  opacity: 1;
-                  
-            }
-            &:last-child{
-                  margin-right: 0;
-            }
-      }
-
-      img {
-            height: 1.6em;
-      }
 }

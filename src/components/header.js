@@ -1,14 +1,21 @@
 import React from 'react'
-import headerStyles from './header.module.scss'
+import styled from "styled-components"
+
 import Menu from '../components/menu'
+
+const HeaderContainer = styled.header`
+    margin: 0 auto;
+    padding: 0;
+    z-index: 99;
+`
 
 const Header = () => {
     return (
-        <header className={headerStyles.header}>
+        <HeaderContainer>
             <div>
                 <Menu></Menu>
             </div>
-        </header>
+        </HeaderContainer>
         
     )
 }
