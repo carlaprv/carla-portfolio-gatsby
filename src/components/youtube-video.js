@@ -15,9 +15,8 @@ const VideosList = styled.ul`
 const VideoItem = styled.li`
 	display: flex;
 	padding-right: 2.2rem;
-	padding-bottom: 2rem;
 	width: 50%;
-	
+
 	&:last-child{
 	  padding-right:0;
 	}
@@ -46,8 +45,8 @@ const VideoThumbnail = styled.img`
 	display: flex;
 	flex-direction: column;
 	overflow: hidden;
-	width: 100%; /* width of container */
-	height: auto; /* height of container */
+	width: 100%; 
+	height: auto; 
 	object-fit: cover;
 
 	&:hover{

@@ -153,7 +153,11 @@ export const query = graphql`
 			  }
 			}
 		}
-		youtube: allMarkdownRemark(filter: { fileAbsolutePath: { regex: "/(/content/youtube)/" } }) {
+		youtube: allMarkdownRemark(
+				sort: { fields: frontmatter___date, order: DESC }
+				filter: { fileAbsolutePath: { regex: "/(/content/youtube)/" } }
+				limit: 3
+			) {
 			edges {
 			  node {
 			    frontmatter {
