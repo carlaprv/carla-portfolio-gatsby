@@ -35,10 +35,10 @@ const BlogPost = (props) => {
 
                                     <div className={blogPostStyles.postSocial}>
                                           <div className={blogPostStyles.tags}>
-                                                {post.frontmatter.categories.map((tag) => {
+                                                {post.frontmatter.categories.map((category) => {
                                                       return(
                                                             <div className={blogPostStyles.tagButton}>
-                                                                  <a href="/">{tag}</a>
+                                                                  <a href="/">{category}</a>
                                                             </div>
                                                       )
                                                 })}  
