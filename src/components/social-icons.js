@@ -7,8 +7,10 @@ const SocialList = styled.ul`
       list-style-type: none;
       border: 0;
       padding-left: 0;
-	  margin:0px;
-	  line-height:40px;
+	margin:0px;
+	line-height:40px;
+	display:flex;
+	flex-direction:row;
 `
 
 const SocialLink = styled.a`
@@ -16,7 +18,7 @@ const SocialLink = styled.a`
 `
 
 const SocialItem = styled.li`
-      margin-right: 1.6em;
+      margin-right: 35px;
       display: inline-block;
       opacity: 0.44;
       transition: 0.8s;
@@ -25,7 +27,11 @@ const SocialItem = styled.li`
       }
       &:last-child{
             margin-right: 0;
-      }
+	}
+	@media screen and (max-width: 468px) {
+		margin-right:20px;
+	}
+
 `
 const SocialIcon = styled.img`
 	height: 35px;
