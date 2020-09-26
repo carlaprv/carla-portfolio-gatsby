@@ -440,13 +440,15 @@ const GlobalStyle = createGlobalStyle`
 		margin-bottom: 1.15rem;
 	}
 	blockquote {
-		margin: 0 2.3rem 2.3rem;
+		margin: 0 2.3rem 1.15rem 2.3rem;
 		margin-top: 0;
 		padding-bottom: 0;
 		padding-left: 0;
 		padding-right: 0;
 		padding-top: 0;
-		margin-bottom: 1.15rem;
+		@media screen and (max-width:480px){
+			margin: 0 0 1.15rem 0;
+		}
 	}
 	form {
 		margin-left: 0;
