@@ -24,6 +24,12 @@ $pink-color-2:#C551B9;
   box-sizing: border-box;
 }
 
+.none{
+  text-decoration: none;
+  margin:0;
+  padding:0;
+}
+
 .btn {
   background-color: white;
   border: 1px solid $gray-light;

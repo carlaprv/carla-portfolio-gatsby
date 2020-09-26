@@ -18,7 +18,7 @@ const BlogItem = ({
                         <div className={blogItemStyles.card}>
                               {image && (
                                     <div className={blogItemStyles.card__image}>
-                                          <img src={image} alt=""/>
+                                          <Link to={`/${slug}`}><img src={image} alt=""/></Link>
                                     </div>
                               )}
                               <div className={blogItemStyles.card__content}>
