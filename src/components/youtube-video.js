@@ -14,18 +14,22 @@ const VideosList = styled.div`
 `
 
 const VideoItem = styled.div`
-	@media(min-width: 1300px) {
-	  width: 30%;  
-	}
-  
-	@media screen and (max-width: 1301px) {
-	  width: 48%;
-	}
-  
-	@media screen and (max-width: 768px) {
-	  width: 100%;
-	  margin-bottom:1rem;
-	}
+width: 450px;  
+
+@media(min-width: 1500px) {
+  width: 31%;  
+  max-width: 31%;
+}
+
+@media screen and (max-width: 1501px) {
+  width: 450px; 
+  max-width: 48%;
+}
+
+@media screen and (max-width: 800px) {
+    width: 100%;
+    max-width: 100%;
+}
 `
 
 const VideoThumbnail = styled.img`
