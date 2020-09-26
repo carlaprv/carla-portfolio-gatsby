@@ -60,7 +60,7 @@ const VideoThumbnail = styled.img`
 const Label = styled.span`
 	position: absolute;
 	z-index: 2;
-	padding: 0px 10px;
+	padding: 5px 10px;
 	margin: 1.5rem 0 1rem 1.5rem;
 	display: inline-block;
 	font-size: .8rem;
@@ -75,9 +75,9 @@ const Label = styled.span`
 	transition: all 0.2s ease;
 
 	&:hover{
-	color: rgba(255, 255, 255, 0.9);
-	border: 2px solid #995692;
-	background: #995692;
+		color: rgba(255, 255, 255, 0.9);
+		border: 2px solid rgb(164, 82, 202);
+		background: rgb(164, 82, 202);
 	}
 `
 
