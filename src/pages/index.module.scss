@@ -135,12 +135,15 @@ ABOUT CONTAINER
       p{
             margin-top:20px;
             text-align: center;
-            margin: 0 6rem;
+            
+            @media screen and (min-width: 800px){
+                  margin: 0 6rem;
+            }
             @media screen and (max-width: 700px){
                   margin: 0 3rem;
             }
-            @media screen and (max-width: 468px){
-                  margin: 0 0;
+            @media screen and (max-width: 600px){
+                  margin: 0 0rem;
             }
       }
 }
