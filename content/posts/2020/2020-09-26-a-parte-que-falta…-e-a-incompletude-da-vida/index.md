@@ -1,6 +1,6 @@
 ---
 title: A parte que falta… e a incompletude da vida
-date: 2020-09-26T00:12:00.713Z
+date: 2018-02-25T00:12:00.000Z
 description: "Durante essa semana, viralizou no facebook e twitter o mais novo
   vídeo da youtuber Jout Jout. Após assistir o vídeo entendi perfeitamente o
   porquê: em quase nove minutos, Jout Jout lê o livro infantil A Parte que
