@@ -127,6 +127,9 @@ const GlobalStyle = createGlobalStyle`
 	input {
 		overflow: visible;
 	}
+	button{
+		border:none;
+	}
 	button,
 	select {
 		text-transform: none;
