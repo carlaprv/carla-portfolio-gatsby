@@ -38,7 +38,7 @@ O livro foi escrito para as crianças, mas encanta ainda mais aos adultos, por q
 É uma espécie de “buraco”, que se transforma em inquietação, insatisfação, num vazio permanente que nos acompanha nos anos de infância, adolescência, vida adulta, maturidade e velhice… e não desaparece nunca.
 
 Não importa quanto sucesso, ou fama, ou dinheiro, ou amor, ou o que mais uma pessoa tenha. Sempre faltará algo, nesta nossa busca chamada “vida”!
-> # Somos seres desejantes destinados a incompletude, e é isso que nos faz caminhar (Jacques Lacan)
+>Somos seres desejantes destinados a incompletude, e é isso que nos faz caminhar (Jacques Lacan)
 
 O ser humano é um ser de falta! No livro, a metáfora dessa temática se dá por meio da história de um ser circular a quem falta uma parte. Otimista, ele se lança no mundo à procura de preencher esta lacuna.
 

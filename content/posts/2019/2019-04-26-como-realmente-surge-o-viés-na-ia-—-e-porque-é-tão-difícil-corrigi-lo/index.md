@@ -87,6 +87,6 @@ Enquanto que em outras áreas essa decisão é entendida como algo que pode muda
 ### Para onde vamos a partir daqui…
 
 Imagino que assim como eu, você já deve estar sentindo-se perdido em meio a tantas informações sobre os problemas do viés da Inteligência Artificial. Mas, felizmente, muitos pesquisadores de IA estão trabalhando duro para resolver esse problema sob diferentes abordagens: algoritmos que ajudam a detectar/reduzir viés nos dados de treinamento ou reduzir o viés do modelo independente da qualidade dos dados; discutindo diferentes versões de justiça e assim por diante.
-> # “Consertar a discriminação em algoritmos não é algo que pode ser facilmente resolvido. É um processo contínuo, assim como a discriminação em qualquer espectro da sociedade”. (Selbst)
+>“Consertar a discriminação em algoritmos não é algo que pode ser facilmente resolvido. É um processo contínuo, assim como a discriminação em qualquer espectro da sociedade”. (Selbst)
 
 Este artigo foi escrito [Karen Hao](https://www.technologyreview.com/profile/karen-hao/) e traduzido para o português por [Carla Vieira](https://twitter.com/carlaprvieira). Se você tiver alguma sugestão de artigo sobre Inteligência Artificial e quer me ajudar a democratizar o conhecimento sobre o assunto pode entrar em contato comigo pelo Twitter.

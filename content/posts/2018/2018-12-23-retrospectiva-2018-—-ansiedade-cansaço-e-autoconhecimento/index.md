@@ -60,7 +60,7 @@ Posso ficar falando disso aqui por vidas, falar sobre como o machismo nos torna 
 2018 fez essa frase fazer totalmente sentido, nunca estive tão ansiosa e estressada como durante esse ano. Crises foram comuns e meu corpo implorou para que eu parasse com a minha rotina e tive que me ausentar no trabalho, faculdade e descansar.
 
 Tem uma carta incrível de Freud para a princesa Marie Bonaparte, em que ele fala sobre a depressão dela e diz:
-> # “Acho que o problema com os deprimidos é que eles simplesmente têm expectativas muito altas para a vida. Eles acham que a vida deveria ter mais significado do que tem”.
+>“Acho que o problema com os deprimidos é que eles simplesmente têm expectativas muito altas para a vida. Eles acham que a vida deveria ter mais significado do que tem”.
 
 Nos momentos mais difíceis das minhas crises, eu percebi essa necessidade de encontrar significado dentre todas as coisas ruins que estavam acontecendo, e muito do que um psicólogo pode fazer é trabalhar para parar essa máquina que está constantemente processando informação e pensando que tem alguma coisa que você precisa entender, resolver, para fazer sentido e poder se sentir melhor.
 

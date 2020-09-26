@@ -36,7 +36,7 @@ Existem as mais diversas razões pelas quais cada um de nós procrastina, mas to
 
 1. Falta de motivação
 
-E a resposta para tudo isso:** autoconhecimento…**
+E a resposta para tudo isso: **autoconhecimento…**
 
 ## Medo
 
@@ -51,11 +51,11 @@ Nos sentimos incapazes de aceitar nossos sucessos e ganhos. Não importando o n�
 Apesar de alguns destes medos parecerem idiotas, pode ser difícil olhar além deles e ver alguma perspectiva. A melhor maneira de lidar com eles é externalizá-los. Conversar com colegas, amigos e familiares. Pedir ajuda. Escrever algo e ver que nunca estamos sozinhos. Receber a confirmação que estamos no caminho certo ou enxergar onde podemos ter errado, enquanto o processo está caminhando, não tem preço e pode ser muito valioso.
 
 Agora o mais importante é isso aqui:
-> # se você recebeu uma tarefa, provavelmente é porque você é a pessoa mais qualificada para fazer esta tarefa.
+> se você recebeu uma tarefa, provavelmente é porque você é a pessoa mais qualificada para fazer esta tarefa.
 
-**Você **demonstrou conhecimento, habilidade ou experiência suficiente em um assunto para fazer com que você seja a pessoa mais recomendada para isso. Se for um objetivo pessoal (uma dieta, uma nova área de estudo, um novo emprego, ou se mudar para uma nova cidade), abrace o fato de que **a mudança não é fácil, mas que você vai acabar crescendo por causa dela.**
+Você demonstrou conhecimento, habilidade ou experiência suficiente em um assunto para fazer com que você seja a pessoa mais recomendada para isso. Se for um objetivo pessoal (uma dieta, uma nova área de estudo, um novo emprego, ou se mudar para uma nova cidade), abrace o fato de que a mudança não é fácil, mas que você vai acabar crescendo por causa dela.
 
-**Você **decidiu buscar isso porque tem um interesse em fazer uma mudança e está alterando de maneira **intencional **o destino da sua vida. **Você **tem que assumir sua **responsabilidade**.
+Você decidiu buscar isso porque tem um interesse em fazer uma mudança e está alterando de maneira intencional o destino da sua vida. Você tem que assumir sua responsabilidade.
 
 ![](https://cdn-images-1.medium.com/max/2000/1*L1Yze_tU4l8F_6OlLB3wIg.jpeg)
 

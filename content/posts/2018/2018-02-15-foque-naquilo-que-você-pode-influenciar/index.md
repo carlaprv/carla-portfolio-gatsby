@@ -50,7 +50,7 @@ Porém, se em vez disso gastarmos os próximos cinco minutos superando um proble
 Este foco resulta em atitude acusatórias, lamentações, ansiedade, stress, linguagem reativa, provocando o encolhimento do Círculo de Influência.
 
 **Sabe quando nos preocupamos demais com problemas que todo mundo vê que são MUITO pequenos? **Isso é uma característica de pessoas reativas, e é muito importante que você pare um minuto e pense se realmente é necessário se preocupar com certas coisas. Eu sempre me preocupo sem necessidade causando um stress desnecessário com problemas que tem solução e até já tenham sido resolvidos. Então, avalie, reflita e veja se vale a pena investir energia naquilo.
-> # “Você faz faxina em seu escritório, em sua bolsa, em sua casa, mas não faz uma faxina em tudo o que perturba a sua alma. Você não desliga a sua mente, não gerencia seus pensamentos e vive fazendo velório antes de morto. O que significa isso? Significa sofrer por antecipação, viver problemas que ainda não ocorreram e que talvez nem ocorram.” Augusto Cury
+>“Você faz faxina em seu escritório, em sua bolsa, em sua casa, mas não faz uma faxina em tudo o que perturba a sua alma. Você não desliga a sua mente, não gerencia seus pensamentos e vive fazendo velório antes de morto. O que significa isso? Significa sofrer por antecipação, viver problemas que ainda não ocorreram e que talvez nem ocorram.” Augusto Cury
 
 ## Como expandir seu círculo de influência
 
