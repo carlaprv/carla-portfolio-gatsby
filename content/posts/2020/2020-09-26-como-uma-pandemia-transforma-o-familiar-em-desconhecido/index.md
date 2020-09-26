@@ -1,6 +1,6 @@
 ---
 title: Como uma pandemia transforma o familiar em desconhecido
-date: 2020-09-26T00:19:50.891Z
+date: 2020-06-06T00:19:00.000Z
 description: Com certeza, uma pandemia é capaz de mudar nossa visão de mundo e,
   principalmente, nossa percepção de tempo.
 language: pt
