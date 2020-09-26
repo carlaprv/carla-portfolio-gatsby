@@ -1,6 +1,6 @@
 ---
 title: Retrospectiva 2018 — Ansiedade, cansaço e autoconhecimento
-date: 2019-12-24T00:14:00.000Z
+date: 2018-12-23T23:14:00.000Z
 description: Quando chega essa época de fim de ano, natal, ano novo, é natural
   fazermos aquela retrospectiva na nossa mente, refletimos sobre o que
   conquistamos, perdemos e desistimos e, claro, começamos a planejar o ano
