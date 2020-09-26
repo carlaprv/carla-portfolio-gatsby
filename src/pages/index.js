@@ -1,5 +1,6 @@
 import React from "react"
 import { Link, graphql } from 'gatsby'
+import { useIntl } from "gatsby-plugin-intl"
 
 import SEO from '../components/seo'
 import Card from '../components/card'
@@ -7,12 +8,9 @@ import Layout from '../components/layout'
 import YoutubeVideo from '../components/youtube-video'
 import Social from '../components/social-icons'
 
-
 import cardStyles from '../components/card.module.scss'
 import layoutStyles from '../components/layout.module.scss'
 import indexStyles from './index.module.scss'
-
-import { useIntl } from "gatsby-plugin-intl"
 
 const IndexPage = (props) => {
 	const intl = useIntl()
@@ -69,9 +67,7 @@ const IndexPage = (props) => {
 							</>
 						)}
 					</div>
-					<YoutubeVideo
-							youtube={youtube}
-						/>
+					<YoutubeVideo youtube={youtube}/>
 				</div>
 			</section>
 			<section className={layoutStyles.coloredSection}>
@@ -102,7 +98,6 @@ const IndexPage = (props) => {
 							)
 						})}
 					</ul>
-					
 				</div>
 			</section>
 		</Layout>
