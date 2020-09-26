@@ -24,7 +24,6 @@ $pink-color-2:#C551B9;
   box-sizing: border-box;
 }
 
-
 .btn {
   background-color: white;
   border: 1px solid $gray-light;
@@ -35,23 +34,26 @@ $pink-color-2:#C551B9;
   display: block;
   width: 100%;
 }
- 
-.cards {
-  display: flex;
-  flex-wrap: wrap;
-  list-style: none;
-  margin: 0;
-  margin-top: 40px;
-  padding: 0;
-}
 
 .cards__item {
   display: flex;
-  padding-right: 2.2rem;
   padding-bottom: 2rem;
-  width: 50%;
-  &:last-child{
-    padding-right:0;
+  width: 450px;  
+  max-width: 48%;
+
+  @media(min-width: 1500px) {
+    width: 40%;  
+    max-width: 40%;
+  }
+
+  @media screen and (max-width: 1501px) {
+    width: 450px; 
+    max-width: 48%;
+  }
+
+  @media screen and (max-width: 800px) {
+      width: 100%;
+      max-width: 100%;
   }
 }
 
@@ -150,25 +152,4 @@ $pink-color-2:#C551B9;
       &:hover {
             opacity: 1;
       }
-}
-
-@media(min-width: 1300px) {
-  .cards__item {
-    width: 40%;
-  }
-  
-}
-
-@media screen and (max-width: 900px) {
-  .cards__item {
-    width: 50%;
-  }
-
-}
-
-@media screen and (max-width: 768px) {
-  .cards__item {
-    width: 100%;
-  }
-
 }

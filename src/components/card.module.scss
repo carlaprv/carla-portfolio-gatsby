@@ -38,8 +38,10 @@ $pink-color-2:#C551B9;
  
 .cards {
   display: flex;
+  flex-direction: row;
   flex-wrap: wrap;
   list-style: none;
+  justify-content: space-between;
   margin: 0;
   margin-top: 40px;
   padding: 0;
@@ -121,7 +123,7 @@ $pink-color-2:#C551B9;
   object-fit: cover;
 }
 
-@media(min-width: 1300px) {
+@media(min-width: 1500px) {
   .cards__item {
     width: 40%;
   }
