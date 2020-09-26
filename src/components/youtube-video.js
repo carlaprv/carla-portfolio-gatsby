@@ -36,9 +36,6 @@ const VideoThumbnail = styled.img`
 	transition: -webkit-box-shadow .35s ease;
 	transition: box-shadow .35s ease;
 	transition: box-shadow .35s ease, -webkit-box-shadow .35s ease;
-	display: flex;
-	flex-direction: column;
-	overflow: hidden;
 	width: 100%; 
 	height: auto; 
 	object-fit: cover;
