@@ -10,7 +10,7 @@ tags:
   - tecnologia
   - vieses
 categories:
-  - inteligência artificial
+  - Inteligência Artificial
 draft: false
 ---
 Ao mesmo tempo em que os algoritmos de Inteligência Artificial trazem possibilidades magníficas de otimização do trabalho, personalização da experiência e outras transformações positivas, também trazem riscos e desafios que precisam ser conhecidos e considerados antes de sua adoção.
