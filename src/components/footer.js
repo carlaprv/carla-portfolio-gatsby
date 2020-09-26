@@ -1,5 +1,5 @@
 import React from 'react'
-import { graphql, useStaticQuery } from 'gatsby'
+import { Link, graphql, useStaticQuery } from 'gatsby'
 import { useIntl } from "gatsby-plugin-intl"
 import styled from "styled-components"
 
@@ -18,12 +18,16 @@ const FooterContainer = styled.footer`
     color:#fff;
 `
 const FooterContent = styled.div`
-    font-family: 'Inter', sans-serif;
+    font-family: 'Merriweather', serif;
     text-align: center;
     margin: 1em 0;
     font-size: 0.95rem;
     ul{
+        margin-top:22px;
         justify-content: center;
+    }
+    img{
+        height: 25px;
     }
     p{
         color:#fff;
@@ -61,16 +65,25 @@ const Footer = () => {
     return (
         <FooterContainer>
             <FooterContent>
+                {intl.locale === "pt" ? (
+                    <p>
+                        Tem interesse em colaborar? <Link to="/contact">Entre em contato</Link> • Quer apoiar meu trabalho? Torne-se um <a href="https://apoia.se/eaicarla">apoiador</a>!
+                    </p>
+                ) : (
+                    <p>
+                        Interested in collaborating? <Link to="/contact">Send me a message</Link> • Want to support my work? Become a <a href="https://apoia.se/eaicarla">sponsor</a>!.
+                    </p>
+                )}
                 <Social purple={false} />
                 {intl.locale === "pt" ? (
                     <p>
-                        © {data.site.siteMetadata.author} 2020. Feito com amor & <a href="/">código</a>.
+                        Feito com amor & <a href="/">código</a>. © {data.site.siteMetadata.author} 2020.
                     </p>
                 ) : (
-                        <p>
-                            © {data.site.siteMetadata.author} 2020. Made with love & <a href="/">various tech</a>.
-                        </p>
-                    )}
+                    <p>
+                        Made with love & <a href="/">various tech</a>. © {data.site.siteMetadata.author} 2020.
+                    </p>
+                )}
             </FooterContent>
         </FooterContainer>
     )
