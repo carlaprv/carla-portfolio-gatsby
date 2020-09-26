@@ -3,15 +3,10 @@ import { createGlobalStyle } from 'styled-components'
 const GlobalStyle = createGlobalStyle`
 	html {
 		font-family: sans-serif;
-		font-size: 62.5%;
-		// -ms-text-size-adjust: 100%;
-		// -webkit-text-size-adjust: 100%;
-		// font-size: 100%;
-		// @media only screen and (max-width: 480px) {
-		// 	html {
-		// 			font-size: 100%;
-		// 	}
-		// }
+		font-size: 100%;
+		box-sizing: border-box;
+		overflow-y: scroll;
+		
 	}
 	body {
 		margin: 0;
@@ -122,6 +117,8 @@ const GlobalStyle = createGlobalStyle`
 	textarea {
 		font: inherit;
 		margin: 0;
+		box-sizing: border-box;
+		resize: vertical;
 	}
 	optgroup {
 		font-weight: 700;
@@ -139,6 +136,7 @@ const GlobalStyle = createGlobalStyle`
 	button,
 	html [type="button"] {
 		-webkit-appearance: button;
+		cursor: pointer;
 	}
 	[type="button"]::-moz-focus-inner,
 	[type="reset"]::-moz-focus-inner,
@@ -193,11 +191,6 @@ const GlobalStyle = createGlobalStyle`
 	::-webkit-file-upload-button {
 		-webkit-appearance: button;
 		font: inherit;
-	}
-	html {
-		font: 112.5%/1.45em georgia, serif;
-		box-sizing: border-box;
-		overflow-y: scroll;
 	}
 	* {
 		box-sizing: inherit;

@@ -23,10 +23,6 @@ SHARED CONTAINER AND SECTIONS
       color: $txt-color;
 }
 
-html{
-      font-size: 100%;
-}
-
 body{
       background-color: $main-bg-color;
 }
@@ -35,11 +31,9 @@ body{
       display: grid;
       grid-template-columns: repeat(12, [col-start] 1fr);
       grid-template-rows: 1fr auto;
-      // grid-template-rows: [row-line-1] 50px [row-line-2] auto [row-line-3] auto [row-line-4] auto [row-line-5] auto [row-line-6];
       align-items: start;
       padding: 0;
       column-gap: 0px;
-      /*Below provides sticky footer*/
       min-height: 100vh;
 }
 
@@ -120,9 +114,6 @@ body{
 
 }
 
-
-
-
 .content h1{
       font-size: 2.25rem;
       font-family: $font-family-sans-serif;
@@ -144,7 +135,7 @@ body{
 
 .button {
       display: inline-block;
-      padding: .2rem .8rem;
+      padding: .4rem .8rem;
       background: #D8BBE8;
       border-radius: 6px;
       color: $main-txt-color;

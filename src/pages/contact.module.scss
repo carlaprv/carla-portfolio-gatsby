@@ -15,14 +15,12 @@ $font-family-serif: 'Merriweather', serif;
 
 /* Style inputs with type="text", select elements and textareas */
 input[type=text], input[type=email], select, textarea {
-      width: 100%; /* Full width */
-      padding: 5px; /* Some padding */ 
-      border: 1px solid #D6BDDC; /* Gray border */
-      border-radius: 6px; /* Rounded borders */
-      box-sizing: border-box; /* Make sure that padding and width stays in place */
-      margin-top: 16px; /* Add a top margin */
-      margin-bottom: 16px; /* Bottom margin */
-      resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+      width: 100%; 
+      padding: 5px; 
+      border: 1px solid #D6BDDC; 
+      border-radius: 6px;
+      margin-top: 16px;
+      margin-bottom: 16px; 
 }
     
 /* Style the submit button with a specific background color etc */
@@ -30,11 +28,7 @@ button[type=submit] {
       background-color: $main-txt-color;
       color: white;
       padding: 8px 30px;
-      border: none;
       border-radius: 6px;
-      cursor: pointer;
-      border:none;
-
       &:hover {
             opacity: 0.8
       }

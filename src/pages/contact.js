@@ -9,7 +9,6 @@ import Social from '../components/social-icons'
 import contactStyles from './contact.module.scss'
 import layoutStyles from '../components/layout.module.scss'
 
-
 const ContactPage = (props) => {
 	const intl = useIntl()
 
