@@ -5,6 +5,7 @@ import SEO from '../components/seo'
 import Card from '../components/card'
 import Layout from '../components/layout'
 import YoutubeVideo from '../components/youtube-video'
+import Social from '../components/social-icons'
 
 
 import cardStyles from '../components/card.module.scss'
@@ -29,17 +30,7 @@ const IndexPage = (props) => {
 					<div className={indexStyles.fullHeaderContainer}>
 						<h1>{intl.formatMessage({ id: "greeting" })}</h1>
 						<h2>{intl.formatMessage({ id: "headline" })}</h2>
-						<ul className={indexStyles.socialIcons}>
-							{props.data.site.siteMetadata.socialLinks.map((socialItem) => {
-								return(
-									<li>
-										<a href={socialItem.link} target="_blank" rel="noreferrer">
-											<img src={socialItem.svg} alt={socialItem.name}/>
-										</a>
-									</li>
-								)
-							})}
-						</ul>
+						<Social purple={false}/>
 						<button className={indexStyles.headerButton}>
 							<a href="/">{intl.formatMessage({ id: "cta" })}</a>
 						</button>
@@ -126,12 +117,6 @@ export const query = graphql`
 		   siteMetadata{
 		        author	
 		        image
-		        socialLinks {
-				name
-				link
-				icon
-				svg
-			  }
 		   }
 		}
 		posts: allMarkdownRemark(

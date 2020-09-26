@@ -49,6 +49,13 @@ video {
             justify-content: center;
             align-content: center;
             text-align: center;
+
+            ul{
+                  margin-top: 10px;
+            }
+            li{
+                  opacity: 0.6;
+            }
       }
       
       h1 {
@@ -63,34 +70,6 @@ video {
             font-weight: 500;
             
       }
-
-      .socialIcons{
-            list-style-type: none;
-            border-bottom: 0;
-            font-size: 1.35em;
-            padding-left: 0;
-            margin-left:0;
-
-            li{
-                  margin-top:0.6em;
-                  display: inline-block;
-                  margin-right: 1em;
-                  margin-bottom: 0;
-                  opacity: 0.8;
-
-                  &:hover{
-                        opacity: 0.5;
-                  }
-                  &:last-child{
-                        margin-right: 0;
-                  }
-            }
-
-            img {
-                  height: 1.5em;
-            }
-      }
-
 
       button.header-button {
             display: inline-block;
