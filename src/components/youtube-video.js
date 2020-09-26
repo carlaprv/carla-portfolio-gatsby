@@ -3,7 +3,7 @@ import React from 'react'
 import styled from "styled-components"
 
 
-const VideosList = styled.ul`
+const VideosList = styled.div`
 	display: flex;
 	flex-wrap: wrap;
 	list-style: none;
@@ -13,7 +13,7 @@ const VideosList = styled.ul`
 	justify-content: space-between;
 `
 
-const VideoItem = styled.li`
+const VideoItem = styled.div`
 	@media(min-width: 1300px) {
 	  width: 30%;  
 	}
