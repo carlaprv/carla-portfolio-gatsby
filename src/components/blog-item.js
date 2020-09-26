@@ -14,21 +14,21 @@ const BlogItem = ({
 
       return(
             <>
-                  <li className={blogItemStyles.cards__item}>
+                  <li className={blogItemStyles.cardsItem}>
                         <div className={blogItemStyles.card}>
                               {image && (
-                                    <div className={blogItemStyles.card__image}>
+                                    <div className={blogItemStyles.cardImage}>
                                           <Link to={`/${slug}`}><img src={image} alt=""/></Link>
                                     </div>
                               )}
-                              <div className={blogItemStyles.card__content}>
-                                    <div className={blogItemStyles.card__title}>
+                              <div className={blogItemStyles.cardContent}>
+                                    <div className={blogItemStyles.cardTitle}>
                                           <Link to={`/${slug}`}>{title}</Link>
                                     </div>
-                                    <div className={blogItemStyles.card__date}>
+                                    <div className={blogItemStyles.cardDate}>
                                           {date}
                                     </div>
-                                    <p className={blogItemStyles.card__text}>{description}</p>
+                                    <p className={blogItemStyles.cardText}>{description}</p>
                                     <div className={blogItemStyles.tags}>
                                           {categories.map((tag) => {
                                                 return(

@@ -41,15 +41,14 @@ $pink-color-2:#C551B9;
   width: 100%;
 }
 
-.cards__item {
+.cards-item {
   display: flex;
   padding-bottom: 2rem;
   width: 450px;  
-  max-width: 48%;
 
   @media(min-width: 1500px) {
-    width: 40%;  
-    max-width: 40%;
+    width: 30%;  
+    max-width: 30%;
   }
 
   @media screen and (max-width: 1501px) {
@@ -81,7 +80,7 @@ $pink-color-2:#C551B9;
   }
 }
 
-.card__title {
+.card-title {
   font-size: 1.3rem;
   line-height: 2rem;
   font-weight: 600;
@@ -89,14 +88,14 @@ $pink-color-2:#C551B9;
   font-family: $font-family-sans-serif;
 }
 
-.card__date{
+.card-date{
   margin-bottom:10px;
   color:$secondary-txt-color;
   font-size:15px;
   font-family: $font-family-sans-serif;
 }
 
-.card__content {
+.card-content {
   display: flex;
   flex: 1 1 auto;
   flex-direction: column;
@@ -107,23 +106,23 @@ $pink-color-2:#C551B9;
   
 }
 
-.card__title a{
+.card-title a{
   text-decoration: none;
   color: $main-txt-color;
   background-image: linear-gradient(0deg,rgba(185, 125, 235, 0.3) 0,rgba(185, 125, 235,.4) 30%,transparent 40%,transparent);
 }
-.card__title a:hover{
+.card-title a:hover{
   background-image: linear-gradient(0deg,rgba(185, 125, 235,.7) 0,rgba(185, 125, 235,.7) 30%,transparent 40%,transparent);
 }
 
-.card__text {
+.card-text {
   flex: 1 1 auto;
   font-size: 0.875rem;
   line-height: 1.5;
   margin-bottom: 1.25rem;
 }
 
-.card__image img{
+.card-image img{
   width: 100%; /* width of container */
   height: 200px; /* height of container */
   object-fit: cover;

@@ -51,11 +51,22 @@ $pink-color-2:#C551B9;
   display: flex;
   padding-right: 2.2rem;
   padding-bottom: 2rem;
-  width: 50%;
-
-  @media(min-width: 1300px) {
+ 
+  @media(min-width: 1500px) {
+    width: 50%;  
+  }
+  @media(max-width: 1499px) {
     width: 33.3333%;
   }
+
+  @media screen and (max-width: 900px) {
+      width: 50%;  
+  }
+  
+  @media screen and (max-width: 768px) {
+      width: 100%;
+  }
+  
 }
 
 .card {
@@ -121,24 +132,4 @@ $pink-color-2:#C551B9;
   width: 100%; /* width of container */
   height: 200px; /* height of container */
   object-fit: cover;
-}
-
-@media(min-width: 1500px) {
-  .cards__item {
-    width: 40%;
-  }
-  
-}
-
-@media screen and (max-width: 900px) {
-  .cards__item {
-    width: 50%;
-  }
-
-}
-
-@media screen and (max-width: 768px) {
-  .cards__item {
-    width: 100%;
-  }
 }
