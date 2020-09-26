@@ -15,8 +15,6 @@ const AboutPage = () => {
           </div>
           
 			</section>
-
-      
     </Layout>
   )
 }
