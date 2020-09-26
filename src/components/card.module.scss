@@ -49,22 +49,21 @@ $pink-color-2:#C551B9;
 
 .cards__item {
   display: flex;
-  padding-right: 2.2rem;
   padding-bottom: 2rem;
  
   @media(min-width: 1500px) {
-    width: 50%;  
-  }
-  @media(max-width: 1499px) {
-    width: 33.3333%;
+    width: 31%;  
+    max-width: 31%;
   }
 
-  @media screen and (max-width: 900px) {
-      width: 50%;  
+  @media screen and (max-width: 1501px) {
+    width: 450px; 
+    max-width: 48%;
   }
-  
-  @media screen and (max-width: 768px) {
+
+  @media screen and (max-width: 800px) {
       width: 100%;
+      max-width: 100%;
   }
   
 }

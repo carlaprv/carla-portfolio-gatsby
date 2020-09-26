@@ -41,14 +41,31 @@ $pink-color-2:#C551B9;
   width: 100%;
 }
 
+.card {
+  background-color: white;
+  border-radius: 6px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+  -webkit-transition: -webkit-box-shadow .35s ease;
+  transition: -webkit-box-shadow .35s ease;
+  transition: box-shadow .35s ease;
+  transition: box-shadow .35s ease, -webkit-box-shadow .35s ease;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+
+  &:hover{
+    box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+  }
+}
+
 .cards-item {
   display: flex;
   padding-bottom: 2rem;
   width: 450px;  
 
   @media(min-width: 1500px) {
-    width: 30%;  
-    max-width: 30%;
+    width: 31%;  
+    max-width: 31%;
   }
 
   @media screen and (max-width: 1501px) {
@@ -62,23 +79,7 @@ $pink-color-2:#C551B9;
   }
 }
 
-.card {
-  background-color: white;
-  border-radius: 6px;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.08);
-  -webkit-transition: -webkit-box-shadow .35s ease;
-  transition: -webkit-box-shadow .35s ease;
-  transition: box-shadow .35s ease;
-  transition: box-shadow .35s ease, -webkit-box-shadow .35s ease;
-  display: flex;
-  // padding:8px;
-  flex-direction: column;
-  overflow: hidden;
 
-  &:hover{
-    box-shadow: 0 6px 15px rgba(0,0,0,0.2);
-  }
-}
 
 .card-title {
   font-size: 1.3rem;
