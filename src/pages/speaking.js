@@ -21,7 +21,7 @@ const SpeakingImage = styled.img`
 	margin-left:30px;
 	width:300px;
 	flex-grow:0;
-    flex-shrink:0;
+      flex-shrink:0;
 	border-radius: 6px;
 `
 const SpeakingPage = () => {

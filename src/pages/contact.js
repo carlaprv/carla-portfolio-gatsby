@@ -52,23 +52,23 @@ const ContactPage = () => {
 					
 					<Social purple={true}/>
 					<ContactForm>
-					<form name="contact" method="POST" data-netlify="true">
-						<p>
-							<label>{intl.formatMessage({ id: "name" })}: <input type="text" name="name" /></label>
-						</p>
-						<p>
-							<label>Email: <input type="email" name="email" /></label>
-						</p>
-						<p>
-							<label>{intl.formatMessage({ id: "subject" })}: <input type="text" name="subject" /></label>
-						</p>
-						<p>
-							<label>{intl.formatMessage({ id: "message" })}: <textarea name="message"></textarea></label>
-						</p>
-						<p>
-							<button type="submit">{intl.formatMessage({ id: "submit" })}</button>
-						</p>
-					</form>
+						<form name="contact" method="POST" data-netlify="true">
+							<p>
+								<label>{intl.formatMessage({ id: "name" })}: <input type="text" name="name" /></label>
+							</p>
+							<p>
+								<label>Email: <input type="email" name="email" /></label>
+							</p>
+							<p>
+								<label>{intl.formatMessage({ id: "subject" })}: <input type="text" name="subject" /></label>
+							</p>
+							<p>
+								<label>{intl.formatMessage({ id: "message" })}: <textarea name="message"></textarea></label>
+							</p>
+							<p>
+								<button type="submit">{intl.formatMessage({ id: "submit" })}</button>
+							</p>
+						</form>
 					</ContactForm>
 				</div>
 			</section>

@@ -39,17 +39,21 @@ const IndexPage = (props) => {
 			<section className={layoutStyles.coloredSection}>
 				<div className={layoutStyles.sectionContent}>
 					<div className={indexStyles.about}>
+						<div>
+
+						
 						<h2>{intl.formatMessage({ id: "about" })}</h2>
-						<img src="/images/avatar_carla_smile_transparent.png" className={indexStyles.aboutImage}/>
 						{intl.locale === "pt" ? (
 							<p>
-								Carla é Bacharel em Sistemas de Informação pela USP, mestranda em <b>Inteligência Artificial</b> pela USP, engenheira de software e <a href="https://developers.google.com/community/experts/directory/profile/profile-carla_vieira">Google Developer Expert em Machine Learning</a>. Co-organizadora da <a href="https://perifaCode.com">perifaCode</a>, buscando levar a tecnologia para dentro das periferias. Acredita na tecnologia como ferramenta de transformação social e tem estudado sobre como o viés inconsciente tem afetado a Inteligência Artificial e como tornar algoritmos caixa-preta mais transparentes.
+								<b>Carla Vieira</b> é Bacharel em Sistemas de Informação pela USP, mestranda em <b>Inteligência Artificial</b> pela USP, engenheira de software e <a href="https://developers.google.com/community/experts/directory/profile/profile-carla_vieira">Google Developer Expert em Machine Learning</a>. Co-organizadora da <a href="https://perifaCode.com">perifaCode</a>, buscando levar a tecnologia para dentro das periferias. Acredita na tecnologia como ferramenta de transformação social e tem estudado sobre como o viés inconsciente tem afetado a Inteligência Artificial e como tornar algoritmos caixa-preta mais transparentes.
 							</p>
 						) : (
 							<p>
-								Carla holds a Bachelor's degree in Information Systems at USP, master student in Artificial Intelligence, software engineer and Google Developer Expert in Machine Learning. She promotes gender and race diversity in technology as co-organizer of <a href="https://perifaCode.com">perifaCode</a> Community. She believes Technology is steadily changing the social good landscape and has been researching about the unconscious bias in Artificial Intelligence and its impacts on our society.
+								<b>Carla Vieira</b> holds a Bachelor's degree in Information Systems at USP, master student in Artificial Intelligence, software engineer and Google Developer Expert in Machine Learning. She promotes gender and race diversity in technology as co-organizer of <a href="https://perifaCode.com">perifaCode</a> Community. She believes Technology is steadily changing the social good landscape and has been researching about the unconscious bias in Artificial Intelligence and its impacts on our society.
 							</p>
-						)}	
+						)}
+						</div>	
+						<img src="images/carla/foto-carla-2020.jpg" className={indexStyles.aboutImage}/>
 					</div>				
 				</div>
 			</section>

@@ -104,33 +104,31 @@ ABOUT CONTAINER
 */
 .about{
       display: flex;
-      flex-direction: column;
+      flex-direction: row;
       align-items: center;
-      text-align: center;
-
-      h2{
-            text-align: center;
-      }
+      text-align: left;
       p{
-            margin-top:20px;
-            text-align: center;
-            
-            @media screen and (min-width: 800px){
-                  margin: 0 6rem;
+            margin-top:20px;            
+            @media screen and (min-width: 1024px){
+                  margin-right: 6rem;
             }
-            @media screen and (max-width: 700px){
-                  margin: 0 3rem;
-            }
-            @media screen and (max-width: 600px){
-                  margin: 0 0rem;
-            }
+      }
+      @media screen and (max-width: 1024px){
+            flex-direction: column;
       }
 }
 
 img.about-image{
-      border-radius: 50%;
-      max-width: 250px;
-      margin-top:20px;
+      border-radius: 10px;
+      width: 300px;
+      height: auto;
+      object-fit: cover;
+      object-position: center center;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+      flex-shrink: 0;
+      @media screen and (max-width: 1024px){
+            display: none;
+      }
 }
 
 
