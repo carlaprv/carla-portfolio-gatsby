@@ -108,9 +108,10 @@ ABOUT CONTAINER
       align-items: center;
       text-align: left;
       p{
-            margin-top:20px;            
-            @media screen and (min-width: 1024px){
-                  margin-right: 6rem;
+            margin-top:20px;   
+            margin-right: 9rem;         
+            @media screen and (max-width: 1024px){
+                  margin-right: 0;
             }
       }
       @media screen and (max-width: 1024px){
