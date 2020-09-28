@@ -36,7 +36,7 @@ const IndexPage = (props) => {
 				</div>
 
 			</section>
-			<section className={layoutStyles.coloredSection}>
+			<section id="about" className={layoutStyles.whiteSection}>
 				<div className={layoutStyles.sectionContent}>
 					<div className={indexStyles.about}>
 						<div>
@@ -53,11 +53,54 @@ const IndexPage = (props) => {
 							</p>
 						)}
 						</div>	
-						<img src="images/carla/foto-carla-2020.jpg" className={indexStyles.aboutImage}/>
+						<img src="/images/carla/foto-carla-2020.jpg" className={indexStyles.aboutImage}/>
 					</div>				
 				</div>
 			</section>
-			<section className={layoutStyles.whiteSection}>
+			<section id="projects" className={layoutStyles.gradientSection}>
+				<div className={layoutStyles.sectionContent}>
+					<h2>{intl.formatMessage({ id: "projects" })}</h2>
+					<div className={indexStyles.projects}>
+						<div className={indexStyles.projectItem}>
+							<div className={indexStyles.details}>
+								<h3>ONG perifaCode</h3>
+								{intl.locale === "pt" ? (
+									<p>A comunidade de programação da periferia! Aqui reunimos pessoas que moram em periferias, favelas e guetos do Brasil para criar uma rede de apoio para conseguirmos vencer os desafios sociais que nos limitam a entrada ou evolução na área de programação.</p>
+								) : (
+									<p></p>
+								)}
+								<p><a href="">Conheça o projeto!</a></p>
+							</div>
+							<div className={indexStyles.projectImage}><img src="/images/projects/perifacode.jpg"/></div>
+						</div>
+						<div className={indexStyles.projectItem}>
+							<div className={indexStyles.details}>
+								<h3>Palestras</h3>
+								{intl.locale === "pt" ? (
+									<p>A comunidade de programação da periferia! Aqui reunimos pessoas que moram em periferias, favelas e guetos do Brasil para criar uma rede de apoio para conseguirmos vencer os desafios sociais que nos limitam a entrada ou evolução na área de programação.</p>
+								) : (
+									<p></p>
+								)}
+								<p><a href="">Acesse meu portfolio</a></p>
+							</div>
+							<div className={indexStyles.projectImage}><img src="/images/projects/carla-palestra-serasa.jpg"/></div>
+						</div>
+						<div className={indexStyles.projectItem}>
+							<div className={indexStyles.details}>
+								<h3>Pesquisa</h3>
+								{intl.locale === "pt" ? (
+									<p>A comunidade de programação da periferia! Aqui reunimos pessoas que moram em periferias, favelas e guetos do Brasil para criar uma rede de apoio para conseguirmos vencer os desafios sociais que nos limitam a entrada ou evolução na área de programação.</p>
+								) : (
+									<p></p>
+								)}
+								<p><a href="">Lattes</a></p>
+							</div>
+							<div className={indexStyles.projectImage}><img src="/images/projects/fairness.jpg"/></div>
+						</div>
+					</div>	
+				</div>
+			</section>
+			<section id="videos" className={layoutStyles.whiteSection}>
 				<div className={layoutStyles.sectionContent}>
 					<div className={layoutStyles.titleContent}>
 						{intl.locale === "pt" ? (
@@ -74,7 +117,7 @@ const IndexPage = (props) => {
 					<YoutubeVideo youtube={youtube}/>
 				</div>
 			</section>
-			<section className={layoutStyles.coloredSection}>
+			<section id="blog" className={layoutStyles.coloredSection}>
 				<div className={layoutStyles.sectionContent}>
 					<div className={layoutStyles.titleContent}>
 						{intl.locale === "pt" ? (
