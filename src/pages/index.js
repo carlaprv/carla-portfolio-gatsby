@@ -40,8 +40,6 @@ const IndexPage = (props) => {
 				<div className={layoutStyles.sectionContent}>
 					<div className={indexStyles.about}>
 						<div>
-
-						
 						<h2>{intl.formatMessage({ id: "about" })}</h2>
 						{intl.locale === "pt" ? (
 							<p>
@@ -57,7 +55,7 @@ const IndexPage = (props) => {
 					</div>				
 				</div>
 			</section>
-			<section id="projects" className={layoutStyles.gradientSection}>
+			<section id="projects" className={layoutStyles.coloredSection}>
 				<div className={layoutStyles.sectionContent}>
 					<h2>{intl.formatMessage({ id: "projects" })}</h2>
 					<div className={indexStyles.projects}>
@@ -87,9 +85,9 @@ const IndexPage = (props) => {
 						</div>
 						<div className={indexStyles.projectItem}>
 							<div className={indexStyles.details}>
-								<h3>Pesquisa</h3>
+								<h3>Mestranda em Inteligêcia Artificial (USP)</h3>
 								{intl.locale === "pt" ? (
-									<p>A comunidade de programação da periferia! Aqui reunimos pessoas que moram em periferias, favelas e guetos do Brasil para criar uma rede de apoio para conseguirmos vencer os desafios sociais que nos limitam a entrada ou evolução na área de programação.</p>
+									<p>Acredito na tecnologia como ferramenta de transformação social e tem estudado sobre como o viés inconsciente tem afetado a Inteligência Artificial e como tornar algoritmos "caixa preta" mais transparentes.</p>
 								) : (
 									<p></p>
 								)}
