@@ -81,7 +81,7 @@ const IndexPage = (props) => {
 								)}
 								<p><a href="">Acesse meu portfolio</a></p>
 							</div>
-							<div className={indexStyles.projectImage}><img src="/images/projects/carla-palestra-serasa.jpg"/></div>
+							<div className={indexStyles.projectImage}><img src="/images/projects/carla-palestra-floripa.jpg"/></div>
 						</div>
 						<div className={indexStyles.projectItem}>
 							<div className={indexStyles.details}>

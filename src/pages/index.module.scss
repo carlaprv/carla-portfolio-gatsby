@@ -150,53 +150,60 @@ PROJECTS
       justify-content: space-between;
       flex-shrink: 1;
       margin-bottom:7rem;
+      
       &:last-child{
             margin-bottom:0rem;
       }
-      @media screen and (max-width: 1024px) {
-            flex-direction: column;
+      @media screen and (min-width: 1025px) {
+            &:nth-child(2n){
+                  flex-direction: row-reverse;
+            }
       }
 
-      .details{
-            display: flex;
-            flex-direction: column;
-            max-width:calc(100% - 450px);
+      @media screen and (max-width: 1024px) {
+            flex-direction: column-reverse;
+            margin-bottom: 3rem;
+      }
+}
+
+.details{
+      display: flex;
+      flex-direction: column;
+      max-width:calc(100% - 450px);
+      @media screen and (max-width: 1024px) {
+            max-width:100%;
+      }
+      h3{
+            font-size: 1.6rem;
+            color:$pink-color;
+      }
+      p {
+            line-height: 2.2rem;
             @media screen and (max-width: 1024px) {
-                  max-width:100%;
-            }
-            h3{
-                  font-size: 1.6rem;
-                  color:$pink-color;
-            }
-            p {
-                  line-height: 2.2rem;
-                  @media screen and (max-width: 1024px) {
-                        margin-right: 0;
-                  }
+                  margin-right: 0;
             }
       }
-      
-      
-     
 }
-      .project-image {
-            flex-shrink: 0;
-            img {
-                  border-radius: 10px;
-                  width: 400px;
-                  height: auto;
-                  object-fit: cover;
-                  object-position: center center;
-                  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
-                  @media screen and (max-width: 1024px) {
-                        width: 100%;
-                        height: 200px;
-                  }
-            }
+
+.project-image {
+      flex-shrink: 0;
+      img {
+            border-radius: 10px;
+            width: 400px;
+            height: auto;
+            object-fit: cover;
+            object-position: center center;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
             @media screen and (max-width: 1024px) {
                   width: 100%;
+                  height: 200px;
             }
       }
+
+      @media screen and (max-width: 1024px) {
+            width: 100%;
+      }
+}
 
 /* 
 """
