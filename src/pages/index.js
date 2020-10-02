@@ -16,6 +16,7 @@ const IndexPage = (props) => {
 	const intl = useIntl()
 	const list = props.data.posts.edges
 	const youtube = props.data.youtube.edges
+	const events = props.data.upcomingevents.edges
 
 	return(
 		<Layout>
@@ -110,42 +111,18 @@ const IndexPage = (props) => {
 				<div className={layoutStyles.sectionContent}>
 					<h2>{intl.formatMessage({ id: "events" })}</h2>
 					<div className={indexStyles.events}>
-						<div className={indexStyles.event}>
-							<div className={indexStyles.eventDetails}>
-								<h4>NOME DO EVENTO</h4>
-								<h3>Título palestra</h3>
-								{intl.locale === "pt" ? (
-									<p>October, 1st, 2020, Cyberspace</p>
-								) : (
-									<p></p>
-								)}
-								<p><a href="">Inscreva-se</a></p>
-							</div>
-						</div>			
-						<div className={indexStyles.event}>
-							<div className={indexStyles.eventDetails}>
-								<h4>NOME DO EVENTO</h4>
-								<h3>Título palestra</h3>
-								{intl.locale === "pt" ? (
-									<p>October, 1st, 2020, Cyberspace</p>
-								) : (
-									<p></p>
-								)}
-								<p><a href="">Inscreva-se</a></p>
-							</div>
-						</div>			
-						<div className={indexStyles.event}>
-							<div className={indexStyles.eventDetails}>
-								<h4>NOME DO EVENTO</h4>
-								<h3>Título palestra</h3>
-								{intl.locale === "pt" ? (
-									<p>October, 1st, 2020, Cyberspace</p>
-								) : (
-									<p></p>
-								)}
-								<p><a href="">Inscreva-se</a></p>
-							</div>
-						</div>	
+						{events.map((edge) => {
+							return (
+								<div className={indexStyles.event}>
+									<div className={indexStyles.eventDetails}>
+										<h4>{edge.node.frontmatter.eventname}</h4>
+										<h3>{edge.node.frontmatter.title}</h3>
+										<p>{edge.node.frontmatter.date}</p>
+										<p><a href={edge.node.frontmatter.eventlink}>Inscreva-se</a></p>
+									</div>
+								</div>
+							)
+						})}						
 					</div>			
 				</div>
 			</section>
@@ -203,44 +180,44 @@ const IndexPage = (props) => {
 export default IndexPage
 
 export const query = graphql`
-	query {
-		site{
-		   siteMetadata{
-		        author	
-		        image
-		   }
+query {
+	site {
+		siteMetadata {
+			author
+			image
 		}
-		posts: allMarkdownRemark(
-			sort: { fields: frontmatter___date, order: DESC }
-			filter: { fileAbsolutePath: { regex: "/(/content/posts)/" } }
-			limit: 3
-		    ) {
-			edges {
-			  node {
-			    excerpt(pruneLength: 150)
-			    fields {
-				slug
-			    }
-			    frontmatter {
-				date(locale: "pt-br", formatString: "DD MMM[,] YYYY")
-				description
-				title
-				thumbnail {
-                           id
-                           publicURL
-                        }
-			    }
-			  }
+	}
+	posts: allMarkdownRemark(
+		sort: { fields: frontmatter___date, order: DESC }
+		filter: { fileAbsolutePath: { regex: "/(/content/posts)/" } }
+		limit: 3
+	) {
+		edges {
+			node {
+				excerpt(pruneLength: 150)
+				fields {
+					slug
+				}
+				frontmatter {
+					date(locale: "pt-br", formatString: "DD MMM[,] YYYY")
+					description
+					title
+					thumbnail {
+						id
+						publicURL
+					}
+				}
 			}
 		}
-		youtube: allMarkdownRemark(
-				sort: { fields: frontmatter___date, order: DESC }
-				filter: { fileAbsolutePath: { regex: "/(/content/youtube)/" } }
-				limit: 3
-			) {
-			edges {
-			  node {
-					frontmatter {
+	}
+	youtube: allMarkdownRemark(
+		sort: { fields: frontmatter___date, order: DESC }
+		filter: { fileAbsolutePath: { regex: "/(/content/youtube)/" } }
+		limit: 3
+	) {
+		edges {
+			node {
+				frontmatter {
 					title
 					date(locale: "pt-br", formatString: "DD MMM[,] YYYY")
 					link
@@ -248,11 +225,27 @@ export const query = graphql`
 					thumbnail {
 						publicURL
 					}
-			    }
-			  }
+				}
 			}
 		}
 	}
+	upcomingevents: allMarkdownRemark(
+		sort: { fields: frontmatter___date, order: ASC }
+		filter: { fileAbsolutePath: { regex: "/(/content/events)/" } }
+		limit: 3
+	) {
+		edges {
+			node {
+				frontmatter {
+					title
+					date(locale: "pt-br", formatString: "DD MMM[,] YYYY")
+					eventname
+					eventlink
+				}
+			}
+		}
+	}
+}
 `
 
 
