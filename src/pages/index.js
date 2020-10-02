@@ -238,7 +238,7 @@ export const query = graphql`
 					link
 					channel
 					thumbnail {
-					publicURL
+						publicURL
 					}
 			    }
 			  }
