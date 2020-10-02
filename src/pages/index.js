@@ -87,7 +87,7 @@ const IndexPage = (props) => {
 								)}
 								<p><a href="">Acesse meu portfolio</a></p>
 							</div>
-							<div className={indexStyles.projectImage}><img src="/images/projects/IMG_2863.jpg"/></div>
+							<div className={indexStyles.projectImage}><img src="/images/projects/wids-event.jpg"/></div>
 						</div>
 						<div className={indexStyles.projectItem}>
 							<div className={indexStyles.details}>
@@ -101,7 +101,7 @@ const IndexPage = (props) => {
 								)}
 								<p><a href="">Lattes</a></p>
 							</div>
-							<div className={indexStyles.projectImage}><img src="/images/projects/girl-ai.png"/></div>
+							<div className={indexStyles.projectImage}><img src="/images/projects/ai-girl.png"/></div>
 						</div>
 					</div>	
 				</div>
