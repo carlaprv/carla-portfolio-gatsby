@@ -63,11 +63,15 @@ const IndexPage = (props) => {
 							<div className={indexStyles.details}>
 								<h3>ONG perifaCode</h3>
 								{intl.locale === "pt" ? (
-									<p>A comunidade de programação da periferia! Aqui reunimos pessoas que moram em periferias, favelas e guetos do Brasil para criar uma rede de apoio para conseguirmos vencer os desafios sociais que nos limitam a entrada ou evolução na área de programação.</p>
+									<p>
+										Sou uma das fundadoras da ONG perifaCode. A ONG foi criada em 2019 com a missão de combater a desigualde social através da diversidade e inclusão de pessoas que moram em periferias, favelas e guetos do Brasil na área de tecnologia. Realizamos diversas atividades, grupos de estudos, feiras de profissão para que jovens tenham o primeiro acesso a programação através de representatividade.
+									</p>
 								) : (
-									<p></p>
+									<p>
+										
+									</p>
 								)}
-								<p><a href="">Conheça o projeto!</a></p>
+								<p><a href="https://perifacode.com/manifesto/">Conheça o projeto</a></p>
 							</div>
 							<div className={indexStyles.projectImage}><img src="/images/projects/perifacode.jpg"/></div>
 						</div>
@@ -75,25 +79,29 @@ const IndexPage = (props) => {
 							<div className={indexStyles.details}>
 								<h3>Palestras</h3>
 								{intl.locale === "pt" ? (
-									<p>A comunidade de programação da periferia! Aqui reunimos pessoas que moram em periferias, favelas e guetos do Brasil para criar uma rede de apoio para conseguirmos vencer os desafios sociais que nos limitam a entrada ou evolução na área de programação.</p>
+									<p>
+										Já participei de diferentes eventos como palestrante tanto no Brasil quanto fora. Realizo palestras sobre Inteligência Artificial, impactos da tecnologia na sociedade, diversdade e sobre a perifaCode. Minha missão é promover oportunidades de aprendizado sobre programação para meninas e mulheres periféricas na ciência e pesquisa. 
+									</p>
 								) : (
 									<p></p>
 								)}
 								<p><a href="">Acesse meu portfolio</a></p>
 							</div>
-							<div className={indexStyles.projectImage}><img src="/images/projects/carla-palestra-floripa.jpg"/></div>
+							<div className={indexStyles.projectImage}><img src="/images/projects/IMG_2863.jpg"/></div>
 						</div>
 						<div className={indexStyles.projectItem}>
 							<div className={indexStyles.details}>
-								<h3>Mestranda em Inteligêcia Artificial (USP)</h3>
+								<h3>Pesquisa em Inteligência Artificial e Sociedade</h3>
 								{intl.locale === "pt" ? (
-									<p>Acredito na tecnologia como ferramenta de transformação social e tem estudado sobre como o viés inconsciente tem afetado a Inteligência Artificial e como tornar algoritmos "caixa preta" mais transparentes.</p>
+									<p>
+										Acredito na tecnologia como ferramenta de transformação social e como pesquisadora tenho desafiado os estereótipos de gênero e de raça que influenciam nossa relação com as áreas de STEM. Tenho pesquisado sobre racismo algorítmico e Explicabilidade em Inteligência Artificial, buscando tornar algoritmos mais inteligíveis para seres humanos.
+									</p>
 								) : (
 									<p></p>
 								)}
 								<p><a href="">Lattes</a></p>
 							</div>
-							<div className={indexStyles.projectImage}><img src="/images/projects/fairness.jpg"/></div>
+							<div className={indexStyles.projectImage}><img src="/images/projects/girl-ai.png"/></div>
 						</div>
 					</div>	
 				</div>

@@ -191,12 +191,14 @@ projects
             border-radius: 10px;
             width: 400px;
             height: auto;
+            min-height: 300px;
             object-fit: cover;
             object-position: center center;
             box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
             @media screen and (max-width: 1024px) {
                   width: 100%;
-                  height: 200px;
+                  min-height: 0px;
+                  max-height: 200px;
             }
       }
 
