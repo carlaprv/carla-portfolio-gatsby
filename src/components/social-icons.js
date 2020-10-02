@@ -8,7 +8,7 @@ const SocialList = styled.ul`
       border: 0;
       padding-left: 0;
 	margin:0px;
-	line-height:40px;
+	line-height:60px;
 	display:flex;
 	flex-direction:row;
 `
@@ -21,7 +21,8 @@ const SocialItem = styled.li`
       margin-right: 35px;
       display: inline-block;
       opacity: 0.44;
-      transition: 0.8s;
+	transition: 0.8s;
+	margin-bottom:0;
       &:hover{
             opacity: 1;  
       }
