@@ -21,7 +21,7 @@ collections:
       - { label: 'Title', name: 'title', widget: 'string' }
       - { label: 'Publish Date', name: 'date', widget: 'datetime' }
       - { label: 'Description', name: 'description', widget: 'string' }
-      - { label: 'Language', name: 'language', widget: 'select', options: ["en", "pt"]} # - { label: 'Slug', name: 'slug', widget: 'string' }
+      - { label: 'Language', name: 'language', widget: 'select', options: ["en", "pt"]}
       - { label: "Featured Image", name: "thumbnail", widget: "image" }
       - { label: 'Body', name: 'body', widget: 'markdown' }
       - { label: 'Tags', name: 'tags', widget: list, default: [''] }
@@ -30,6 +30,7 @@ collections:
   - name: 'youtube'
     label: 'Youtube'
     label_singular: 'video'
+    description: 'Registrar novos vídeos no youtube.'
     folder: 'content/youtube'
     path: '{{year}}/{{title}}/index'
     create: true
@@ -46,3 +47,45 @@ collections:
       - { label: 'Video ID', name: 'videoid', widget: 'string' }
       - { label: 'Thumbnail', name: 'thumbnail', widget: 'image'}
       - { label: 'Youtube link', name: 'link', widget: 'string'}
+  - name: 'talks'
+    label: 'Talks'
+    label_singular: 'talk'
+    description: 'Registrar palestras/painéis em que participou.'
+    folder: 'content/talks'
+    path: '{{year}}/{{title}}/index'
+    create: true
+    slug: "{{year}}--{{title}}"
+    media_folder: ''
+    public_folder: ''
+    editor:
+      preview: false
+    fields:
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Date', name: 'date', widget: 'datetime' }
+      - { label: 'Body', name: 'body', widget: 'markdown' }
+      - { label: 'Thumbnail', name: 'thumbnail', widget: 'image'}
+      - { label: 'Event or Conference', name: 'eventname', widget: 'string' }
+      - { label: 'Country', name: 'country', widget: 'string' , required: false}
+      - { label: 'State', name: 'state', widget: 'string' , required: false}
+      - { label: 'Slides link', name: 'slides', widget: 'string', required: false}
+      - { label: 'Video Link', name: 'video', widget: 'string', required: false}
+      - { label: 'Article Link', name: 'article', widget: 'string', required: false}
+  - name: 'podcasts'
+    label: 'Podcasts'
+    label_singular: 'episode'
+    description: 'Registrar participação em podcasts.'
+    folder: 'content/podcasts'
+    path: '{{year}}/{{title}}/index'
+    create: true
+    slug: "{{year}}--{{title}}"
+    media_folder: ''
+    public_folder: ''
+    editor:
+      preview: false
+    fields:
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Date', name: 'date', widget: 'datetime' }
+      - { label: 'Body', name: 'body', widget: 'markdown' }
+      - { label: 'Podcast Name', name: 'podcastname', widget: 'string' }
+      - { label: 'Thumbnail', name: 'thumbnail', widget: 'image' }
+      - { label: 'Episode link', name: 'slides', widget: 'string' }
