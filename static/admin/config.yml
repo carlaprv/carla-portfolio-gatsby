@@ -50,7 +50,7 @@ collections:
   - name: 'talks'
     label: 'Talks'
     label_singular: 'talk'
-    description: 'Registrar palestras/painéis em que participou.'
+    description: 'Registrar participação em palestras/painéis.'
     folder: 'content/talks'
     path: '{{year}}/{{title}}/index'
     create: true
