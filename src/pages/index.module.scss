@@ -131,7 +131,7 @@ img.about-image {
 
 /* 
 """
-PROJECTS
+projects
 """
 */
 
@@ -204,6 +204,47 @@ PROJECTS
             width: 100%;
       }
 }
+
+/* 
+"""
+events
+"""
+*/
+
+.events{
+      margin-top: 3rem;
+      display: flex;
+      flex-flow: row wrap;
+      padding: 0px;
+      justify-content: space-between;
+}
+
+.event{
+      display: flex;
+      flex-direction: column;
+      text-align: left;
+      margin-bottom:3rem;
+      min-width: 300px;
+      
+      &:last-child{
+            margin-bottom:0rem;
+      }
+
+      .event-details{
+            h3{
+                  font-size: 1.6rem;
+                  color:$pink-color;
+            }
+            p {
+                  line-height: 2.2rem;
+                  @media screen and (max-width: 1024px) {
+                        margin-right: 0;
+                  }
+            }
+      }
+
+}
+
 
 /* 
 """

@@ -20,7 +20,7 @@ const IndexPage = (props) => {
 	return(
 		<Layout>
 			<SEO title={intl.formatMessage({ id: "home" })} lang={intl.locale}/>
-			<section>
+			<section id="header">
 				<video poster="" id="bgvid" loop muted autoPlay>
 					<source src="/images/video-carla-banner.mp4" type="video/mp4"/>
 				</video>
@@ -36,7 +36,7 @@ const IndexPage = (props) => {
 				</div>
 
 			</section>
-			<section id="about" className={layoutStyles.whiteSection}>
+			<section id="about" className={layoutStyles.coloredSection}>
 				<div className={layoutStyles.sectionContent}>
 					<div className={indexStyles.about}>
 						<div>
@@ -55,7 +55,7 @@ const IndexPage = (props) => {
 					</div>				
 				</div>
 			</section>
-			<section id="projects" className={layoutStyles.coloredSection}>
+			<section id="projects" className={layoutStyles.whiteSection}>
 				<div className={layoutStyles.sectionContent}>
 					<h2>{intl.formatMessage({ id: "projects" })}</h2>
 					<div className={indexStyles.projects}>
@@ -96,6 +96,49 @@ const IndexPage = (props) => {
 							<div className={indexStyles.projectImage}><img src="/images/projects/fairness.jpg"/></div>
 						</div>
 					</div>	
+				</div>
+			</section>
+			<section id="events" className={layoutStyles.coloredSection}>
+				<div className={layoutStyles.sectionContent}>
+					<h2>{intl.formatMessage({ id: "events" })}</h2>
+					<div className={indexStyles.events}>
+						<div className={indexStyles.event}>
+							<div className={indexStyles.eventDetails}>
+								<h4>NOME DO EVENTO</h4>
+								<h3>Título palestra</h3>
+								{intl.locale === "pt" ? (
+									<p>October, 1st, 2020, Cyberspace</p>
+								) : (
+									<p></p>
+								)}
+								<p><a href="">Inscreva-se</a></p>
+							</div>
+						</div>			
+						<div className={indexStyles.event}>
+							<div className={indexStyles.eventDetails}>
+								<h4>NOME DO EVENTO</h4>
+								<h3>Título palestra</h3>
+								{intl.locale === "pt" ? (
+									<p>October, 1st, 2020, Cyberspace</p>
+								) : (
+									<p></p>
+								)}
+								<p><a href="">Inscreva-se</a></p>
+							</div>
+						</div>			
+						<div className={indexStyles.event}>
+							<div className={indexStyles.eventDetails}>
+								<h4>NOME DO EVENTO</h4>
+								<h3>Título palestra</h3>
+								{intl.locale === "pt" ? (
+									<p>October, 1st, 2020, Cyberspace</p>
+								) : (
+									<p></p>
+								)}
+								<p><a href="">Inscreva-se</a></p>
+							</div>
+						</div>	
+					</div>			
 				</div>
 			</section>
 			<section id="videos" className={layoutStyles.whiteSection}>
@@ -189,16 +232,14 @@ export const query = graphql`
 			) {
 			edges {
 			  node {
-			    frontmatter {
-				title
-				date(locale: "pt-br", formatString: "DD MMM[,] YYYY")
-				description
-				videoid
-				link
-				channel
-				thumbnail {
-				  publicURL
-				}
+					frontmatter {
+					title
+					date(locale: "pt-br", formatString: "DD MMM[,] YYYY")
+					link
+					channel
+					thumbnail {
+					publicURL
+					}
 			    }
 			  }
 			}
