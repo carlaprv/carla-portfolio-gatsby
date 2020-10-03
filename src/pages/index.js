@@ -65,7 +65,7 @@ const IndexPage = (props) => {
 								<h3>ONG perifaCode</h3>
 								{intl.locale === "pt" ? (
 									<p>
-										Sou uma das fundadoras da ONG perifaCode. A ONG foi criada em 2019 com a missão de combater a desigualde social através da diversidade e inclusão de pessoas que moram em periferias, favelas e guetos do Brasil na área de tecnologia. Realizamos diversas atividades, grupos de estudos, feiras de profissão para que jovens tenham o primeiro acesso a programação através de representatividade.
+										Sou uma das fundadoras da ONG perifaCode. A ONG tem a missão de combater a desigualde social através da diversidade e inclusão de pessoas que moram em periferias, favelas e guetos do Brasil na área de tecnologia. Realizamos diversas atividades, grupos de estudos, feiras de profissão para que jovens tenham o primeiro acesso a programação através de representatividade.
 									</p>
 								) : (
 									<p>
