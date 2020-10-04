@@ -1,5 +1,4 @@
 import React from "react"
-import { graphql } from 'gatsby'
 import { useIntl } from "gatsby-plugin-intl"
 import styled from "styled-components"
 
@@ -8,6 +7,13 @@ import SEO from '../components/seo'
 import Social from '../components/social-icons'
 
 import layoutStyles from '../components/layout.module.scss'
+
+
+const ContactContainer = styled.div`
+	ul{
+		line-height: 90px;
+	}	
+`
 
 const ContactForm = styled.div`
 	input[type=text], input[type=email], select, textarea {
@@ -41,16 +47,16 @@ const ContactPage = () => {
 			<SEO title={intl.formatMessage({ id: "contact" })} />
 			<section className={layoutStyles.coloredSection}>
         			<div className={layoutStyles.sectionContent}>
-					<div>
+					<ContactContainer>
 						<h1>{intl.formatMessage({ id: "contact" })}</h1>
 						{intl.locale === "pt" ? (
 							<p>Se você tem interesse em uma palestra minha na sua conferência/evento ou quer apenas entrar em contato, pode só enviar um e-mail para <a href="mailto:contato@carlavieira.dev">contato@carlavieira.dev</a> ou preencher o formulário abaixo.</p>
 						) : (
 							<p>Looking to get in touch? I'd love to hear from you. The best way to get in touch with me is to send me an e-mail to <a href="mailto:contato@carlavieira.dev">contato@carlavieira.dev</a> or fill out the form below.</p>
 						)}
-					</div>
 					
-					<Social purple={true}/>
+						<Social purple={true}/>
+					</ContactContainer>
 					<ContactForm>
 						<form name="contact" method="POST" data-netlify="true">
 							<p>

@@ -93,7 +93,7 @@ const YoutubeVideo = ({
 						<VideoItem>
 							<a href={edge.node.frontmatter.link}>
 								<Label>{edge.node.frontmatter.channel}</Label>
-								<VideoThumbnail src={edge.node.frontmatter.thumbnail.publicURL} alt="" />
+								<VideoThumbnail src={edge.node.frontmatter.thumbnail.publicURL} alt={edge.node.frontmatter.title} />
 							</a>
 						</VideoItem>
 					)

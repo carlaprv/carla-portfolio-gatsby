@@ -13,8 +13,11 @@ const AboutContainer = styled.div`
 	flex-direction:row;
 	justify-content: flex-start;
 	align-items: center;
-
 	margin-bottom:20px;
+
+	@media screen and (max-width:600px){
+		flex-direction:column;
+	}
 	h2{
 		color: #A173B1;
 		font-size: 1.8rem;
@@ -42,11 +45,11 @@ const Avatar = styled.img`
 	margin-right:30px;
 `
 const Experience = styled.div`
-	margin-top:40px;
+	margin-top:60px;
 
 	h1{
-		font-size: 2.3rem;
-		background-image: linear-gradient(0deg,rgba(151, 99, 194, 0.5) 0,rgba(151, 99, 194,.5) 30%,transparent 40%,transparent);
+		font-size: 2.1rem;
+		background-image: linear-gradient(0deg,rgba(151, 99, 194, .4) 0,rgba(151, 99, 194,.4) 30%,transparent 40%,transparent);
 
 	}
 

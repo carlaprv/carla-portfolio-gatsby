@@ -65,7 +65,12 @@ module.exports = {
 			{
 				name: 'About',
 				namept:'Sobre',
-				link: '/about'
+				link: '/#about'
+			},
+			{
+				name: 'Projects',
+				namept:'Projetos',
+				link: '/#projects'
 			},
 			{
 				name:'Blog',
