@@ -28,7 +28,7 @@ const BlogPost = (props) => {
                               <div className={blogPostStyles.postData}>
                                     <Link to="/blog" rel="blog" className={blogPostStyles.backLink}>← Voltar na listagem</Link>
                                     <p className={blogPostStyles.date}>
-                                          {post.frontmatter.date} · Leitura de {post.timeToRead} min · Escrito por <Link to="/about" rel="/#about">{props.data.site.siteMetadata.author}</Link>
+                                          {post.frontmatter.date} · Leitura de {post.timeToRead} min · Escrito por <b>{props.data.site.siteMetadata.author}</b>
                                     </p>
                                     <h1 className={blogPostStyles.postTitle}>{post.frontmatter.title}</h1>
                                     <p  className={blogPostStyles.postDescription}>{post.frontmatter.description}</p>
