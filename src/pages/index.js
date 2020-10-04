@@ -124,7 +124,19 @@ const IndexPage = (props) => {
 			</section>
 			<section id="events" className={layoutStyles.coloredSection}>
 				<div className={layoutStyles.sectionContent}>
+				<div className={layoutStyles.titleContent}>
 					<h2>{intl.formatMessage({ id: "events" })}</h2>
+					{intl.locale === "pt" ? (
+						<>
+						<Link className={layoutStyles.button} href="/speaking">Veja todas as palestras</Link>
+						</>
+					):(
+						<>
+						<Link className={layoutStyles.button} href="/speaking">See all talks</Link>
+						</>
+					)}
+					</div>
+					
 					<div className={indexStyles.events}>
 						{events.map((edge) => {
 							return (
