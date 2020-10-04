@@ -64,15 +64,20 @@ const IndexPage = (props) => {
 							<div className={indexStyles.details}>
 								<h3>ONG perifaCode</h3>
 								{intl.locale === "pt" ? (
+									<>
 									<p>
 										Sou uma das fundadoras da ONG perifaCode. A ONG tem a missão de combater a desigualde social através da diversidade e inclusão de pessoas que moram em periferias, favelas e guetos do Brasil na área de tecnologia. Realizamos diversas atividades, grupos de estudos e capacitação técnica que jovens tenham o primeiro acesso a programação através de representatividade.
 									</p>
+									<p><a href="https://perifacode.com/manifesto/">Conheça o projeto</a></p>
+									</>
 								) : (
+									<>
 									<p>
 										I am co-founder of perifaCode, a non-profit organization that aims to increase the presence of people from brazilian favelas in the technology field. Our initiatives include study groups, events related to technology and community building (through our online forums). Our mission is to introduce programming and technology to a new generation of coders, coders who will become builders of technological innovation and of their own futures.
 									</p>
+									<p><a href="https://perifacode.com/manifesto/">More about the project</a></p>
+									</>
 								)}
-								<p><a href="https://perifacode.com/manifesto/">Conheça o projeto</a></p>
 							</div>
 							<div className={indexStyles.projectImage}><img src="/images/projects/perifacode.jpg"/></div>
 						</div>
@@ -80,16 +85,21 @@ const IndexPage = (props) => {
 							<div className={indexStyles.details}>
 								<h3>Palestras</h3>
 								{intl.locale === "pt" ? (
+									<>
 									<p>
 										Já participei de diferentes eventos como palestrante tanto no Brasil quanto fora. Realizo palestras sobre Inteligência Artificial, impactos da tecnologia na sociedade, diversdade e sobre a perifaCode. Minha missão é promover oportunidades de aprendizado sobre programação para meninas e mulheres periféricas na ciência e pesquisa. 
 									</p>
+									<p><a href="">Acesse meu portfolio</a></p>
+									</>
 								) : (
+									<>
 									<p>
 										I've given quite a few talks around the world about technology,  Artificial Intelligence and its impacts on our society. My mission is to prommote learning opportunities about STEM to black girls and women from Brazil.
-
 									</p>
+									<p><a href="">Access my portfolio</a></p>
+									</>
 								)}
-								<p><a href="">Acesse meu portfolio</a></p>
+								
 							</div>
 							<div className={indexStyles.projectImage}><img src="/images/projects/wids-event.jpg"/></div>
 						</div>
@@ -105,7 +115,7 @@ const IndexPage = (props) => {
 										I believe Technology is steadily changing the social good landscape. As a researcher I have been challenging gender and race stereotypes in STEM. I've been researching about algorithmic racism and Explanability in Artificial Intelligence, seeking to make algorithms more intelligible to humans.
 									</p>
 								)}
-								<p><a href="">Lattes</a></p>
+								<p><a href="http://lattes.cnpq.br/7512704307943563">CV Lattes</a> | <a href="https://www.researchgate.net/profile/Carla_Vieira16">Research Gate</a></p>
 							</div>
 							<div className={indexStyles.projectImage}><img src="/images/projects/ai-girl.jpg"/></div>
 						</div>
