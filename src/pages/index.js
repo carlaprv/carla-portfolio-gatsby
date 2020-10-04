@@ -44,11 +44,11 @@ const IndexPage = (props) => {
 						<h2>{intl.formatMessage({ id: "about" })}</h2>
 						{intl.locale === "pt" ? (
 							<p>
-								<b>Carla Vieira</b> é Bacharel em Sistemas de Informação pela USP, mestranda em <b>Inteligência Artificial</b> pela USP, engenheira de software e <a href="https://developers.google.com/community/experts/directory/profile/profile-carla_vieira">Google Developer Expert em Machine Learning</a>. Co-organizadora da <a href="https://perifaCode.com">perifaCode</a>, buscando levar a tecnologia para dentro das periferias. Acredita na tecnologia como ferramenta de transformação social e tem estudado sobre como o viés inconsciente tem afetado a Inteligência Artificial e como tornar algoritmos caixa-preta mais transparentes.
+								<b>Carla Vieira</b> é Bacharel em Sistemas de Informação pela USP, mestranda em <a href="http://ppgsi.each.usp.br/orientandos/" target="_blank">Inteligência Artificial</a> pela USP, engenheira de software e <a href="https://developers.google.com/community/experts/directory/profile/profile-carla_vieira">Google Developer Expert em Machine Learning</a>. Co-organizadora da <a href="https://perifaCode.com">perifaCode</a>, buscando levar a tecnologia para dentro das periferias. Acredita na tecnologia como ferramenta de transformação social e tem estudado sobre como o viés inconsciente tem afetado a Inteligência Artificial e como tornar algoritmos caixa-preta mais transparentes.
 							</p>
 						) : (
 							<p>
-								<b>Carla Vieira</b> holds a Bachelor's degree in Information Systems at USP, master student in Artificial Intelligence, software engineer and Google Developer Expert in Machine Learning. She promotes gender and race diversity in technology as co-organizer of <a href="https://perifaCode.com">perifaCode</a> Community. She believes Technology is steadily changing the social good landscape and has been researching about the unconscious bias in Artificial Intelligence and its impacts on our society.
+								<b>Carla Vieira</b> holds a Bachelor's degree in Information Systems at USP, master student in <a href="http://ppgsi.each.usp.br/orientandos/" target="_blank">Artificial Intelligence</a>, software engineer and Google Developer Expert in Machine Learning. She promotes gender and race diversity in technology as co-organizer of <a href="https://perifaCode.com">perifaCode</a> Community. She believes Technology is steadily changing the social good landscape and has been researching about the unconscious bias in Artificial Intelligence and its impacts on our society.
 							</p>
 						)}
 						</div>	
@@ -65,11 +65,11 @@ const IndexPage = (props) => {
 								<h3>ONG perifaCode</h3>
 								{intl.locale === "pt" ? (
 									<p>
-										Sou uma das fundadoras da ONG perifaCode. A ONG tem a missão de combater a desigualde social através da diversidade e inclusão de pessoas que moram em periferias, favelas e guetos do Brasil na área de tecnologia. Realizamos diversas atividades, grupos de estudos, feiras de profissão para que jovens tenham o primeiro acesso a programação através de representatividade.
+										Sou uma das fundadoras da ONG perifaCode. A ONG tem a missão de combater a desigualde social através da diversidade e inclusão de pessoas que moram em periferias, favelas e guetos do Brasil na área de tecnologia. Realizamos diversas atividades, grupos de estudos e capacitação técnica que jovens tenham o primeiro acesso a programação através de representatividade.
 									</p>
 								) : (
 									<p>
-										
+										I am co-founder of perifaCode, a non-profit organization that aims to increase the presence of people from brazilian favelas in the technology field. Our initiatives include study groups, events related to technology and community building (through our online forums). Our mission is to introduce programming and technology to a new generation of coders, coders who will become builders of technological innovation and of their own futures.
 									</p>
 								)}
 								<p><a href="https://perifacode.com/manifesto/">Conheça o projeto</a></p>
@@ -84,7 +84,10 @@ const IndexPage = (props) => {
 										Já participei de diferentes eventos como palestrante tanto no Brasil quanto fora. Realizo palestras sobre Inteligência Artificial, impactos da tecnologia na sociedade, diversdade e sobre a perifaCode. Minha missão é promover oportunidades de aprendizado sobre programação para meninas e mulheres periféricas na ciência e pesquisa. 
 									</p>
 								) : (
-									<p></p>
+									<p>
+										I've given quite a few talks around the world about technology,  Artificial Intelligence and its impacts on our society. My mission is to prommote learning opportunities about STEM to black girls and women from Brazil.
+
+									</p>
 								)}
 								<p><a href="">Acesse meu portfolio</a></p>
 							</div>
@@ -98,7 +101,9 @@ const IndexPage = (props) => {
 										Acredito na tecnologia como ferramenta de transformação social e como pesquisadora tenho desafiado os estereótipos de gênero e de raça que influenciam nossa relação com as áreas de STEM. Tenho pesquisado sobre racismo algorítmico e Explicabilidade em Inteligência Artificial, buscando tornar algoritmos mais inteligíveis para seres humanos.
 									</p>
 								) : (
-									<p></p>
+									<p>
+										I believe Technology is steadily changing the social good landscape. As a researcher I have been challenging gender and race stereotypes in STEM. I've been researching about algorithmic racism and Explanability in Artificial Intelligence, seeking to make algorithms more intelligible to humans.
+									</p>
 								)}
 								<p><a href="">Lattes</a></p>
 							</div>
