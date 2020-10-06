@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link, graphql } from 'gatsby'
+import { useIntl } from "gatsby-plugin-intl"
 
 import SEO from '../components/seo'
 import Layout from '../components/layout'
@@ -8,6 +9,7 @@ import blogPostStyles from './blog.module.scss'
 
 
 const BlogPost = (props) => {
+	const intl = useIntl()
       const post = props.data.markdownRemark
       const next = props.pageContext.next
       const previous = props.pageContext.previous
@@ -52,16 +54,28 @@ const BlogPost = (props) => {
                               <div className={blogPostStyles.postContent}>
                                     <div dangerouslySetInnerHTML={{ __html: post.html}}></div>
                               </div>
-                              <div className={blogPostStyles.blogSupport}>
-                                    <div className={blogPostStyles.blogSupportText}>
-                                          <p>If you found this article useful or it’s saved you time, I would be grateful for your support.</p>
+                              
+                              {intl.locale === "pt" ? (
+                                    <div className={blogPostStyles.blogSupport}>
+                                          <div className={blogPostStyles.blogSupportText}>
+                                                <p>Se você achou esse artigo útil e gostou do conteúdo! Que tal apoiar meu trabalho?</p>
+                                          </div>
+                                          <div className={blogPostStyles.blogSupportButton}>
+                                                <img src="/images/coffee-cup.png"/>
+                                                <a href="https://picpay.me/carlaprv">Aceito um café</a>
+                                          </div>
                                     </div>
-                                    <div className={blogPostStyles.blogSupportButton}>
-                                          <img src="/images/coffee-cup.png"/>
-                                          <a href="https://picpay.me/carlaprv">Buy me a coffee</a>
-                                          
+                              ):(
+                                    <div className={blogPostStyles.blogSupport}>
+                                          <div className={blogPostStyles.blogSupportText}>
+                                                <p>If you found this article useful or it’s saved you time, I would be grateful for your support.</p>
+                                          </div>
+                                          <div className={blogPostStyles.blogSupportButton}>
+                                                <img src="/images/coffee-cup.png"/>
+                                                <a href="https://picpay.me/carlaprv">Buy me a coffee</a>
+                                          </div>
                                     </div>
-                              </div>
+                              )}
 
                               <div className={blogPostStyles.blogPagination}>
                                     {previous && (
