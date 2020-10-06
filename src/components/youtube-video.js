@@ -23,7 +23,22 @@ const VideosList = styled.div`
 	
 	@media screen and (max-width: 600px) {
             min-height: auto;
-      }
+	}
+
+	scrollbar-color: #958C9D #E2D9EA;   /* scroll thumb & track */
+	
+	&::-webkit-scrollbar {
+		width: 12px;               /* width of the entire scrollbar */
+	}
+	&::-webkit-scrollbar-track {
+		background: #E2D9EA;   
+		border-radius: 20px;        /* color of the tracking area */
+	}
+	&::-webkit-scrollbar-thumb {
+		background-color: #958C9D;    /* color of the scroll thumb */
+		border-radius: 20px;       /* roundness of the scroll thumb */
+		border: 3px solid #E2D9EA;  /* creates padding around scroll thumb */
+	}
 `
 
 const VideoItem = styled.div`
