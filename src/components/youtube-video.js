@@ -4,32 +4,43 @@ import styled from "styled-components"
 
 
 const VideosList = styled.div`
-	display: flex;
-	flex-wrap: wrap;
 	list-style: none;
 	margin: 0;
 	margin-top: 40px;
 	padding: 0;
 	justify-content: space-between;
+
+	grid-column-start: 3;
+      grid-column-end: 11;
+      min-width: 100%;
+      min-height: 200px;
+      display: flex;
+	overflow-x: auto;
+
+      @media screen and (max-width: 1024px) {
+            grid-column-start: 2;
+            grid-column-end: 12;
+      }
 `
 
 const VideoItem = styled.div`
-width: 450px;  
+	margin-right: 20px;
+	min-width: 450px;  
 
-@media(min-width: 1500px) {
-  width: 31%;  
-  max-width: 31%;
-}
+	@media(min-width: 1500px) {
+		min-width: 31%;  
+		max-width: 31%;
+	}
 
-@media screen and (max-width: 1501px) {
-  width: 450px; 
-  max-width: 48%;
-}
+	@media screen and (max-width: 1501px) {
+		min-width: 450px; 
+		max-width: 48%;
+	}
 
-@media screen and (max-width: 800px) {
-    width: 100%;
-    max-width: 100%;
-}
+	@media screen and (max-width: 800px) {
+		min-width: 100%;
+		max-width: 100%;
+	}
 `
 
 const VideoThumbnail = styled.img`
@@ -92,7 +103,7 @@ const YoutubeVideo = ({
 					return (
 						<VideoItem>
 							<a href={edge.node.frontmatter.link}>
-								<Label>{edge.node.frontmatter.channel}</Label>
+								{/* <Label>{edge.node.frontmatter.channel}</Label> */}
 								<VideoThumbnail src={edge.node.frontmatter.thumbnail.publicURL} alt={edge.node.frontmatter.title} />
 							</a>
 						</VideoItem>

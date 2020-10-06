@@ -167,8 +167,9 @@ const IndexPage = (props) => {
 							</>
 						)}
 					</div>
-					<YoutubeVideo youtube={youtube}/>
+					{/* <YoutubeVideo youtube={youtube}/> */}
 				</div>
+				<YoutubeVideo youtube={youtube}/>	
 			</section>
 			<section id="blog" className={layoutStyles.coloredSection}>
 				<div className={layoutStyles.sectionContent}>

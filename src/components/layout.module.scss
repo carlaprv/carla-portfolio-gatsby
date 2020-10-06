@@ -50,6 +50,18 @@ body{
       color: $txt-color;
 }
 
+.colored-section {
+      display: grid;
+      grid-template-columns: repeat(12, [col-start] 1fr);
+      background: $main-bg-color;
+      padding:80px 0;
+      background-image: url('/images/background.png');
+      background-position: top;
+      background-attachment: fixed;
+      text-align: left;
+      color: $txt-color;
+}
+
 .white-section {
       display: grid;
       grid-template-columns: repeat(12, [col-start] 1fr);
