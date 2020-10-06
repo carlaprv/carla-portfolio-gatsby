@@ -8,7 +8,6 @@ const VideosList = styled.div`
 	margin: 0;
 	margin-top: 40px;
 	padding: 0;
-	justify-content: space-between;
 
 	grid-column-start: 3;
       grid-column-end: 11;
@@ -20,6 +19,10 @@ const VideosList = styled.div`
       @media screen and (max-width: 1024px) {
             grid-column-start: 2;
             grid-column-end: 12;
+	}
+	
+	@media screen and (max-width: 600px) {
+            min-height: auto;
       }
 `
 
@@ -40,6 +43,11 @@ const VideoItem = styled.div`
 	@media screen and (max-width: 800px) {
 		min-width: 100%;
 		max-width: 100%;
+	}
+
+	@media screen and (max-width: 600px) {
+		min-width: 240px;
+		max-width: 240px;
 	}
 `
 
@@ -64,7 +72,8 @@ const VideoThumbnail = styled.img`
 	}
 
 	@media screen and (max-width: 600px) {
-		height:150px;
+		width:240px;
+		height:auto;
 	}
 `
 
