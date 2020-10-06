@@ -24,8 +24,6 @@ const VideosList = styled.div`
 	@media screen and (max-width: 600px) {
             min-height: auto;
 	}
-
-	scrollbar-color: #958C9D #E2D9EA;   /* scroll thumb & track */
 	
 	&::-webkit-scrollbar {
 		width: 12px;               /* width of the entire scrollbar */

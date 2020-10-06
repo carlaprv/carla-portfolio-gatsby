@@ -142,6 +142,7 @@ a{
 
 .post-content{
       margin-top: 40px;
+      margin-bottom: 80px;
       color:$main-txt-color;
             font-family: $font-family-serif;
             line-height: 2rem;
@@ -187,13 +188,77 @@ a{
       }
 }
 
+// Support
+
+.blog-support{
+      display: flex;
+      -moz-box-pack: justify;
+      justify-content: space-between;
+      align-items: center;
+      flex-flow: row wrap;
+      border-top:3px dashed $secondary-pink-color;
+      padding-top: 40px;
+      padding-bottom: 40px;
+      
+      @media screen and (max-width: 600px) {
+            flex-shrink: 0;
+            flex-flow: column wrap;
+
+      }
+}
+
+.blog-support-text{
+      flex-basis: calc(62.5% - 22px);
+      p{
+            font-style: italic;
+            font-size: 16px;
+            line-height: 24px;
+            margin-bottom: 0;
+            opacity: 0.8;
+      }
+}
+
+.blog-support-button{
+      flex-basis: calc(37.5% - 22px);
+      max-width: 200px;
+      background-color:rgb(165, 88, 180);
+      border-radius: 6px;
+      padding:14px;
+      text-align: center;
+
+      display: flex;
+      align-items: center;
+      align-self: flex-end;
+      justify-content: space-evenly;
+      opacity: 0.8;
+      &:hover{
+            opacity: 1;
+      }
+      @media screen and (max-width: 600px) {
+            margin-top: 30px;
+            padding:10px;
+            align-self: flex-start;
+            
+      }
+      a{    
+            font-size: 16px;
+            font-weight: bold;
+            color: white;
+            line-height: 32px;
+            margin-bottom: -3px;
+      }
+      img{
+            margin-bottom: 0;
+      }
+} 
+
 // PAGINATION
 
 .blog-pagination{
       display: flex;
       -moz-box-pack: justify;
       justify-content: space-between;
-      border-top:1px solid $secondary-pink-color;
+      border-top:3px dashed $secondary-pink-color;
       padding-top: 40px;
 }
 
@@ -209,7 +274,6 @@ a{
       }
 
       .blog-nav-item{
-            // border:1px solid $secondary-pink-color;
             margin-top: 30px;
             background-color: white;
             padding:20px;

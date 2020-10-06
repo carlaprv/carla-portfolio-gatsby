@@ -52,6 +52,16 @@ const BlogPost = (props) => {
                               <div className={blogPostStyles.postContent}>
                                     <div dangerouslySetInnerHTML={{ __html: post.html}}></div>
                               </div>
+                              <div className={blogPostStyles.blogSupport}>
+                                    <div className={blogPostStyles.blogSupportText}>
+                                          <p>If you found this article useful or it’s saved you time, I would be grateful for your support.</p>
+                                    </div>
+                                    <div className={blogPostStyles.blogSupportButton}>
+                                          <img src="/images/coffee-cup.png"/>
+                                          <a href="https://picpay.me/carlaprv">Buy me a coffee</a>
+                                          
+                                    </div>
+                              </div>
 
                               <div className={blogPostStyles.blogPagination}>
                                     {previous && (
