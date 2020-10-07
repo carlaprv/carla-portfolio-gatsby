@@ -107,3 +107,4 @@ collections:
       - { label: 'Date', name: 'date', widget: 'datetime' }
       - { label: 'Body', name: 'body', widget: 'markdown' }
       - { label: 'Event Subscription Link', name: 'eventlink', widget: 'string' , required: false }
+      - { label: 'Is it an Online Event?', name: 'online', widget: "boolean", default: false }

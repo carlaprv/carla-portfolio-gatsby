@@ -254,6 +254,33 @@ events
             }
       }
 
+      .event-online{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            align-content: center;
+            // background-color: $secondary-bg-color;
+            // padding:2px 15px;
+            // border-radius: 6px;
+            // max-width:180px;
+            margin-bottom:10px;
+            p{
+                  text-transform: uppercase;
+                  font-family: $font-family-sans-serif;
+                  font-weight: 600;
+                  color:#5F336A;
+                  // padding-left:15px;
+                  // border-left: 2px solid #ab88c0;
+                  font-size: 13px;
+                  margin-bottom: 0;
+            }
+            img{
+                  width:15px;
+                  margin-right:10px;
+                  margin-bottom: 0;
+            }
+      }
+
 }
 
 

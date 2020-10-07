@@ -142,6 +142,14 @@ const IndexPage = (props) => {
 							return (
 								<div className={indexStyles.event}>
 									<div className={indexStyles.eventDetails}>
+										{`${edge.node.frontmatter.online}` ? (
+											<div className={indexStyles.eventOnline}>
+												<img src="/images/rec.svg"/>
+												<p>Evento online</p>
+											</div>
+										):(
+											<p>Evento presencial</p>
+										)}
 										<h4>{edge.node.frontmatter.eventname}</h4>
 										<h3>{edge.node.frontmatter.title}</h3>
 										<p>{edge.node.frontmatter.date}</p>
@@ -269,6 +277,7 @@ query {
 					date(locale: "pt-br", formatString: "DD MMM[,] YYYY")
 					eventname
 					eventlink
+					online
 				}
 			}
 		}
