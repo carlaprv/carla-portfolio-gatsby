@@ -1,5 +1,5 @@
 import React from "react"
-import { Link } from 'gatsby'
+import { Link,  graphql } from 'gatsby'
 import { useIntl } from "gatsby-plugin-intl"
 import styled from "styled-components"
 

@@ -142,13 +142,16 @@ const IndexPage = (props) => {
 							return (
 								<div className={indexStyles.event}>
 									<div className={indexStyles.eventDetails}>
-										{`${edge.node.frontmatter.online}` ? (
+										{edge.node.frontmatter.online ? (
 											<div className={indexStyles.eventOnline}>
 												<img src="/images/rec.svg"/>
 												<p>Evento online</p>
 											</div>
 										):(
-											<p>Evento presencial</p>
+											<div className={indexStyles.eventOnline}>
+												<img src="/images/push-pin.png"/>
+												<p>Evento presencial</p>
+											</div>
 										)}
 										<h4>{edge.node.frontmatter.eventname}</h4>
 										<h3>{edge.node.frontmatter.title}</h3>
