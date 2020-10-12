@@ -7,12 +7,6 @@ import SEO from '../components/seo'
 
 import layoutStyles from '../components/layout.module.scss'
 
-
-const Container = styled.div`
-	
-		
-`
-
 const TextBox = styled.div`
 	width: 100%; 
 	border-radius: 6px;
@@ -66,19 +60,20 @@ const copyDivToClipboard = (element) => {
 	window.getSelection().addRange(range); // to select text
 	document.execCommand("copy");
 	window.getSelection().removeAllRanges();// to deselect
-  }
+}
+
 
 const BioPage = () => {
 	const intl = useIntl()
 
 	return (
 		<Layout>
-			<SEO title={intl.formatMessage({ id: "bio" })} />
+			<SEO title={intl.formatMessage({ id: "biography" })} />
 			<section className={layoutStyles.coloredSection}>
         			<div className={layoutStyles.sectionContent}>
-					<h1>{intl.formatMessage({ id: "bio" })}</h1>
+					<h1>{intl.formatMessage({ id: "biography" })}</h1>
 					{intl.locale === "pt" ? (
-						<Container>
+						<div>
 							<TextBox>
 								<h2>Mini bio</h2>
 								<p id="shortbio">
@@ -103,10 +98,10 @@ const BioPage = () => {
 									<img src="/images/bio/foto-2-carla.jpg"/>
 								</Photos>
 							</TextBox>
-						</Container>
+						</div>
 						
 					) : (
-						<Container>
+						<div>
 							<TextBox>
 								<h2>Short bio</h2>
 								<p id="shortbio">Carla holds a Bachelor's degree in Information Systems at USP, master student in Artificial Intelligence, software engineer and Google Developer Expert in Machine Learning.</p>
@@ -127,7 +122,7 @@ const BioPage = () => {
 									<img src="/images/bio/foto-2-carla.jpg"/>
 								</Photos>
 							</TextBox>
-						</Container>
+						</div>
 					)}
 				</div>
 			</section>
