@@ -1,9 +1,12 @@
 import React from "react"
-import { Link, graphql } from 'gatsby'
+import { Link } from 'gatsby'
 import { useIntl } from "gatsby-plugin-intl"
 import styled from "styled-components"
+
 import Layout from '../components/layout'
 import SEO from '../components/seo'
+import PageHeader from '../components/page-header'
+
 import layoutStyles from '../components/layout.module.scss'
 
 const SpeakingContent = styled.div`
@@ -30,11 +33,16 @@ const SpeakingPage = () => {
 	return (
 		<Layout>
 			<SEO title={intl.formatMessage({ id: "speaking" })} />
+			<PageHeader
+				slug="speaking"
+				title={intl.formatMessage({ id: "speaking" })}
+				description="Por aqui você vai encontrar os conteúdos das minhas palestras."
+				background="/images/speaking/evento.jpg"
+			/>
 			<section className={layoutStyles.coloredSection}>
 				<div className={layoutStyles.sectionContent}>
-					<SpeakingContent>
-						<SpeakingText>
-							<h1>{intl.formatMessage({ id: "speaking" })}</h1>
+					{/* <SpeakingContent> */}
+						{/* <SpeakingText> */}
 							{intl.locale === "pt" ? (
 								<><p>
 									Já participei de diferentes eventos como palestrante tanto no Brasil quanto fora. Se você tem interesse nas palestras que eu já dei, os slides estão disponíveis no speakerdeck. 
@@ -47,9 +55,9 @@ const SpeakingPage = () => {
 									If you're interested in me speaking at your conference or podcast, you can send an e-mail to <a href="mailto:contato@carlavieira.dev">contato@carlavieira.dev</a> or fill out my <Link to="/contact">contact form</Link>.
 								</p>
 							)}
-						</SpeakingText>
-						<SpeakingImage src="images/carla-palestra-cp-goias.jpg"/>
-					</SpeakingContent>
+						{/* </SpeakingText>
+						<SpeakingImage src="images/carla-palestra-cp-goias.jpg"/> */}
+					{/* </SpeakingContent> */}
 				</div>
 			</section>
 		</Layout>
