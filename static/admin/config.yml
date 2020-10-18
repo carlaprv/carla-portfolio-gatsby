@@ -67,6 +67,7 @@ collections:
       - { label: 'Event or Conference', name: 'eventname', widget: 'string' }
       - { label: 'Country', name: 'country', widget: 'string' , required: false}
       - { label: 'State', name: 'state', widget: 'string' , required: false}
+      - { label: 'City', name: 'city', widget: 'string' , required: false}
       - { label: 'Slides link', name: 'slides', widget: 'string', required: false}
       - { label: 'Video Link', name: 'video', widget: 'string', required: false}
       - { label: 'Article Link', name: 'article', widget: 'string', required: false}
