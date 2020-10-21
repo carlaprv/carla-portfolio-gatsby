@@ -44,15 +44,15 @@ const IndexPage = (props) => {
 						<h2>{intl.formatMessage({ id: "about" })}</h2>
 						{intl.locale === "pt" ? (
 							<p>
-								<b>Carla Vieira</b> é Bacharel em Sistemas de Informação pela USP, mestranda em <a href="http://ppgsi.each.usp.br/orientandos/" target="_blank">Inteligência Artificial</a> pela USP, engenheira de software e <a href="https://developers.google.com/community/experts/directory/profile/profile-carla_vieira">Google Developer Expert em Machine Learning</a>. Co-fundadora da <a href="https://perifaCode.com">perifaCode</a>, buscando levar a tecnologia para dentro das periferias. Acredita na tecnologia como ferramenta de transformação social e tem estudado sobre como o viés inconsciente tem afetado a Inteligência Artificial e como tornar algoritmos caixa-preta mais transparentes.
+								<b>Carla Vieira</b> é Bacharel em Sistemas de Informação pela USP, mestranda em <a href="http://ppgsi.each.usp.br/orientandos/" target="_blank" rel="noreferrer">Inteligência Artificial</a> pela USP, engenheira de software e <a href="https://developers.google.com/community/experts/directory/profile/profile-carla_vieira">Google Developer Expert em Machine Learning</a>. Co-fundadora da <a href="https://perifaCode.com">perifaCode</a>, buscando levar a tecnologia para dentro das periferias. Acredita na tecnologia como ferramenta de transformação social e tem estudado sobre como o viés inconsciente tem afetado a Inteligência Artificial e como tornar algoritmos caixa-preta mais transparentes.
 							</p>
 						) : (
 							<p>
-								<b>Carla Vieira</b> holds a Bachelor's degree in Information Systems at USP, master student in <a href="http://ppgsi.each.usp.br/orientandos/" target="_blank">Artificial Intelligence</a>, software engineer and Google Developer Expert in Machine Learning. She promotes gender and race diversity in technology as co-founder of <a href="https://perifaCode.com">perifaCode</a> Community. She believes Technology is steadily changing the social good landscape and has been researching about the unconscious bias in Artificial Intelligence and its impacts on our society.
+								<b>Carla Vieira</b> holds a Bachelor's degree in Information Systems at USP, master student in <a href="http://ppgsi.each.usp.br/orientandos/" target="_blank" rel="noreferrer">Artificial Intelligence</a>, software engineer and Google Developer Expert in Machine Learning. She promotes gender and race diversity in technology as co-founder of <a href="https://perifaCode.com">perifaCode</a> Community. She believes Technology is steadily changing the social good landscape and has been researching about the unconscious bias in Artificial Intelligence and its impacts on our society.
 							</p>
 						)}
 						</div>	
-						<img src="/images/carla/foto-carla-2020.jpg" className={indexStyles.aboutImage}/>
+						<img src="/images/carla/foto-carla-2020.jpg" className={indexStyles.aboutImage} alt=""/>
 					</div>				
 				</div>
 			</section>
@@ -79,7 +79,7 @@ const IndexPage = (props) => {
 									</>
 								)}
 							</div>
-							<div className={indexStyles.projectImage}><img src="/images/projects/perifacode.jpg"/></div>
+							<div className={indexStyles.projectImage}><img src="/images/projects/perifacode.jpg" alt=""/></div>
 						</div>
 						<div className={indexStyles.projectItem}>
 							<div className={indexStyles.details}>
@@ -89,19 +89,19 @@ const IndexPage = (props) => {
 									<p>
 										Já participei de diferentes eventos como palestrante tanto no Brasil quanto fora. Realizo palestras sobre Inteligência Artificial, impactos da tecnologia na sociedade, diversdade e sobre a perifaCode. Minha missão é promover oportunidades de aprendizado sobre programação para meninas e mulheres periféricas na ciência e pesquisa. 
 									</p>
-									<p><a href="">Acesse meu portfolio</a></p>
+									<p><a href="/">Acesse meu portfolio</a></p>
 									</>
 								) : (
 									<>
 									<p>
 										I've given quite a few talks around the world about technology,  Artificial Intelligence and its impacts on our society. My mission is to prommote learning opportunities about STEM to black girls and women from Brazil.
 									</p>
-									<p><a href="">Access my portfolio</a></p>
+									<p><a href="/">Access my portfolio</a></p>
 									</>
 								)}
 								
 							</div>
-							<div className={indexStyles.projectImage}><img src="/images/projects/wids-event.jpg"/></div>
+							<div className={indexStyles.projectImage}><img src="/images/projects/wids-event.jpg" alt=""/></div>
 						</div>
 						<div className={indexStyles.projectItem}>
 							<div className={indexStyles.details}>
@@ -117,7 +117,7 @@ const IndexPage = (props) => {
 								)}
 								<p><a href="http://lattes.cnpq.br/7512704307943563">CV Lattes</a> | <a href="https://www.researchgate.net/profile/Carla_Vieira16">Research Gate</a></p>
 							</div>
-							<div className={indexStyles.projectImage}><img src="/images/projects/ai-girl.jpg"/></div>
+							<div className={indexStyles.projectImage}><img src="/images/projects/ai-girl.jpg" alt=""/></div>
 						</div>
 					</div>	
 				</div>
@@ -144,12 +144,12 @@ const IndexPage = (props) => {
 									<div className={indexStyles.eventDetails}>
 										{edge.node.frontmatter.online ? (
 											<div className={indexStyles.eventOnline}>
-												<img src="/images/rec.svg"/>
+												<img src="/images/rec.svg" alt=""/>
 												<p>Evento online</p>
 											</div>
 										):(
 											<div className={indexStyles.eventOnline}>
-												<img src="/images/push-pin.png"/>
+												<img src="/images/push-pin.png" alt=""/>
 												<p>Evento presencial</p>
 											</div>
 										)}
@@ -170,11 +170,11 @@ const IndexPage = (props) => {
 						{intl.locale === "pt" ? (
 							<>
 							<h2>Últimos vídeos do canal</h2>
-							<a className={layoutStyles.button} href="https://youtube.com/eaicarla" target="_blank">Veja todos os vídeos</a>
+							<a className={layoutStyles.button} href="https://youtube.com/eaicarla" target="_blank" rel="noreferrer">Veja todos os vídeos</a>
 							</>
 						):(
 							<><h2>Latest Youtube videos</h2>
-							<a className={layoutStyles.button} href="https://youtube.com/eaicarla" target="_blank">See all videos</a>
+							<a className={layoutStyles.button} href="https://youtube.com/eaicarla" target="_blank" rel="noreferrer">See all videos</a>
 							</>
 						)}
 					</div>

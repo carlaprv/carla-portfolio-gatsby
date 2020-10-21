@@ -9,6 +9,10 @@ import PageHeader from '../components/page-header'
 
 import layoutStyles from '../components/layout.module.scss'
 
+const SpeakingContainer = styled.div`
+	display: flex;
+`
+
 const SpeakingPage = () => {
 	const intl = useIntl()
 
@@ -36,6 +40,9 @@ const SpeakingPage = () => {
 							</p>
 						)}
 				</div>
+				<SpeakingContainer>
+							
+				</SpeakingContainer>
 			</section>
 		</Layout>
 	)
