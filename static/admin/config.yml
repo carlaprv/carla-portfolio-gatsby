@@ -109,3 +109,24 @@ collections:
       - { label: 'Body', name: 'body', widget: 'markdown' }
       - { label: 'Event Subscription Link', name: 'eventlink', widget: 'string' , required: false }
       - { label: 'Is it an Online Event?', name: 'online', widget: "boolean", default: false }
+  - name: 'midianews'
+    label: 'Midia News'
+    description: 'Registrar entrevistas e matérias na mídia'
+    label_singular: 'news'
+    folder: 'content/news'
+    path: '{{year}}/{{title}}/index'
+    create: true
+    slug: "{{year}}--{{title}}"
+    media_folder: ''
+    public_folder: ''
+    editor:
+      preview: false
+    fields:
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Revista/portal', name: 'midianame', widget: 'string' }
+      - { label: 'Date', name: 'date', widget: 'datetime' }
+      - { label: 'Autor', name: 'author', widget: 'string' , required: false }
+      - { label: 'Link', name: 'link', widget: 'string' }
+      - { label: 'Body', name: 'body', widget: 'markdown' }
+      - { label: 'Thumbnail', name: 'thumbnail', widget: 'image' , required: false }
+      - { label: 'Logotipo', name: 'logo', widget: 'image' , required: false }

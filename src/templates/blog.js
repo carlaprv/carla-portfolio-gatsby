@@ -61,7 +61,7 @@ const BlogPost = (props) => {
                                                 <p>Se você achou esse artigo útil e gostou do conteúdo! Que tal apoiar meu trabalho?</p>
                                           </div>
                                           <div className={blogPostStyles.blogSupportButton}>
-                                                <img src="/images/coffee-cup.png"/>
+                                                <img src="/images/coffee-cup.png" alt=""/>
                                                 <a href="https://picpay.me/carlaprv">Aceito um café</a>
                                           </div>
                                     </div>
@@ -71,7 +71,7 @@ const BlogPost = (props) => {
                                                 <p>If you found this article useful or it’s saved you time, I would be grateful for your support.</p>
                                           </div>
                                           <div className={blogPostStyles.blogSupportButton}>
-                                                <img src="/images/coffee-cup.png"/>
+                                                <img src="/images/coffee-cup.png" alt=""/>
                                                 <a href="https://picpay.me/carlaprv">Buy me a coffee</a>
                                           </div>
                                     </div>
