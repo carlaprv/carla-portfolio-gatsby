@@ -131,6 +131,20 @@ module.exports = {
 			},
 		},
 		{
+			resolve: 'gatsby-source-filesystem',
+			options: {
+				name: `podcasts`,
+				path: `${__dirname}/content/podcasts/`,
+			},
+		},
+		{
+			resolve: 'gatsby-source-filesystem',
+			options: {
+				name: `news`,
+				path: `${__dirname}/content/news/`,
+			},
+		},
+		{
 			resolve: 'gatsby-plugin-intl',
 			options: {
 				// language JSON resource path
