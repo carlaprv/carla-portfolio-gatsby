@@ -73,6 +73,11 @@ module.exports = {
 				link: '/#projects'
 			},
 			{
+				name: 'Palestras',
+				namept:'Palestras',
+				link: '/speaking'
+			},
+			{
 				name:'Blog',
 				namept:'Blog',
 				link: '/blog'

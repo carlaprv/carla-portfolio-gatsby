@@ -1,6 +1,6 @@
 ---
 title: "O front-end como você conhece vai morrer "
-date: 2019-08-23T14:23:00.000Z
+date: 2019-08-10T14:23:00.000Z
 thumbnail: 2019-front-in-vale.jpg
 eventname: Front In Vale
 country: Brasil
