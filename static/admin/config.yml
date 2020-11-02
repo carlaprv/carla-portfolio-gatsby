@@ -124,7 +124,7 @@ collections:
     fields:
       - { label: 'Title', name: 'title', widget: 'string' }
       - { label: 'Revista/portal', name: 'midianame', widget: 'string' }
-      - { label: 'Date', name: 'date', widget: 'datetime' }
+      - { label: 'Date', name: 'date', widget: 'datetime', time_format: True }
       - { label: 'Autor', name: 'author', widget: 'string' , required: false }
       - { label: 'Link', name: 'link', widget: 'string' }
       - { label: 'Body', name: 'body', widget: 'markdown' }

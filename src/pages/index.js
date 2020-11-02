@@ -1,6 +1,7 @@
 import React from "react"
 import { Link, graphql } from 'gatsby'
 import { useIntl } from "gatsby-plugin-intl"
+import moment from 'moment'
 
 import SEO from '../components/seo'
 import Card from '../components/card'
@@ -270,8 +271,7 @@ query {
 	}
 	upcomingevents: allMarkdownRemark(
 		sort: { fields: frontmatter___date, order: ASC }
-		filter: { fileAbsolutePath: { regex: "/(/content/events)/" } }
-		limit: 3
+		filter: {fileAbsolutePath: {regex: "/(/content/events)/"}, isFuture: { eq: true }}, limit: 3
 	) {
 		edges {
 			node {
