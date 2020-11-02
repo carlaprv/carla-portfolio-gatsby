@@ -1,20 +1,29 @@
 import React from "react"
-import { Link } from 'gatsby'
+import { graphql, Link } from 'gatsby'
 import { useIntl } from "gatsby-plugin-intl"
 import styled from "styled-components"
 
 import Layout from '../components/layout'
 import SEO from '../components/seo'
 import PageHeader from '../components/page-header'
+import TalkItem from '../components/talk-item'
 
 import layoutStyles from '../components/layout.module.scss'
 
 const SpeakingContainer = styled.div`
 	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	list-style: none;
+	justify-content: space-between;
+	margin: 0;
+	margin-top: 40px;
+	padding: 0;
 `
 
-const SpeakingPage = () => {
+const SpeakingPage = (props) => {
 	const intl = useIntl()
+	const talks = props.data.allMarkdownRemark.edges
 
 	return (
 		<Layout>
@@ -27,25 +36,47 @@ const SpeakingPage = () => {
 			/>
 			<section className={layoutStyles.coloredSection}>
 				<div className={layoutStyles.sectionContent}>
-						{intl.locale === "pt" ? (
-							<><p>
-								Já participei de diferentes eventos como palestrante tanto no Brasil quanto fora. Se você tem interesse nas palestras que eu já dei, os slides estão disponíveis no speakerdeck. 
-							</p><p>
-								Se você tem interesse em uma palestra minha na sua conferência/evento ou quer apenas entrar em contato, pode só enviar um e-mail para <a href="mailto:contato@carlavieira.dev">contato@carlavieira.dev</a> ou preencher o <Link to="/contact">formulário de contato</Link>.
-							</p></>
-						) : (
-							<p>
-								I've given quite a few talks around the world about Python, Artificial Intelligence, Data science and more.
-								If you're interested in me speaking at your conference or podcast, you can send an e-mail to <a href="mailto:contato@carlavieira.dev">contato@carlavieira.dev</a> or fill out my <Link to="/contact">contact form</Link>.
-							</p>
-						)}
+					<SpeakingContainer>
+						{talks.map((edge) => {
+							return (
+								<TalkItem
+									image={edge.node.frontmatter.thumbnail.publicURL}
+									date={edge.node.frontmatter.date}
+									title={edge.node.frontmatter.title}
+									eventname={edge.node.frontmatter.eventname}
+									video={edge.node.frontmatter.video}
+									slides={edge.node.frontmatter.slides}
+								/>
+							)
+						})}	
+					</SpeakingContainer>	
 				</div>
-				<SpeakingContainer>
-							
-				</SpeakingContainer>
+				
 			</section>
 		</Layout>
 	)
 }
+
+export const TalksListQuery = graphql`
+   query TalksListQuery {
+	allMarkdownRemark(sort: {fields: frontmatter___date, order: DESC}, filter: {fileAbsolutePath: {regex: "/(/content/talks)/"}}) {
+	  edges {
+	    node {
+		frontmatter {
+		  title
+		  date(locale: "pt-br", formatString: "DD MMM[,] YYYY")
+		  eventname
+		  thumbnail {
+		    id
+		    publicURL
+		  }
+		  video
+		  slides
+		}
+	    }
+	  }
+	}
+    }    
+`
 
 export default SpeakingPage

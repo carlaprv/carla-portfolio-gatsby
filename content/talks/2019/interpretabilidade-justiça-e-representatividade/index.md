@@ -1,6 +1,6 @@
 ---
 title: Interpretabilidade, Justiça e representatividade
-date: 2020-12-11T14:31:00.000Z
+date: 2019-12-11T14:31:00.000Z
 thumbnail: 2019-gdg.jpg
 eventname: GDG Datafest
 country: Brasil

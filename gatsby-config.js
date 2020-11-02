@@ -133,6 +133,13 @@ module.exports = {
 		{
 			resolve: 'gatsby-source-filesystem',
 			options: {
+				name: `events`,
+				path: `${__dirname}/content/talks/`,
+			},
+		},
+		{
+			resolve: 'gatsby-source-filesystem',
+			options: {
 				name: `podcasts`,
 				path: `${__dirname}/content/podcasts/`,
 			},
