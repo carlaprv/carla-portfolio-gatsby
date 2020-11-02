@@ -1,10 +1,7 @@
 ---
 title: Como realmente surge o viés na IA — e porque é tão difícil corrigi-lo
 date: 2019-04-26T00:16:00.000Z
-description: Nos últimos meses, documentamos como a grande maioria das
-  aplicações de Inteligência Artificial são baseadas na categoria de algoritmos
-  conhecidos como Deep Learning, e como esses algoritmos reconhecem padrões nos
-  dados.
+description: Nós costumamos explicar o viés da IA atribuindo a culpa a um conjunto de dados de treinamento enviesado. Mas a realidade tem mais aspectos a serem considerados.
 language: pt
 thumbnail: 1-jurtdjsaby48bnle4wm4cg.png
 tags:

@@ -23,7 +23,7 @@ const SpeakingPage = () => {
 				slug="speaking"
 				title={intl.formatMessage({ id: "speaking" })}
 				description="Por aqui você vai encontrar os conteúdos das minhas palestras."
-				background="/images/speaking/evento.jpg"
+				background=""
 			/>
 			<section className={layoutStyles.coloredSection}>
 				<div className={layoutStyles.sectionContent}>
