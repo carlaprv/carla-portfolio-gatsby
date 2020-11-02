@@ -21,6 +21,18 @@ const SpeakingContainer = styled.div`
 	padding: 0;
 `
 
+const SpeakingSection = styled.div`
+	display: grid;
+	grid-template-columns: repeat(12, [col-start] 1fr);
+	background: #fbf4ff;
+	padding:15px 0;
+	background-image: url('/images/background.png');
+	background-position: top;
+	background-attachment: fixed;
+	text-align: left;
+	color: #251b33;
+`
+
 const SpeakingPage = (props) => {
 	const intl = useIntl()
 	const talks = props.data.allMarkdownRemark.edges
@@ -34,7 +46,7 @@ const SpeakingPage = (props) => {
 				description="Por aqui você vai encontrar os conteúdos das minhas palestras."
 				background=""
 			/>
-			<section className={layoutStyles.coloredSection}>
+			<SpeakingSection>
 				<div className={layoutStyles.sectionContent}>
 					<SpeakingContainer>
 						{talks.map((edge) => {
@@ -51,8 +63,7 @@ const SpeakingPage = (props) => {
 						})}	
 					</SpeakingContainer>	
 				</div>
-				
-			</section>
+			</SpeakingSection>
 		</Layout>
 	)
 }
