@@ -2,7 +2,7 @@
 title: Inteligência Artificial, Explicabilidade e justiça
 date: 2020-04-29T14:33:00.000Z
 thumbnail: wids-2020.png
-eventname: WiDS SP - Women in Data Science São Paulo
+eventname: Women in Data Science São Paulo
 slides: https://speakerdeck.com/carlaprv/interpretabilidade-justica-e-representatividade
 video: https://www.youtube.com/watch?v=4_2_AGOB9XI&t=1s
 ---

@@ -90,14 +90,14 @@ const IndexPage = (props) => {
 									<p>
 										Já participei de diferentes eventos como palestrante tanto no Brasil quanto fora. Realizo palestras sobre Inteligência Artificial, impactos da tecnologia na sociedade, diversdade e sobre a perifaCode. Minha missão é promover oportunidades de aprendizado sobre programação para meninas e mulheres periféricas na ciência e pesquisa. 
 									</p>
-									<p><a href="/">Acesse meu portfolio</a></p>
+									<p><Link to="/speaking">Acesse meu portfolio</Link></p>
 									</>
 								) : (
 									<>
 									<p>
 										I've given quite a few talks around the world about technology,  Artificial Intelligence and its impacts on our society. My mission is to prommote learning opportunities about STEM to black girls and women from Brazil.
 									</p>
-									<p><a href="/">Access my portfolio</a></p>
+									<p><Link to="/speaking">Access my portfolio</Link></p>
 									</>
 								)}
 								
@@ -129,11 +129,11 @@ const IndexPage = (props) => {
 					<h2>{intl.formatMessage({ id: "events" })}</h2>
 					{intl.locale === "pt" ? (
 						<>
-						<Link className={layoutStyles.button} href="/speaking">Veja todas as palestras</Link>
+						<Link className={layoutStyles.button} to="/speaking">Veja todas as palestras</Link>
 						</>
 					):(
 						<>
-						<Link className={layoutStyles.button} href="/speaking">See all talks</Link>
+						<Link className={layoutStyles.button} to="/speaking">See all talks</Link>
 						</>
 					)}
 					</div>
@@ -146,7 +146,7 @@ const IndexPage = (props) => {
 										{edge.node.frontmatter.online ? (
 											<div className={indexStyles.eventOnline}>
 												<img src="/images/rec.svg" alt=""/>
-												<p>Evento online</p>
+												<p>Evento online - {edge.node.frontmatter.date}</p>
 											</div>
 										):(
 											<div className={indexStyles.eventOnline}>
@@ -156,7 +156,6 @@ const IndexPage = (props) => {
 										)}
 										<h4>{edge.node.frontmatter.eventname}</h4>
 										<h3>{edge.node.frontmatter.title}</h3>
-										<p>{edge.node.frontmatter.date}</p>
 										<p><a href={edge.node.frontmatter.eventlink}>Inscreva-se</a></p>
 									</div>
 								</div>

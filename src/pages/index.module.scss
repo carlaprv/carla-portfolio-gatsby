@@ -239,17 +239,21 @@ events
 
       .event-details{
             h3{
-                  font-size: 1.5rem;
-                  color:$pink-color;
-                  line-height: 2.2rem;
+                  font-size: 1.3rem;
+                  line-height: 2rem;
             }
             h4{
-                  font-size: 1.3rem;
+                  font-size: 1rem;
+                  color:$pink-color;
+                  line-height: 1.5rem;
+                  font-weight: 600;
             }
             p {
                   line-height: 2.2rem;
+                  font-size: 1rem;
                   @media screen and (max-width: 1024px) {
                         margin-right: 0;
+                        
                   }
             }
       }
