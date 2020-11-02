@@ -91,7 +91,7 @@ const Tags = styled.div`
 `
 
 const TagButton = styled.div`
-      padding: .3rem .6rem;
+      padding: .4rem .6rem;
       background: #D8BBE8;
       border-radius: 6px;
       color: #33204B;
@@ -140,14 +140,14 @@ const TalkItem = ({
                                     </CardEvent>
                                     <Tags>
                                           {slides && (
-                                                <TagButton>
-                                                      <a href={`${slides}`} target="_blank">Slides</a>
-                                                </TagButton>
+                                                <a href={`${slides}`} target="_blank">
+                                                      <TagButton>Slides</TagButton>
+                                                </a>
                                           )}
                                           {video && (
-                                                <TagButton>
-                                                      <a href={`${video}`} target="_blank">Vídeo</a>
-                                                </TagButton>
+                                                <a href={`${video}`} target="_blank">
+                                                      <TagButton>Vídeo</TagButton>
+                                                </a>
                                           )}
                                     </Tags>
                               </CardContent>
