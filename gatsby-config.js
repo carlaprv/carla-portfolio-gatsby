@@ -49,7 +49,7 @@ module.exports = {
 			},
 			{
 				name:'Email',
-				link:'contato@carlavieira.dev',
+				link:'mailto:contato@carlavieira.dev',
 				icon:"/images/social-icons/mail.png",
 				svg:"/images/social-icons/mail.svg",
 				svgpurple:"/images/social-icons/mail_purple.svg",

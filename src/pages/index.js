@@ -16,6 +16,7 @@ import indexStyles from './index.module.scss'
 const IndexPage = (props) => {
 	const intl = useIntl()
 	const list = props.data.posts.edges
+	const news = props.data.news.edges
 	const youtube = props.data.youtube.edges
 	const events = props.data.upcomingevents.edges
 
@@ -129,15 +130,15 @@ const IndexPage = (props) => {
 				<div className={layoutStyles.sectionContent}>
 				<div className={layoutStyles.titleContent}>
 					<h2>{intl.formatMessage({ id: "events" })}</h2>
-					{intl.locale === "pt" ? (
-						<>
-						<Link className={layoutStyles.button} to="/speaking">Veja todas as palestras</Link>
-						</>
-					):(
-						<>
-						<Link className={layoutStyles.button} to="/speaking">See all talks</Link>
-						</>
-					)}
+						{intl.locale === "pt" ? (
+							<>
+							<Link className={layoutStyles.button} to="/speaking">Veja todas as palestras</Link>
+							</>
+						):(
+							<>
+							<Link className={layoutStyles.button} to="/speaking">See all talks</Link>
+							</>
+						)}
 					</div>
 					
 					<div className={indexStyles.events}>
@@ -180,11 +181,40 @@ const IndexPage = (props) => {
 							</>
 						)}
 					</div>
-					{/* <YoutubeVideo youtube={youtube}/> */}
 				</div>
 				<YoutubeVideo youtube={youtube}/>	
 			</section>
-			<section id="blog" className={layoutStyles.coloredSection}>
+			<section id="news" className={layoutStyles.coloredSection}>
+				<div className={layoutStyles.sectionContent}>
+					<div className={layoutStyles.titleContent}>
+						{intl.locale === "pt" ? (
+							<>
+							<h2>Matérias e entrevistas</h2>
+							<Link className={layoutStyles.button} href="/news">Veja todos as matérias e entrevistas</Link>
+							</>
+						):(
+							<><h2>News and interviews</h2>
+							<Link className={layoutStyles.button} href="/news">View All news and interviews</Link>
+							</>
+						)}
+						
+					</div>
+					<ul className={cardStyles.cards}>
+						{news.map((edge) => {
+						return (
+								<Card
+									slug={edge.node.frontmatter.link}
+									date={edge.node.frontmatter.date}
+									title={edge.node.frontmatter.title}
+									description={edge.node.frontmatter.midianame}
+									image={edge.node.frontmatter.thumbnail.publicURL}
+								/>
+							)
+						})}
+					</ul>
+				</div>
+			</section>
+			<section id="blog" className={layoutStyles.whiteSection}>
 				<div className={layoutStyles.sectionContent}>
 					<div className={layoutStyles.titleContent}>
 						{intl.locale === "pt" ? (
@@ -243,6 +273,27 @@ query {
 					date(locale: "pt-br", formatString: "DD MMM[,] YYYY")
 					description
 					title
+					thumbnail {
+						id
+						publicURL
+					}
+				}
+			}
+		}
+	}
+	news: allMarkdownRemark(
+		sort: { fields: frontmatter___date, order: DESC }
+		filter: { fileAbsolutePath: { regex: "/(/content/news)/" } }
+		limit: 3
+	) {
+		edges {
+			node {
+				frontmatter {
+					date(locale: "pt-br", formatString: "DD MMM[,] YYYY")
+					midianame
+					title
+					author
+					link
 					thumbnail {
 						id
 						publicURL

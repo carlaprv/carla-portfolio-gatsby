@@ -23,18 +23,6 @@ $pink-color-2:#C551B9;
 *::after { 
   box-sizing: border-box;
 }
-
-
-.btn {
-  background-color: white;
-  border: 1px solid $gray-light;
-  border-radius: 6px;
-  color: $main-txt-color;
-  padding: 0.5rem;
-  text-transform: lowercase;
-  display: block;
-  width: 100%;
-}
  
 .cards {
   display: flex;
@@ -45,90 +33,4 @@ $pink-color-2:#C551B9;
   margin: 0;
   margin-top: 40px;
   padding: 0;
-}
-
-.cards__item {
-  display: flex;
-  padding-bottom: 2rem;
- 
-  @media(min-width: 1500px) {
-    width: 31%;  
-    max-width: 31%;
-  }
-
-  @media screen and (max-width: 1501px) {
-    width: 450px; 
-    max-width: 48%;
-  }
-
-  @media screen and (max-width: 800px) {
-      width: 100%;
-      max-width: 100%;
-  }
-  
-}
-
-.card {
-  background-color: white;
-  border-radius: 6px;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.08);
-  -webkit-transition: -webkit-box-shadow .35s ease;
-  transition: -webkit-box-shadow .35s ease;
-  transition: box-shadow .35s ease;
-  transition: box-shadow .35s ease, -webkit-box-shadow .35s ease;
-  display: flex;
-  flex-direction: column;
-  overflow: hidden;
-
-  &:hover{
-    box-shadow: 0 6px 15px rgba(0,0,0,0.2);
-  }
-}
-
-.card__title {
-  font-size: 1.3rem;
-  line-height: 2rem;
-  font-weight: 600;
-  margin-bottom: 9px;
-  font-family: $font-family-sans-serif;
-}
-
-.card__date{
-  margin-bottom:10px;
-  color:$secondary-txt-color;
-  font-size:15px;
-  font-family: $font-family-sans-serif;
-}
-
-.card__content {
-  display: flex;
-  flex: 1 1 auto;
-  flex-direction: column;
-  padding: 1rem 2rem 2rem 2rem;
-  p{
-    font-size: 1rem;
-  }
-  
-}
-
-.card__title a{
-  text-decoration: none;
-  color: $main-txt-color;
-  background-image: linear-gradient(0deg,rgba(185, 125, 235, 0.3) 0,rgba(185, 125, 235,.4) 30%,transparent 40%,transparent);
-}
-.card__title a:hover{
-  background-image: linear-gradient(0deg,rgba(185, 125, 235,.7) 0,rgba(185, 125, 235,.7) 30%,transparent 40%,transparent);
-}
-
-.card__text {
-  flex: 1 1 auto;
-  font-size: 0.875rem;
-  line-height: 1.5;
-  margin-bottom: 1.25rem;
-}
-
-.card__image img{
-  width: 100%; /* width of container */
-  height: 200px; /* height of container */
-  object-fit: cover;
 }
