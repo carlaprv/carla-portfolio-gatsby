@@ -1,6 +1,5 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import cardStyles from './card.module.scss'
 import styled from "styled-components"
 
 
@@ -60,14 +59,16 @@ const CardTitle = styled.div`
       line-height: 2rem;
       font-weight: 600;
       margin-bottom: 9px;
-      font-family: $font-family-sans-serif;
+      font-family: 'Inter', sans-serif;
 
       a{
             text-decoration: none;
             color: $main-txt-color;
-            background-image: linear-gradient(0deg,rgba(185, 125, 235, 0.3) 0,rgba(185, 125, 235,.4) 30%,transparent 40%,transparent);
+            // background-image: linear-gradient(0deg,rgba(185, 125, 235, 0.3) 0,rgba(185, 125, 235,.4) 30%,transparent 40%,transparent);
             &:hover{
-                  background-image: linear-gradient(0deg,rgba(185, 125, 235,.7) 0,rgba(185, 125, 235,.7) 30%,transparent 40%,transparent);
+                  // background-image: linear-gradient(0deg,rgba(185, 125, 235,.7) 0,rgba(185, 125, 235,.7) 30%,transparent 40%,transparent);
+                  background-image: linear-gradient(0deg,rgba(185, 125, 235, 0.3) 0,rgba(185, 125, 235,.4) 30%,transparent 40%,transparent);
+
             }   
       }
 `
@@ -76,7 +77,7 @@ const CardDate = styled.div`
       margin-bottom:10px;
       color:$secondary-txt-color;
       font-size:15px;
-      font-family: $font-family-sans-serif;
+      font-family: 'Inter', sans-serif;
 `
 const CardText = styled.p`
       flex: 1 1 auto;

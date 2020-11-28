@@ -39,7 +39,7 @@ const IndexPage = (props) => {
 				</div>
 
 			</section>
-			<section id="about" className={layoutStyles.coloredSection}>
+			<section id="about" className={layoutStyles.whiteSection}>
 				<div className={layoutStyles.sectionContent}>
 					<div className={indexStyles.about}>
 						<div>
@@ -58,7 +58,7 @@ const IndexPage = (props) => {
 					</div>				
 				</div>
 			</section>
-			<section id="projects" className={layoutStyles.whiteSection}>
+			<section id="projects" className={layoutStyles.coloredSection}>
 				<div className={layoutStyles.sectionContent}>
 					<h2>{intl.formatMessage({ id: "projects" })}</h2>
 					<div className={indexStyles.projects}>
@@ -126,47 +126,6 @@ const IndexPage = (props) => {
 					</div>	
 				</div>
 			</section>
-			<section id="events" className={layoutStyles.coloredSection}>
-				<div className={layoutStyles.sectionContent}>
-				<div className={layoutStyles.titleContent}>
-					<h2>{intl.formatMessage({ id: "events" })}</h2>
-						{intl.locale === "pt" ? (
-							<>
-							<Link className={layoutStyles.button} to="/speaking">Veja todas as palestras</Link>
-							</>
-						):(
-							<>
-							<Link className={layoutStyles.button} to="/speaking">See all talks</Link>
-							</>
-						)}
-					</div>
-					
-					<div className={indexStyles.events}>
-						{events.map((edge) => {
-							return (
-								<div className={indexStyles.event}>
-									<div className={indexStyles.eventDetails}>
-										{edge.node.frontmatter.online ? (
-											<div className={indexStyles.eventOnline}>
-												<img src="/images/rec.svg" alt=""/>
-												<p>Evento online - {edge.node.frontmatter.date}</p>
-											</div>
-										):(
-											<div className={indexStyles.eventOnline}>
-												<img src="/images/push-pin.png" alt=""/>
-												<p>Evento presencial</p>
-											</div>
-										)}
-										<h4>{edge.node.frontmatter.eventname}</h4>
-										<h3>{edge.node.frontmatter.title}</h3>
-										<p><a href={edge.node.frontmatter.eventlink}>Inscreva-se</a></p>
-									</div>
-								</div>
-							)
-						})}						
-					</div>			
-				</div>
-			</section>
 			<section id="videos" className={layoutStyles.whiteSection}>
 				<div className={layoutStyles.sectionContent}>
 					<div className={layoutStyles.titleContent}>
@@ -214,7 +173,48 @@ const IndexPage = (props) => {
 					</ul>
 				</div>
 			</section>
-			<section id="blog" className={layoutStyles.whiteSection}>
+			<section id="events" className={layoutStyles.whiteSection}>
+				<div className={layoutStyles.sectionContent}>
+				<div className={layoutStyles.titleContent}>
+					<h2>{intl.formatMessage({ id: "events" })}</h2>
+						{intl.locale === "pt" ? (
+							<>
+							<Link className={layoutStyles.button} to="/speaking">Veja todas as palestras</Link>
+							</>
+						):(
+							<>
+							<Link className={layoutStyles.button} to="/speaking">See all talks</Link>
+							</>
+						)}
+					</div>
+					
+					<div className={indexStyles.events}>
+						{events.map((edge) => {
+							return (
+								<div className={indexStyles.event}>
+									<div className={indexStyles.eventDetails}>
+										{edge.node.frontmatter.online ? (
+											<div className={indexStyles.eventOnline}>
+												<img src="/images/rec.svg" alt=""/>
+												<p>Evento online - {edge.node.frontmatter.date}</p>
+											</div>
+										):(
+											<div className={indexStyles.eventOnline}>
+												<img src="/images/push-pin.png" alt=""/>
+												<p>Evento presencial</p>
+											</div>
+										)}
+										<h4>{edge.node.frontmatter.eventname}</h4>
+										<h3>{edge.node.frontmatter.title}</h3>
+										<p><a href={edge.node.frontmatter.eventlink}>Inscreva-se</a></p>
+									</div>
+								</div>
+							)
+						})}						
+					</div>			
+				</div>
+			</section>
+			<section id="blog" className={layoutStyles.coloredSection}>
 				<div className={layoutStyles.sectionContent}>
 					<div className={layoutStyles.titleContent}>
 						{intl.locale === "pt" ? (
