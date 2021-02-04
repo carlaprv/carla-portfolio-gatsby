@@ -87,9 +87,10 @@ const IndexPage = (props) => {
 						</div>
 						<div className={indexStyles.projectItem}>
 							<div className={indexStyles.details}>
-								<h3>Palestras</h3>
+								
 								{intl.locale === "pt" ? (
 									<>
+									<h3>Palestras</h3>
 									<p>
 										Já participei de diferentes eventos como palestrante tanto no Brasil quanto fora. Realizo palestras sobre Inteligência Artificial, impactos da tecnologia na sociedade, diversdade e sobre a perifaCode. Minha missão é promover oportunidades de aprendizado sobre programação para meninas e mulheres periféricas na ciência e pesquisa. 
 									</p>
@@ -97,6 +98,7 @@ const IndexPage = (props) => {
 									</>
 								) : (
 									<>
+									<h3>Public speaking</h3>
 									<p>
 										I've given quite a few talks around the world about technology,  Artificial Intelligence and its impacts on our society. My mission is to prommote learning opportunities about STEM to black girls and women from Brazil.
 									</p>
@@ -109,15 +111,20 @@ const IndexPage = (props) => {
 						</div>
 						<div className={indexStyles.projectItem}>
 							<div className={indexStyles.details}>
-								<h3>Pesquisa em Inteligência Artificial e Sociedade</h3>
 								{intl.locale === "pt" ? (
+									<>
+									<h3>Pesquisa em Inteligência Artificial e Sociedade</h3>
 									<p>
 										Acredito na tecnologia como ferramenta de transformação social e como pesquisadora tenho desafiado os estereótipos de gênero e de raça que influenciam nossa relação com as áreas de STEM. Tenho pesquisado sobre racismo algorítmico e Explicabilidade em Inteligência Artificial, buscando tornar algoritmos mais inteligíveis para seres humanos.
 									</p>
+									</>
 								) : (
+									<>
+									<h3>Human-Centered Artificial Intelligence Research</h3>
 									<p>
 										I believe Technology is steadily changing the social good landscape. As a researcher I have been challenging gender and race stereotypes in STEM. I've been researching about algorithmic racism and Explanability in Artificial Intelligence, seeking to make algorithms more intelligible to humans.
 									</p>
+									</>
 								)}
 								<p><a href="http://lattes.cnpq.br/7512704307943563">CV Lattes</a> | <a href="https://www.researchgate.net/profile/Carla_Vieira16">Research Gate</a></p>
 							</div>
