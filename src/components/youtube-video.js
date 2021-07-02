@@ -90,30 +90,6 @@ const VideoThumbnail = styled.img`
 	}
 `
 
-const Label = styled.span`
-	position: absolute;
-	z-index: 2;
-	padding: 5px 10px;
-	margin: 1.5rem 0 1rem 1.5rem;
-	display: inline-block;
-	font-size: .8rem;
-	font-weight: 600;
-	font-family: inherit;
-	text-transform: uppercase;
-	letter-spacing: 1px;
-	color: rgba(255, 255, 255, 0.9);
-	border: 2px solid rgba(255, 255, 255, 0.6);
-	background: rgba(255, 255, 255, 0.2);
-	border-radius: 100px;
-	transition: all 0.2s ease;
-
-	&:hover{
-		color: rgba(255, 255, 255, 0.9);
-		border: 2px solid rgb(164, 82, 202);
-		background: rgb(164, 82, 202);
-	}
-`
-
 const YoutubeVideo = ({
 	youtube
 }) => {
@@ -125,7 +101,6 @@ const YoutubeVideo = ({
 					return (
 						<VideoItem>
 							<a href={edge.node.frontmatter.link}>
-								{/* <Label>{edge.node.frontmatter.channel}</Label> */}
 								<VideoThumbnail src={edge.node.frontmatter.thumbnail.publicURL} alt={edge.node.frontmatter.title} />
 							</a>
 						</VideoItem>
