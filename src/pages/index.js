@@ -1,6 +1,7 @@
 import React from "react"
 import { Link, graphql } from 'gatsby'
 import { useIntl } from "gatsby-plugin-intl"
+import Markdown from 'markdown-to-jsx';
 
 import SEO from '../components/seo'
 import Card from '../components/card'
@@ -18,6 +19,7 @@ const IndexPage = (props) => {
 	const news = props.data.news.edges
 	const youtube = props.data.youtube.edges
 	const events = props.data.upcomingevents.edges
+	const bio = props.data.bio.edges
 
 	return(
 		<Layout>
@@ -44,13 +46,9 @@ const IndexPage = (props) => {
 						<div>
 						<h2>{intl.formatMessage({ id: "about" })}</h2>
 						{intl.locale === "pt" ? (
-							<p>
-								<b>Carla Vieira</b> é Bacharel em Sistemas de Informação pela USP, mestranda em <a href="http://ppgsi.each.usp.br/orientandos/" target="_blank" rel="noreferrer">Inteligência Artificial</a> pela USP, engenheira de software e <a href="https://developers.google.com/community/experts/directory/profile/profile-carla_vieira">Google Developer Expert em Machine Learning</a>. Co-fundadora da <a href="https://perifaCode.com">perifaCode</a>, buscando levar a tecnologia para dentro das periferias. Acredita na tecnologia como ferramenta de transformação social e tem estudado sobre como o viés inconsciente tem afetado a Inteligência Artificial e como tornar algoritmos caixa-preta mais transparentes.
-							</p>
+							<p>{bio.map((edge) => {return (<Markdown>{edge.node.frontmatter.biopt}</Markdown>)})}</p>
 						) : (
-							<p>
-								<b>Carla Vieira</b> holds a Bachelor's degree in Information Systems at USP, master student in <a href="http://ppgsi.each.usp.br/orientandos/" target="_blank" rel="noreferrer">Artificial Intelligence</a>, software engineer and Google Developer Expert in Machine Learning. She promotes gender and race diversity in technology as co-founder of <a href="https://perifaCode.com">perifaCode</a> Community. She believes Technology is steadily changing the social good landscape and has been researching about the unconscious bias in Artificial Intelligence and its impacts on our society.
-							</p>
+							<p>{bio.map((edge) => {return (<Markdown>{edge.node.frontmatter.bioen}</Markdown>)})}</p>
 						)}
 						</div>	
 						<img src="/images/carla/foto-carla-2020.jpg" className={indexStyles.aboutImage} alt=""/>
@@ -339,6 +337,23 @@ query {
 					eventname
 					eventlink
 					online
+				}
+			}
+		}
+	}
+	bio: allMarkdownRemark(
+		sort: {fields: frontmatter___date, order: DESC}, 
+		filter: {fileAbsolutePath: {regex: "/(/content/bio)/"}}, 
+		limit: 1
+	) {
+		edges {
+			node {
+			frontmatter {
+					title
+					biopt
+					bioen
+					minibiopt
+					minibioen
 				}
 			}
 		}
