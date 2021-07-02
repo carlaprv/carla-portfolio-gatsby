@@ -157,6 +157,13 @@ module.exports = {
 			},
 		},
 		{
+			resolve: 'gatsby-source-filesystem',
+			options: {
+				name: `bio`,
+				path: `${__dirname}/content/bio/`,
+			},
+		},
+		{
 			resolve: 'gatsby-plugin-intl',
 			options: {
 				// language JSON resource path
