@@ -1,5 +1,5 @@
 ---
-title: Teste
+title: Bio
 date: 2021-07-02T12:28:13.946Z
 biopt: "**Carla Vieira** é Bacharel em Sistemas de Informação pela USP,
   mestranda em [Inteligência Artificial](http://ppgsi.each.usp.br/orientandos/)
@@ -18,6 +18,10 @@ bioen: "**Carla Vieira** holds a Bachelor's degree in Information Systems at
   Community. She believes Technology is steadily changing the social good
   landscape and has been researching about the unconscious bias in Artificial
   Intelligence and its impacts on our society."
-minibiopt: teste
-minibioen: testes
+minibiopt: Carla Vieira é Bacharel em Sistemas de Informação pela USP, mestranda
+  em Inteligência Artificial pela USP, engenheira de software e Google Developer
+  Expert em Machine Learning.
+minibioen: Carla holds a Bachelor's degree in Information Systems at USP, master
+  student in Artificial Intelligence, software engineer and Google Developer
+  Expert in Machine Learning.
 ---
