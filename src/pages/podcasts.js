@@ -1,6 +1,5 @@
 import React from "react"
-import { Link } from 'gatsby'
-import { useIntl } from "gatsby-plugin-intl"
+// import { useIntl } from "gatsby-plugin-intl"
 import styled from "styled-components"
 
 import Layout from '../components/layout'
@@ -15,7 +14,7 @@ const PodcastsContainer = styled.div`
 
 
 const PodcastsPage = () => {
-	const intl = useIntl()
+	// const intl = useIntl()
 
 	return (
 		<Layout>

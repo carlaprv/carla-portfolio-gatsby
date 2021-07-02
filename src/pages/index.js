@@ -1,7 +1,6 @@
 import React from "react"
 import { Link, graphql } from 'gatsby'
 import { useIntl } from "gatsby-plugin-intl"
-import moment from 'moment'
 
 import SEO from '../components/seo'
 import Card from '../components/card'

@@ -133,19 +133,19 @@ const TalkItem = ({
                                           {date}
                                     </CardDate>
                                     <CardTitle>
-                                          <a href={`${slides}`} target="_blank">{title}</a>
+                                          <a href={`${slides}`} target="_blank" rel="noreferrer">{title}</a>
                                     </CardTitle>
                                     <CardEvent>
                                           {eventname}
                                     </CardEvent>
                                     <Tags>
                                           {slides && (
-                                                <a href={`${slides}`} target="_blank">
+                                                <a href={`${slides}`} target="_blank" rel="noreferrer">
                                                       <TagButton>Slides</TagButton>
                                                 </a>
                                           )}
                                           {video && (
-                                                <a href={`${video}`} target="_blank">
+                                                <a href={`${video}`} target="_blank" rel="noreferrer">
                                                       <TagButton>Vídeo</TagButton>
                                                 </a>
                                           )}
