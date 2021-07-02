@@ -202,6 +202,7 @@ module.exports = {
 		},
 		},
 		'gatsby-plugin-sharp',
+		'markdown-to-jsx',
 		{
 			resolve: 'gatsby-transformer-remark',
 			options:{
