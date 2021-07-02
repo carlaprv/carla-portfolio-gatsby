@@ -7,6 +7,23 @@ media_folder: static/assets
 public_folder: /assets
 
 collections:
+  - name: 'bio'
+    label: 'Bio information'
+    folder: 'content/bio' # The path to the folder where the documents are stored
+    path: '{{slug}}/index'
+    create: true
+    slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    media_folder: ''
+    public_folder: ''
+    editor:
+      preview: true
+    fields:
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Publish Date', name: 'date', widget: 'datetime' }
+      - { label: 'Bio (pt)', name: 'biopt', widget: 'markdown' }
+      - { label: 'Bio (en)', name: 'bioen', widget: 'markdown' }
+      - { label: 'Minibio (pt)', name: 'minibiopt', widget: 'markdown' }
+      - { label: 'Minibio (en)', name: 'minibioen', widget: 'markdown' }
   - name: 'blog'
     label: 'Blog'
     folder: 'content/posts' # The path to the folder where the documents are stored
