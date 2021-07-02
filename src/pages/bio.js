@@ -1,5 +1,6 @@
 import React from "react"
 import { useIntl } from "gatsby-plugin-intl"
+import Markdown from 'markdown-to-jsx';
 import styled from "styled-components"
 
 import Layout from '../components/layout'
@@ -43,9 +44,11 @@ const Photos = styled.div`
 	display: flex;
 	flex-direction:row;
 	margin-top:20px;
+	
 		
 	img{
 		margin-right:30px;
+		max-width: 48%;
 		border-radius:6px;
 		&:last-child{
 			margin-right:0;
@@ -63,8 +66,10 @@ const copyDivToClipboard = (element) => {
 }
 
 
-const BioPage = () => {
+const BioPage = (props) => {
 	const intl = useIntl()
+	const bio = props.data.bio.edges
+
 
 	return (
 		<Layout>
@@ -77,14 +82,14 @@ const BioPage = () => {
 							<TextBox>
 								<h2>Mini bio</h2>
 								<p id="shortbio">
-									Carla Vieira é Bacharel em Sistemas de Informação pela USP, mestranda em Inteligência Artificial pela USP, engenheira de software e Google Developer Expert em Machine Learning.
+									{bio.map((edge) => {return (<Markdown>{edge.node.frontmatter.minibiopt}</Markdown>)})}
 								</p>
 								<button onClick={() => copyDivToClipboard("shortbio")}><img src="/images/copy.svg" alt="" aria-label="copiar"/></button>
 							</TextBox>
 							<TextBox>
 								<h2>Bio</h2>
 								<p id="longbio">
-									Carla Vieira é Bacharel em Sistemas de Informação pela USP, mestranda em Inteligência Artificial pela USP, engenheira de software e Google Developer Expert em Machine Learning. Co-fundadora da perifaCode, buscando levar a tecnologia para dentro das periferias. Acredita na tecnologia como ferramenta de transformação social e tem estudado sobre como o viés inconsciente tem afetado a Inteligência Artificial e como tornar algoritmos caixa-preta mais transparentes.
+									{bio.map((edge) => {return (<Markdown>{edge.node.frontmatter.biopt}</Markdown>)})}
 								</p>
 								<button onClick={() => copyDivToClipboard("longbio")}><img src="/images/bio/copy.svg" alt="" aria-label="copiar"/></button>
 							</TextBox>
@@ -104,12 +109,12 @@ const BioPage = () => {
 						<div>
 							<TextBox>
 								<h2>Short bio</h2>
-								<p id="shortbio">Carla holds a Bachelor's degree in Information Systems at USP, master student in Artificial Intelligence, software engineer and Google Developer Expert in Machine Learning.</p>
+								<p id="shortbio">{bio.map((edge) => {return (<Markdown>{edge.node.frontmatter.minibioen}</Markdown>)})}</p>
 								<button onClick={() => copyDivToClipboard("shortbio")}><img src="/images/copy.svg" alt="" aria-label="copiar"/></button>
 							</TextBox>
 							<TextBox>
 								<h2>Long bio</h2>
-								<p id="longbio">Carla holds a Bachelor's degree in Information Systems at USP, master student in Artificial Intelligence, software engineer and Google Developer Expert in Machine Learning. She promotes gender and race diversity in technology as co-organizer of perifaCode Community. She believes Technology is steadily changing the social good landscape and has been researching about the unconscious bias in Artificial Intelligence and its impacts on our society. </p>
+								<p id="longbio">{bio.map((edge) => {return (<Markdown>{edge.node.frontmatter.bioen}</Markdown>)})} </p>
 								<button onClick={() => copyDivToClipboard("longbio")}><img src="/images/copy.svg" alt="" aria-label="copiar"/></button>
 							</TextBox>
 							<TextBox>
@@ -131,3 +136,25 @@ const BioPage = () => {
 }
 
 export default BioPage
+
+export const query = graphql`
+query {
+	bio: allMarkdownRemark(
+		sort: {fields: frontmatter___date, order: DESC}, 
+		filter: {fileAbsolutePath: {regex: "/(/content/bio)/"}}, 
+		limit: 1
+	) {
+		edges {
+			node {
+			frontmatter {
+					title
+					biopt
+					bioen
+					minibiopt
+					minibioen
+				}
+			}
+		}
+	}
+}
+`
