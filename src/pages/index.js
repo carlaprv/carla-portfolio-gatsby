@@ -1,7 +1,6 @@
 import React from "react"
 import { Link, graphql } from 'gatsby'
 import { useIntl } from "gatsby-plugin-intl"
-import Markdown from 'markdown-to-jsx';
 
 import SEO from '../components/seo'
 import Card from '../components/card'
@@ -46,9 +45,9 @@ const IndexPage = (props) => {
 						<div>
 						<h2>{intl.formatMessage({ id: "about" })}</h2>
 						{intl.locale === "pt" ? (
-							<p>{bio.map((edge) => {return (<Markdown>{edge.node.frontmatter.biopt}</Markdown>)})}</p>
+							<p>{bio.map((edge) => {return (<p>{edge.node.frontmatter.biopt}</p>)})}</p>
 						) : (
-							<p>{bio.map((edge) => {return (<Markdown>{edge.node.frontmatter.bioen}</Markdown>)})}</p>
+							<p>{bio.map((edge) => {return (<p>{edge.node.frontmatter.bioen}</p>)})}</p>
 						)}
 						</div>	
 						<img src="/images/carla/foto-carla-2020.jpg" className={indexStyles.aboutImage} alt=""/>
@@ -177,7 +176,8 @@ const IndexPage = (props) => {
 					</ul>
 				</div>
 			</section>
-			<section id="events" className={layoutStyles.whiteSection}>
+			{events && events.length && (
+				<section id="events" className={layoutStyles.whiteSection}>
 				<div className={layoutStyles.sectionContent}>
 				<div className={layoutStyles.titleContent}>
 					<h2>{intl.formatMessage({ id: "events" })}</h2>
@@ -218,6 +218,8 @@ const IndexPage = (props) => {
 					</div>			
 				</div>
 			</section>
+			)}
+			
 			<section id="blog" className={layoutStyles.coloredSection}>
 				<div className={layoutStyles.sectionContent}>
 					<div className={layoutStyles.titleContent}>

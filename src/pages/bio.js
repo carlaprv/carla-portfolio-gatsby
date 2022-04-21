@@ -1,6 +1,6 @@
 import React from "react"
 import { useIntl } from "gatsby-plugin-intl"
-import Markdown from 'markdown-to-jsx';
+
 import styled from "styled-components"
 
 import Layout from '../components/layout'
@@ -82,14 +82,14 @@ const BioPage = (props) => {
 							<TextBox>
 								<h2>Mini bio</h2>
 								<p id="shortbio">
-									{bio.map((edge) => {return (<Markdown>{edge.node.frontmatter.minibiopt}</Markdown>)})}
+									{bio.map((edge) => {return (<p>{edge.node.frontmatter.minibiopt}</p>)})}
 								</p>
 								<button onClick={() => copyDivToClipboard("shortbio")}><img src="/images/copy.svg" alt="" aria-label="copiar"/></button>
 							</TextBox>
 							<TextBox>
 								<h2>Bio</h2>
 								<p id="longbio">
-									{bio.map((edge) => {return (<Markdown>{edge.node.frontmatter.biopt}</Markdown>)})}
+									{bio.map((edge) => {return (<p>{edge.node.frontmatter.biopt}</p>)})}
 								</p>
 								<button onClick={() => copyDivToClipboard("longbio")}><img src="/images/bio/copy.svg" alt="" aria-label="copiar"/></button>
 							</TextBox>
@@ -109,12 +109,12 @@ const BioPage = (props) => {
 						<div>
 							<TextBox>
 								<h2>Short bio</h2>
-								<p id="shortbio">{bio.map((edge) => {return (<Markdown>{edge.node.frontmatter.minibioen}</Markdown>)})}</p>
+								<p id="shortbio">{bio.map((edge) => {return (<p>{edge.node.frontmatter.minibioen}</p>)})}</p>
 								<button onClick={() => copyDivToClipboard("shortbio")}><img src="/images/copy.svg" alt="" aria-label="copiar"/></button>
 							</TextBox>
 							<TextBox>
 								<h2>Long bio</h2>
-								<p id="longbio">{bio.map((edge) => {return (<Markdown>{edge.node.frontmatter.bioen}</Markdown>)})} </p>
+								<p id="longbio">{bio.map((edge) => {return (<p>{edge.node.frontmatter.bioen}</p>)})} </p>
 								<button onClick={() => copyDivToClipboard("longbio")}><img src="/images/copy.svg" alt="" aria-label="copiar"/></button>
 							</TextBox>
 							<TextBox>
