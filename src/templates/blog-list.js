@@ -44,6 +44,7 @@ const BlogListPage = (props) => {
 									title={edge.node.frontmatter.title}
 									description={edge.node.frontmatter.description}
 									categories={edge.node.frontmatter.categories}
+									hyperlink={edge.node.frontmatter.hyperlink}
 									image={edge.node.frontmatter.thumbnail.publicURL}
 								/>
 							)
@@ -87,6 +88,7 @@ export const BlogListQuery = graphql`
 		description
 		title
 		categories
+		hyperlink
 		thumbnail {
 		   id
 		   publicURL
