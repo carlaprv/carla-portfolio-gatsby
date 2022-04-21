@@ -9,6 +9,7 @@ const BlogItem = ({
       title,
       description,
       categories,
+      hyperlink,
       image
     }) => {
 
@@ -18,12 +19,20 @@ const BlogItem = ({
                         <div className={blogItemStyles.card}>
                               {image && (
                                     <div className={blogItemStyles.cardImage}>
-                                          <Link to={`/${slug}`}><img src={image} alt=""/></Link>
+                                          {hyperlink ? (
+                                                <Link to={`${hyperlink}`}><img src={image} alt=""/></Link>
+                                          ):(
+                                                <Link to={`/${slug}`}><img src={image} alt=""/></Link>
+                                          )}
                                     </div>
                               )}
                               <div className={blogItemStyles.cardContent}>
                                     <div className={blogItemStyles.cardTitle}>
-                                          <Link to={`/${slug}`}>{title}</Link>
+                                          {hyperlink ? (
+                                                <Link to={`${hyperlink}`}>{title}</Link>
+                                          ):(
+                                                <Link to={`/${slug}`}>{title}</Link>
+                                          )}
                                     </div>
                                     <div className={blogItemStyles.cardDate}>
                                           {date}
