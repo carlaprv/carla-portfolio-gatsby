@@ -20,7 +20,7 @@ const BlogItem = ({
                               {image && (
                                     <div className={blogItemStyles.cardImage}>
                                           {hyperlink ? (
-                                                <Link to={`${hyperlink}`}><img src={image} alt=""/></Link>
+                                                <Link to={`${hyperlink}`} target="_blank" rel="noreferrer"><img src={image} alt=""/></Link>
                                           ):(
                                                 <Link to={`/${slug}`}><img src={image} alt=""/></Link>
                                           )}
@@ -29,7 +29,7 @@ const BlogItem = ({
                               <div className={blogItemStyles.cardContent}>
                                     <div className={blogItemStyles.cardTitle}>
                                           {hyperlink ? (
-                                                <Link to={`${hyperlink}`}>{title}</Link>
+                                                <Link to={`${hyperlink}`} target="_blank" rel="noreferrer">{title}</Link>
                                           ):(
                                                 <Link to={`/${slug}`}>{title}</Link>
                                           )}
