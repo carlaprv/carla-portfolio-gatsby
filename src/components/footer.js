@@ -65,15 +65,6 @@ const Footer = () => {
     return (
         <FooterContainer>
             <FooterContent>
-                {intl.locale === "pt" ? (
-                    <p>
-                        Tem interesse em colaborar? <Link to="/contact">Entre em contato</Link> • Quer apoiar meu trabalho? Torne-se um <a href="https://apoia.se/eaicarla">apoiador</a>!
-                    </p>
-                ) : (
-                    <p>
-                        Interested in collaborating? <Link to="/contact">Send me a message</Link> • Want to support my work? Become a <a href="https://apoia.se/eaicarla">sponsor</a>!.
-                    </p>
-                )}
                 <Social purple={false} />
                 {intl.locale === "pt" ? (
                     <p>
