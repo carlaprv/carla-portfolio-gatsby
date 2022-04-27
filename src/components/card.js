@@ -88,6 +88,7 @@ const CardText = styled.p`
 
 const Card = ({
       slug,
+      external_link,
       date,
       title,
       description,
@@ -109,7 +110,11 @@ const Card = ({
                                           {date}
                                     </CardDate>
                                     <CardTitle>
-                                          <Link to={`/${slug}`}>{title}</Link>
+                                          {external_link ? (
+                                                <Link to={`${external_link}`} target="_blank" rel="noreferrer">{title}</Link>
+                                          ):(
+                                                <Link to={`/${slug}`}>{title}</Link>
+                                          )}
                                     </CardTitle>
                                     <CardText>{description}</CardText>
                                     {/* <button className={cardStyles.btn}>Button</button> */}

@@ -142,7 +142,8 @@ const IndexPage = (props) => {
 						{news.map((edge) => {
 						return (
 								<Card
-									slug={edge.node.frontmatter.link}
+									slug={""}
+									external_link={edge.node.frontmatter.link}
 									date={edge.node.frontmatter.date}
 									title={edge.node.frontmatter.title}
 									description={edge.node.frontmatter.midianame}
