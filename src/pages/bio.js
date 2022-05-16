@@ -99,8 +99,8 @@ const BioPage = (props) => {
 									Se você precisa de fotos minhas em alta resolução, pode selecionar uma das opções abaixo.
 								</p>
 								<Photos>
-									<img src="/images/bio/foto-1-carla.jpg" alt=""/>
-									<img src="/images/bio/foto-2-carla.jpg" alt=""/>
+									<img src="/images/bio/carla-foto-montreal-1.png" alt=""/>
+									<img src="/images/bio/carla-foto-montreal-2.png" alt=""/>
 								</Photos>
 							</TextBox>
 						</div>
