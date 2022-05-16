@@ -50,7 +50,7 @@ const IndexPage = (props) => {
 							<p>{bio.map((edge) => {return (<p>{edge.node.frontmatter.bioen}</p>)})}</p>
 						)}
 						</div>	
-						<img src="/images/carla/foto-carla-2020.jpg" className={indexStyles.aboutImage} alt=""/>
+						<img src="/images/bio/carla-foto-montreal-1.png" className={indexStyles.aboutImage} alt=""/>
 					</div>				
 				</div>
 			</section>
