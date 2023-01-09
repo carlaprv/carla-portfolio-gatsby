@@ -6,8 +6,8 @@ eventname: LeadDev San Francisco
 country: Unitade States of America
 state: CA
 city: San Francisco
-slides: https://leaddev.com/leaddev-san-francisco/video/towards-global-and-human-centered-explanations-machine-learning-models?btr=70e5df67ac3e74a45e2a56b5f4e942fe
-video: https://leaddev.com/leaddev-san-francisco/video/towards-global-and-human-centered-explanations-machine-learning-models?btr=70e5df67ac3e74a45e2a56b5f4e942fe
+slides: https://leaddev.com/leaddev-san-francisco/video/towards-global-and-human-centered-[…]ns-machine-learning-models?btr=e942a8c746efbaf679a32f91327f795a
+video: https://leaddev.com/leaddev-san-francisco/video/towards-global-and-human-centered-[…]ns-machine-learning-models?btr=e942a8c746efbaf679a32f91327f795a
 ---
 The need for interpretable artificial intelligence systems grows along with the prevalence of artificial intelligence applications use in everyday life. The current situation is such that these systems are able to predict and decide upon various cases more accurately and speedily than a human.
 
