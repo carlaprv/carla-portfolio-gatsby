@@ -1,18 +1,23 @@
 ---
 title: Bio
 date: 2021-07-02T12:28:13.946Z
-biopt: Carla Vieira é Bacharel em Sistemas de Informação pela USP, mestranda em
-  Inteligência Artificial pela mesma instituição e engenheira de software.
-  Acredita na tecnologia como ferramenta de transformação social e tem estudado
-  sobre como o viés inconsciente tem afetado a Inteligência Artificial e como
-  tornar algoritmos caixa-preta mais transparentes.
-bioen: Carla Vieira holds a Bachelor's degree in Information Systems at USP,
-  master student in Artificial Intelligence and software engineer. She believes
-  Technology is steadily changing the social good landscape and has been
-  researching about the unconscious bias in Artificial Intelligence and its
-  impacts on our society.
-minibiopt: Carla Vieira é Bacharel em Sistemas de Informação pela USP, mestranda
-  em Inteligência Artificial pela USP e engenheira de software
-minibioen: Carla holds a Bachelor's degree in Information Systems at USP, master
-  student in Artificial Intelligence and software engineer.
+biopt: >
+  Carla Vieira é Engenheira de Dados e mestre em Inteligência Artificial pela
+  USP. Sua pesquisa teve como foco a construção de sistemas de Inteligência
+  Artificial explicáveis. Carla acredita na tecnologia como ferramenta de
+  transformação social e na importância de construir uma sociedade resiliente a
+  IA. Foi reconhecida como Google Developer Expert em Machine Learning e uma das
+  100 mulheres brilhantes na área de IA Ética.
+bioen: Carla is a brazilian Data Engineer and Google Developer Expert in Machine
+  Learning. She holds a master degree in Artificial Intelligence and her
+  research focused on building trustworthy and explainable AI systems. She was
+  listed as a Raising Star Women in AI Ethics and participated in the creation
+  of perifaCode a brazilian initiative that aims to create economic opportunity
+  by developing a new generation with the skills to succeed in a technological
+  world.
+minibiopt: "Carla Vieira é Engenheira de Dados e mestre em Inteligência
+  Artificial pela USP. Foi reconhecida como Google Developer Expert em Machine
+  Learning e uma das 100 mulheres brilhantes na área de IA Ética. "
+minibioen: Carla is a brazilian Data Engineer and Google Developer Expert in
+  Machine Learning.
 ---
